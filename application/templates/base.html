@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+<html lang="en">
+    <head>
+        {% block title %}<title>Local Library</title>{% endblock %}
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <!-- Add additional CSS in static file -->
+                    {% load static %}
+                    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+                    <link href="{% static 'css/all.css' %}" rel="stylesheet"> <!--load all styles -->
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #778e90">
+            <div class="d-flex w-25 order-0">
+                <span style="font-size:200%" class="font-weight-bold text-white">Helen</span>
+                <span style="font-size:200%" class="font-weight-bold text-blue">Dai</span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
+                <ul class="navbar-nav nav-fill w-100">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CS Projects<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Art Projects<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+            <span class="navbar-text small text-truncate mt-1 w-25 text-right order-1 order-md-last">always show</span>
+        </nav>
+        <div class="container-fluid">
+            {% block content %}{% endblock %}
+        </div>
+        <!-- Footer -->
+        <footer class="page-footer">
+
+            <!-- Footer Elements -->
+            <div class="container">
+        
+                <!-- Grid row-->
+                <div class="row">
+            
+                    <!-- Grid column -->
+                    <div class="col-md-12 py-4">
+                        <div class="mb-3 flex-center" style="margin-top: 2vw;">
+                
+                            <!-- Facebook -->
+                            <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
+                            </a>
+                            <!-- GitHub -->
+                            <a class="git-ic">
+                            <i class="fab fa-github fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
+                            </a>
+                            <!--Linkedin -->
+                            <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
+                            </a>
+                            <!--Instagram-->
+                            <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+            
+                </div>
+                <!-- Grid row-->
+        
+            </div>
+            <!-- Footer Elements -->
+        
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">
+                © 2021 Copyright: helendai-portfolio.com
+            </div>
+            <!-- Copyright -->
+        
+        </footer>
+        <!-- Footer -->
+    </body>
+</html>

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800;900&display=swap');
+
+/* global settings
+====================*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14pt;
+    background-color: white;
+    background-image:
+        linear-gradient(
+        to right, 
+        #f3e2ce,
+        #f3e2ce 60%,
+        #d8dfd6 60%,
+        #d8dfd6 40%,
+        #d8dfd6 40%
+        );
+}
+
+img {
+    /* set max width for images so they don't run off the screen */
+    margin: 0, auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    /* Make sure the text doesn't touch the side of the screen */
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* nav bar
+====================*/
+.text-blue {
+    color: #d8dfd6;
+}
+
+/* home page
+====================*/
+.card-title {
+    font-size: 80pt;
+}
+
+.intro-card {
+    margin-top: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.about-card {
+    margin-top: 5rem;
+}

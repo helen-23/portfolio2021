@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800;900&display=swap');
+
+/* global settings
+====================*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14pt;
+    background-color: white;
+    background-image:
+        linear-gradient(
+        to right, 
+        #f3e2ce,
+        #f3e2ce 60%,
+        #d8dfd6 60%,
+        #d8dfd6 40%,
+        #d8dfd6 40%
+        );
+}
+
+footer {
+    background-color: #778e90;
+}
+
+img {
+    /* set max width for images so they don't run off the screen */
+    margin: 0, auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    /* Make sure the text doesn't touch the side of the screen */
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* nav bar
+====================*/
+.text-blue {
+    color: #d8dfd6;
+}
+
+/* home page
+====================*/
+
+.custom-title {
+    font-size: 6vw;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    line-height: 1;
+    color: #463c35;
+}
+
+.custom-title span {
+    color: #778e90;
+}
+
+h2.card-title {
+    font-size: 2vw;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    line-height: 1;
+}
+
+p.card-text {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    line-height: 2;
+}
+
+.intro-card {
+    margin-top: 4vw;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    padding-left: 3vw;
+    padding-right: 2vw;
+}
+
+.about-card {
+    margin-top: 3vw;
+    background-color: #b3c0b9;
+}
+
+.btn-custom {
+    margin-top: 2vw;
+    background-color: #778e90;
+    width: 13vw;
+    font-size: 1.3vw;
+}
+
+#rectangle{
+    width: 3vw;
+    height: 40vw;
+    border-radius: 50px;
+    background: #ad9a84;
+    background-image: linear-gradient(to top, #ad9a84, #f3e2ce);
+    position: absolute;
+    top: 40vw;
+    left: 24vw;
+}
