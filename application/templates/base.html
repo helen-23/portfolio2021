@@ -12,7 +12,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-<html lang="en">
+<html lang="en" id="top">
     <head>
         {% block title %}<title>Local Library</title>{% endblock %}
         <meta charset="utf-8">
@@ -37,13 +37,27 @@
                         <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CS Projects<span class="sr-only">(current)</span></a>
+                        <div class="dropdown">
+                            <a class="nav-link" href="#cs-portfolio">CS Projects<span class="sr-only">(current)</span></a>
+                            <div class="dropdown-box">
+                                <div class="dropdown-content">
+                                    <a class="nav-link" href="{% url 'FullMonteWeb' %}">FullMonteWeb</a>
+                                    <a class="nav-link" href="{% url 'PocketTravel' %}">PocketTravel</a>
+                                    <a class="nav-link" href="{% url 'ReversiAI' %}">Reversi AI</a>
+                                    <a class="nav-link" href="{% url 'GunmanJump' %}">GunmanJump</a>
+                                    <a class="nav-link" href="{% url 'BubbleMania' %}">BubbleMania</a>
+                                    <a class="nav-link" href="{% url 'Cycle63' %}">Cycle63</a>
+                                    <a class="nav-link" href="{% url 'TunerPro' %}">TunerPro</a>
+                                    <a class="nav-link" href="{% url 'OregonWildlifeClassifier' %}">Oregon Wildlife Classifier</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Art Projects<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#art-portfolio">Artworks<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
@@ -55,6 +69,9 @@
         <div class="container-fluid">
             {% block content %}{% endblock %}
         </div>
+        <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top" style="background-color: #778e90; color: white; z-index: 99;">
+            <i class="fas fa-arrow-up"></i>
+        </button>
         <!-- Footer -->
         <footer class="page-footer">
 
@@ -104,3 +121,31 @@
         <!-- Footer -->
     </body>
 </html>
+
+<script>
+    //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    // When the user scrolls down 300 from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+    if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+    ) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+</script>

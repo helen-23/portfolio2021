@@ -4,99 +4,218 @@
 
 <div id="rectangle"></div>
 
-<div class="card shadow-lg rounded mb-3 intro-card" style="max-width: 85vw;">
-    <div class="row no-gutters">
-        <div class="col-md-6">
-            <div id="carouselControls" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselIndicators" data-slide-to="2"></li>
-                  </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="intro_image" src="{% static 'images/profile_photo2.jpg' %}" alt="First slide">
+<section class="home-hero">
+    <div class="card shadow-lg rounded mb-3 intro-card" style="max-width: 85vw;">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <div id="carouselControls" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="intro_image" src="{% static 'images/profile_photo2.jpg' %}" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="intro_image" src="{% static 'images/profile_photo2.jpg' %}" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="intro_image" src="{% static 'images/profile_photo2.jpg' %}" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="intro_image" src="{% static 'images/profile_photo2.jpg' %}" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="intro_image" src="{% static 'images/profile_photo2.jpg' %}" alt="Third slide">
-                    </div>
+                    <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card-body" style="padding: 0rem 0rem 0rem 3vw;">
-                <h1 class="card-title custom-title">
-                    I<span>'</span>m Helen<br>Dai<span>.</span>
-                </h1>
-                <p class="card-text" style="margin-top: 2vw; color: #463c35;">Cornell Tech at Cornell University '22 MEng. in Computer Science</p>
-                <p class="card-text" style="color: #463c35;">University of Toronto '21 BASc. in Computer Engineering</p>
-                <a href="#" class="btn btn-primary btn-custom">See my work</a>
+            <div class="col-md-6">
+                <div class="card-body" style="padding: 0rem 0rem 0rem 3vw;">
+                    <h1 class="card-title custom-title">
+                        I<span>'</span>m Helen<br>Dai<span>.</span>
+                    </h1>
+                    <p class="card-text" style="margin-top: 2vw; color: #463c35;">Cornell Tech at Cornell University '22 MEng. in Computer Science</p>
+                    <p class="card-text" style="color: #463c35;">University of Toronto '21 BASc. in Computer Engineering</p>
+                    <a href="#cs-portfolio" class="btn btn-primary btn-custom">See my CS work</a>
+                    <a href="#art-portfolio" class="btn btn-primary btn-custom">See my art work</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="side-by-side">
-    <div class="row no-gutters">
-        <div class="col-3" style="padding-left: 15vw; padding-top: 5vw;">
-            <img class="img-thumbnail rounded-circle" src="{% static 'images/cornell.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
-                <p> Cornell 2021-2022 </p>
-            </div>
-            <img class="img-thumbnail rounded-circle" src="{% static 'images/uoft.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
-                <p> UToronto 2016-2021 </p>
-            </div>
-            <img class="img-thumbnail rounded-circle" src="{% static 'images/thales.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
-                <p> Thales Canada 2018 </p>
-            </div>
-        </div>
-        <div class="col-3" style="padding-left: 2vw; padding-top: 10vw;">
-            <img class="img-thumbnail rounded-circle" src="{% static 'images/fullmonteweb.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
-                <p> FullMonteWeb 2020-2021 </p>
-            </div>
-            <img class="img-thumbnail rounded-circle" src="{% static 'images/intel.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
-                <p> Intel 2019-2020 </p>
-            </div>
-            <img class="img-thumbnail rounded-circle" src="{% static 'images/codezilla.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
-                <p> CodeZilla 2016-2018 </p>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card text-center ml-auto about-card">
-                <div class="card-header">
-                    <h2 class="card-title" style="color: white;"> About Me </h2>
+<section id="about" class="home-about" style="scroll-margin-top: 2vw;">
+    <div class="side-by-side">
+        <div class="row no-gutters">
+            <div class="col-3" style="padding-left: 15vw; padding-top: 5vw;">
+                <img class="img-thumbnail rounded-circle" src="{% static 'images/cornell.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+                <div class="caption">
+                    <p> Cornell 2021-2022 </p>
                 </div>
-                <div class="card-body">
-                <p class="card-text">I am a Computer Engineering undergraduate at the University of Toronto (U of T) and an experienced programming tutor. I started coding in the summer of Grade 10 and have since then been very passionate about Computer Science and Engineering as a whole. On this site, you will see some of my selected projects from the past, including single player and multiplayer video games, a chess game AI, and some hardware applications implemented on the FPGA.</p>
-                <p class="card-text">During U of T's Professional Experience Year Program (PEY), I interned at Intel San Jose Campus for a full year as a Software Engineering intern. During the summer of 2020, I also did research at U of T with Professor Vaughn Betz. Please check out my resume to see more details about my past academic and professional experiences.</p>
-                <p class="card-text">My focuses of study are Computer Vision, Computer Graphics, and Human-Computer Interaction.</p>
-                <a href="#" class="btn btn-primary btn-custom"> Watch my Video Intro </a>
+                <img class="img-thumbnail rounded-circle" src="{% static 'images/uoft.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+                <div class="caption">
+                    <p> UToronto 2016-2021 </p>
                 </div>
-                <div class="card-footer text-muted">
-                Skills: 
+                <img class="img-thumbnail rounded-circle" src="{% static 'images/thales.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+                <div class="caption">
+                    <p> Thales Canada 2018 </p>
                 </div>
             </div>
+            <div class="col-3" style="padding-left: 2vw; padding-top: 10vw;">
+                <img class="img-thumbnail rounded-circle" src="{% static 'images/fullmonteweb.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+                <div class="caption">
+                    <p> FullMonteWeb 2020-2021 </p>
+                </div>
+                <img class="img-thumbnail rounded-circle" src="{% static 'images/intel.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+                <div class="caption">
+                    <p> Intel 2019-2020 </p>
+                </div>
+                <img class="img-thumbnail rounded-circle" src="{% static 'images/codezilla.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+                <div class="caption">
+                    <p> CodeZilla 2016-2018 </p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card text-center ml-auto about-card">
+                    <div class="card-header">
+                        <h2 class="card-title" style="color: white;"> About Me </h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">I am a Computer Engineering undergraduate at the University of Toronto (U of T) and an experienced programming tutor. I started coding in the summer of Grade 10 and have since then been very passionate about Computer Science and Engineering as a whole. On this site, you will see some of my selected projects from the past, including single player and multiplayer video games, a chess game AI, and some hardware applications implemented on the FPGA.</p>
+                        <p class="card-text">During U of T's Professional Experience Year Program (PEY), I interned at Intel San Jose Campus for a full year as a Software Engineering intern. During the summer of 2020, I also did research at U of T with Professor Vaughn Betz. Please check out my resume to see more details about my past academic and professional experiences.</p>
+                        <p class="card-text">My focuses of study are Computer Vision, Computer Graphics, and Human-Computer Interaction.</p>
+                        <a href="#" class="btn btn-primary btn-custom"> Check out my video intro </a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Skills: 
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+<section id="cs-portfolio" class="home-cs-portfolio" style="scroll-margin-top: 5vw;">
+    <div class="card text-center mx-auto cs-projects-card">
+        <div class="card-header">
+            <h2 class="card-title" style="color: white;"> Software/Hardware Projects </h2>
         </div>
-</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div class="cs-gallery text-white rounded">
+                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="w-100" style="height: 20vw; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <h5 class="hover-caption">FullMonteWeb</h5>
+                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="cs-gallery text-white rounded">
+                        <img src="{% static 'images/pocket_travel.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <h5 class="hover-caption">PocketTravel</h5>
+                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
+                        </div>
+                    </div>
+                </div>
 
-<div class="card shadow-lg rounded mb-3 intro-card">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="cs-gallery text-white rounded">
+                        <img src="{% static 'images/reversi_ai.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <h5 class="hover-caption">Reversi AI</h5>
+                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div class="cs-gallery text-white rounded">
+                        <img src="{% static 'images/gunman_mahem.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <h5 class="hover-caption">GunmanJump</h5>
+                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="cs-gallery text-white rounded">
+                        <img src="{% static 'images/tuner_pro.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <h5 class="hover-caption">TunerPro</h5>
+                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
+                        </div>
+                    </div>
+                </div>
 
-</div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="cs-gallery text-white rounded">
+                        <img src="{% static 'images/bubble_mania.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <h5 class="hover-caption">BubbleMania</h5>
+                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div class="cs-gallery text-white rounded">
+                        <img src="{% static 'images/cycle_63.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <h5 class="hover-caption">Cycle63</h5>
+                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="cs-gallery text-white rounded">
+                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="w-100" style="height: 20vw; object-fit: cover;">
+                        <div class="hover-overlay">
+                            <h5 class="hover-caption">Oregon Wildlife Classifier</h5>
+                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="art-portfolio" class="home-art-portfolio" style="scroll-margin-top: 5vw;">
+    <div class="card text-center mx-auto art-projects-card">
+        <div class="card-header">
+            <h2 class="card-title" style="color: white;"> Visual Arts/Design Projects </h2>
+        </div>
+        <div class="card-body">
+            
+        </div>
+    </div>
+</section>
 
 {% endblock %}
