@@ -144,6 +144,9 @@ p.card-text {
     line-height: 2;
 }
 
+/* Intro section
+====================*/
+
 .intro-card {
     margin-top: 4vw;
     padding-top: 4vw;
@@ -152,7 +155,14 @@ p.card-text {
     padding-right: 2vw;
 }
 
-/* about page
+.intro_image {
+    width: 100%;
+    height: 50vh;
+    border-radius:5px;
+    object-fit:cover;
+}
+
+/* about section
 ====================*/
 
 .about-card {
@@ -204,7 +214,7 @@ img.gallery-img {
     transform: scale(1.1);
 }
 
-/* CS projects page
+/* CS projects section
 ====================*/
 
 .cs-projects-card {
@@ -247,7 +257,7 @@ img.gallery-img {
     opacity: 1;
 }
 
-/* art projects page
+/* art projects section
 ====================*/
 
 .art-projects-card {
