@@ -172,13 +172,13 @@ p.card-text {
 
 #rectangle{
     width: 3vw;
-    height: 40vw;
+    height: 120vh;
     border-radius: 50px;
     background: #ad9a84;
     background-image: linear-gradient(to top, #ad9a84, #f3e2ce);
     position: absolute;
-    top: 40vw;
-    left: 24vw;
+    top: 80vh;
+    left: 23vw;
 }
 
 /* galaries common
