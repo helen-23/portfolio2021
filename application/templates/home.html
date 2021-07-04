@@ -119,87 +119,99 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <div class="cs-gallery text-white rounded">
-                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="w-100" style="height: 20vw; object-fit: cover;">
-                        <div class="hover-overlay">
-                            <h5 class="hover-caption">FullMonteWeb</h5>
-                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="cs-gallery text-white rounded">
-                        <img src="{% static 'images/pocket_travel.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
-                        <div class="hover-overlay">
-                            <h5 class="hover-caption">PocketTravel</h5>
-                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
-                        </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">FullMonteWeb</h5>
+                    <div class="cs-gallery zoom">
+                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid gallery-img" alt="">
+                        <a href="{% url 'FullMonteWeb' %}">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="cs-gallery text-white rounded">
-                        <img src="{% static 'images/reversi_ai.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
-                        <div class="hover-overlay">
-                            <h5 class="hover-caption">Reversi AI</h5>
-                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <div class="cs-gallery text-white rounded">
-                        <img src="{% static 'images/gunman_mahem.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
-                        <div class="hover-overlay">
-                            <h5 class="hover-caption">GunmanJump</h5>
-                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="cs-gallery text-white rounded">
-                        <img src="{% static 'images/tuner_pro.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
-                        <div class="hover-overlay">
-                            <h5 class="hover-caption">TunerPro</h5>
-                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
-                        </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">PocketTravel</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'PocketTravel' %}">
+                            <img src="{% static 'images/pocket_travel.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="cs-gallery text-white rounded">
-                        <img src="{% static 'images/bubble_mania.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
-                        <div class="hover-overlay">
-                            <h5 class="hover-caption">BubbleMania</h5>
-                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <div class="cs-gallery text-white rounded">
-                        <img src="{% static 'images/cycle_63.gif' %}" class="w-100" style="height: 20vw; object-fit: cover;">
-                        <div class="hover-overlay">
-                            <h5 class="hover-caption">Cycle63</h5>
-                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
-                        </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">Reversi AI</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'ReversiAI' %}">
+                            <img src="{% static 'images/reversi_ai.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="cs-gallery text-white rounded">
-                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="w-100" style="height: 20vw; object-fit: cover;">
-                        <div class="hover-overlay">
-                            <h5 class="hover-caption">Oregon Wildlife Classifier</h5>
-                            <a href="#" class="btn btn-primary btn-custom hover-button">See details</a>
-                        </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">GunmanJump</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'GunmanJump' %}">
+                            <img src="{% static 'images/gunman_mahem.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">BubbleMania</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'BubbleMania' %}">
+                            <img src="{% static 'images/bubble_mania.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">Cycle63</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'Cycle63' %}">
+                            <img src="{% static 'images/cycle_63.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">TunerPro</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'TunerPro' %}">
+                            <img src="{% static 'images/tuner_pro.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">Oregon Wildlife Classifier</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'OregonWildlifeClassifier' %}">
+                            <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -213,9 +225,75 @@
             <h2 class="card-title" style="color: white;"> Visual Arts/Design Projects </h2>
         </div>
         <div class="card-body">
-            
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                        <img  src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <a href="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"  class="fancybox" rel="ligthbox">
+                        <img  src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
+                    </a>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <a href="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
+                        <img  src="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
+                    </a>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <a href="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
+                        <img  src="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
+                    </a>
+                </div>
+                
+                 <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <a href="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                        <img  src="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
+                    </a>
+                </div>
+                
+                 <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <a href="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                        <img  src="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
+                    </a>
+                </div>
+                
+                 <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <a href="https://images.pexels.com/photos/56005/fiji-beach-sand-palm-trees-56005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
+                        <img  src="https://images.pexels.com/photos/56005/fiji-beach-sand-palm-trees-56005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
+                    </a>
+                </div>
+                
+                 <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <a href="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
+                        <img  src="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
+                    </a>
+                </div>
+           </div>
         </div>
     </div>
 </section>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+            
+            $(".zoom").hover(function(){
+                
+                $(this).addClass('transition');
+            }, function(){
+                
+                $(this).removeClass('transition');
+            });
+    });
+        
+</script>
 
 {% endblock %}

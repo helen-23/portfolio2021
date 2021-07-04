@@ -20,7 +20,8 @@
                     <!-- Add additional CSS in static file -->
                     {% load static %}
                     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-                    <link href="{% static 'css/all.css' %}" rel="stylesheet"> <!--load all styles -->
+                    <link rel="stylesheet" href="{% static 'css/all.css' %}"> <!--load all styles -->
+                    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #778e90">
@@ -77,31 +78,33 @@
 
             <!-- Footer Elements -->
             <div class="container">
+                
+                <div class="contact-card text-white">
+                    <h2>Contact Me</h2>
+                    <p><b>Primary email:</b> helendai23@gmail.com<br><b>Secondary email:</b> xd42@cornell.edu<br><b>Cell:</b> +1 (416) 918-3689</p>
+                </div>
         
                 <!-- Grid row-->
                 <div class="row">
             
                     <!-- Grid column -->
-                    <div class="col-md-12 py-4">
-                        <div class="mb-3 flex-center" style="margin-top: 2vw;">
-                
+                    <div class="col-md-12 py-5">
                             <!-- Facebook -->
-                            <a class="fb-ic">
-                            <i class="fab fa-facebook-f fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
+                            <a class="fb-ic" href="https://www.facebook.com/helen.dai.37" target="_blank">
+                                <i class="fab fa-facebook-f fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
                             </a>
                             <!-- GitHub -->
-                            <a class="git-ic">
-                            <i class="fab fa-github fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
+                            <a class="git-ic" href="https://github.com/helen-23" target="_blank">
+                                <i class="fab fa-github fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
                             </a>
                             <!--Linkedin -->
-                            <a class="li-ic">
-                            <i class="fab fa-linkedin-in fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
+                            <a class="li-ic" href="https://www.linkedin.com/in/xiao-ying-helen-dai" target="_blank">
+                                <i class="fab fa-linkedin-in fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
                             </a>
                             <!--Instagram-->
-                            <a class="ins-ic">
-                            <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x text-white"> </i>
+                            <a class="ins-ic" href="https://www.instagram.com/melonrebellon/" target="_blank">
+                                <i class="fab fa-instagram fa-lg fa-2x text-white"> </i>
                             </a>
-                        </div>
                     </div>
                     <!-- Grid column -->
             

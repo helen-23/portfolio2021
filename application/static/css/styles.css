@@ -27,10 +27,6 @@ body {
         );
 }
 
-footer {
-    background-color: #778e90;
-}
-
 img {
     /* set max width for images so they don't run off the screen */
     margin: 0, auto;
@@ -175,7 +171,40 @@ p.card-text {
     left: 24vw;
 }
 
-/* cs projects page
+/* galaries common
+====================*/
+.project-caption {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.custom-thumbnail{
+    margin-bottom: 30px;
+}
+
+img.gallery-img {
+    width: 100%;
+    height: 200px;
+    border-radius:5px;
+    object-fit:cover;
+}
+
+.zoom {
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+
+.transition {
+    -webkit-transform: scale(1.1); 
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* CS projects page
 ====================*/
 
 .cs-projects-card {
@@ -187,88 +216,35 @@ p.card-text {
 .cs-gallery {
     overflow: hidden;
     position: relative;
-    padding-bottom: 60%;
 }
 
 .cs-gallery .hover-overlay {
     width: 100%;
     height: 100%;
+    border-radius:5px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 90;
-    transition: all 0.4s;
-}
-
-.cs-gallery img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.3s;
-}
-
-.cs-gallery .hover-content {
-    position: relative;
-    z-index: 99;
-}
-
-.cs-gallery::after {
-    content: '';
-    width: 100%;
-    height: 10px;
-    background: #f3e2ce;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    display: block;
-    transition: all 0.3s;
-    z-index: 999;
 }
 
 .cs-gallery .hover-caption {
-    background: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
-    transition: all 0.3s;
-    padding: 1rem;
-    width: 100%;
-    z-index: 99;
-}
-
-.cs-gallery .hover-button {
     margin: 0;
     position: absolute;
     top: 50%;
+    left: 50%;
     transform: translateY(-50%);
     transform: translateX(-50%);
     opacity: 0;
-    background-color: #ad9a84;
+    color: white;
 }
 
 .cs-gallery:hover .hover-overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .cs-gallery:hover .hover-caption {
-    background: rgba(0, 0, 0, 0);
-    bottom: 0;
-}
-
-.cs-gallery:hover .hover-button {
     opacity: 1;
-
-}
-
-.cs-gallery:hover::after {
-    bottom: 0;
-}
-
-.hover-button:hover {
-    background-color: white;
-    color: #ad9a84;
-    border: 2px solid #ad9a84;
 }
 
 /* art projects page
@@ -279,4 +255,23 @@ p.card-text {
     margin-top: 3vw;
     margin-bottom: 3vw;
     background-color: #b3c0b9;
+}
+
+/* contact/footer
+====================*/
+footer {
+    background-color: #778e90;
+}
+
+footer .footer-copyright {
+    background-color: #426164;
+    color: white;
+}
+
+.contact-card {
+    padding-top: 5vh;
+}
+
+.contact-card h2 {
+    font-weight: 600;
 }
