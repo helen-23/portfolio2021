@@ -41,12 +41,27 @@ img {
     text-align: center;
 }
 
+.container2 {
+    /* Make sure the text doesn't touch the side of the screen */
+    width: 85%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
 .btn-custom {
-    margin-top: 2vw;
     background-color: #778e90;
     border: none;
     width: 13vw;
     font-size: 1.3vw;
+}
+
+.btn-custom-large {
+    background-color: #778e90;
+    border: none;
+    width: 20vw;
+    font-size: 1.6vw;
+    margin: 0 0 5vh 0 !important;
+    padding: 15px 5px;
 }
 
 .btn-custom:hover {
@@ -70,6 +85,11 @@ img {
     bottom: 20px;
     right: 20px;
     display: none;
+}
+
+.custom-card-text {
+    text-align: left;
+    line-height: 1 !important;
 }
 
 /* nav bar
@@ -111,11 +131,6 @@ img {
     display: block;
 }
 
-.dropdown:hover,
-.dropdown:focus {
-    font-weight: 700;
-}
-
 /* home page
 ====================*/
 
@@ -144,6 +159,27 @@ p.card-text {
     line-height: 2;
 }
 
+.home-intro {
+    transition: all 1s;
+}
+
+.home-cs-selected {
+    transition: all 1s;
+}
+
+.home-selected-arts {
+    transition: all 1s;
+}
+
+.hide {
+    opacity:0;
+    left:-100%;
+}
+.show {
+    opacity:1;
+    left:0;
+}
+
 /* Intro section
 ====================*/
 
@@ -162,23 +198,9 @@ p.card-text {
     object-fit:cover;
 }
 
-/* about section
-====================*/
-
-.about-card {
+.greetings-card {
     margin-top: 3vw;
     background-color: #b3c0b9;
-}
-
-#rectangle{
-    width: 3vw;
-    height: 120vh;
-    border-radius: 50px;
-    background: #ad9a84;
-    background-image: linear-gradient(to top, #ad9a84, #f3e2ce);
-    position: absolute;
-    top: 80vh;
-    left: 23vw;
 }
 
 /* galaries common
@@ -214,7 +236,47 @@ img.gallery-img {
     transform: scale(1.1);
 }
 
-/* CS projects section
+/* about page
+====================*/
+
+#rectangle{
+    width: 3vw;
+    height: 120vh;
+    border-radius: 50px;
+    background: #ad9a84;
+    background-image: linear-gradient(to top, #ad9a84, #f3e2ce);
+    position: absolute;
+    top: 80vh;
+    left: 23vw;
+}
+
+/* Selected CS/art projects section
+====================*/
+
+.project-card {
+    border-radius:10px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 350px;
+    object-fit:cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1vw;
+}
+
+.project-card .hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+}
+
+/* All CS projects page
 ====================*/
 
 .cs-projects-card {

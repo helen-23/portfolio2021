@@ -5,6 +5,15 @@ from django.http import HttpResponse
 def home(request):
     return render(request, "home.html")
 
+def about(request):
+    return render(request, "about.html")
+
+def cs_projects(request):
+    return render(request, "cs_projects.html")
+
+def art_projects(request):
+    return render(request, "art_projects.html")
+
 def fullmonte_web(request):
     return render(request, "FullMonteWeb.html")
 

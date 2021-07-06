@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<section id="cs-portfolio" class="home-cs-portfolio" style="scroll-margin-top: 5vw;">
+    <div class="card text-center mx-auto cs-projects-card">
+        <div class="card-header">
+            <h2 class="card-title" style="color: white;"> Software/Hardware Projects </h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">FullMonteWeb</h5>
+                    <div class="cs-gallery zoom">
+                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid gallery-img" alt="">
+                        <a href="{% url 'FullMonteWeb' %}">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">PocketTravel</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'PocketTravel' %}">
+                            <img src="{% static 'images/pocket_travel.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">Reversi AI</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'ReversiAI' %}">
+                            <img src="{% static 'images/reversi_ai.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">GunmanJump</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'GunmanJump' %}">
+                            <img src="{% static 'images/gunman_mahem.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">BubbleMania</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'BubbleMania' %}">
+                            <img src="{% static 'images/bubble_mania.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">Cycle63</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'Cycle63' %}">
+                            <img src="{% static 'images/cycle_63.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">TunerPro</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'TunerPro' %}">
+                            <img src="{% static 'images/tuner_pro.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
+                    <h5 class="project-caption">Oregon Wildlife Classifier</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'OregonWildlifeClassifier' %}">
+                            <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+            
+            $(".zoom").hover(function(){
+                
+                $(this).addClass('transition');
+            }, function(){
+                
+                $(this).removeClass('transition');
+            });
+    });
+        
+</script>
+
+{% endblock %}

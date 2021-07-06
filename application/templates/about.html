@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div id="rectangle"></div>
+<div class="side-by-side">
+    <div class="row no-gutters">
+        <div class="col-3" style="padding-left: 12vw; padding-top: 10vw;">
+            <img class="img-thumbnail rounded-circle" src="{% static 'images/fullmonteweb.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+            <div class="caption">
+                <p> FullMonteWeb 2020-2021 </p>
+            </div>
+            <img class="img-thumbnail rounded-circle" src="{% static 'images/vtr.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+            <div class="caption">
+                <p> VTR 2020 Summer </p>
+            </div>
+            <img class="img-thumbnail rounded-circle" src="{% static 'images/thales.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+            <div class="caption">
+                <p> Thales 2018 Summer </p>
+            </div>
+        </div>
+        <div class="col-3" style="padding-left: 2vw; padding-top: 5vw;">
+            <img class="img-thumbnail rounded-circle" src="{% static 'images/cornell.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+            <div class="caption">
+                <p> Cornell 2021-2022 </p>
+            </div>
+            <img class="img-thumbnail rounded-circle" src="{% static 'images/uoft.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+            <div class="caption">
+                <p> UToronto 2016-2021 </p>
+            </div>
+            <img class="img-thumbnail rounded-circle" src="{% static 'images/intel.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+            <div class="caption">
+                <p> Intel 2019-2020 </p>
+            </div>
+            <img class="img-thumbnail rounded-circle" src="{% static 'images/codezilla.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
+            <div class="caption">
+                <p> CodeZilla 2016-2018 </p>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card text-center ml-auto about-card">
+                <div class="card-header">
+                    <h2 class="card-title" style="color: white;"> Hi there! </h2>
+                </div>
+                <div class="card-body">
+                    <p class="custom-card-text">I am a Computer Engineering graduate from the University of Toronto and an incoming MEng in Computer Science student at Cornell Tech, Cornell University. I am passionate about technologies and how us, as humans, interact with them through creative ways. Feel free to check out some of my selected projects on this site. Happy browsing!</p>
+                    <a href="#" class="btn btn-primary btn-custom"> A little more about me </a>
+                </div>
+                <div class="card-footer text-muted">
+                    Skills: 
+                </div>
+            </div>
+        </div>
+</div>
+
+{% endblock %}

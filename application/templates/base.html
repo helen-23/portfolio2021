@@ -34,31 +34,29 @@
             </div>
             <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
                 <ul class="navbar-nav nav-fill w-100">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% url 'about' %}">About<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link" href="#cs-portfolio">CS Projects<span class="sr-only">(current)</span></a>
-                            <div class="dropdown-box">
-                                <div class="dropdown-content">
-                                    <a class="nav-link" href="{% url 'FullMonteWeb' %}">FullMonteWeb</a>
-                                    <a class="nav-link" href="{% url 'PocketTravel' %}">PocketTravel</a>
-                                    <a class="nav-link" href="{% url 'ReversiAI' %}">Reversi AI</a>
-                                    <a class="nav-link" href="{% url 'GunmanJump' %}">GunmanJump</a>
-                                    <a class="nav-link" href="{% url 'BubbleMania' %}">BubbleMania</a>
-                                    <a class="nav-link" href="{% url 'Cycle63' %}">Cycle63</a>
-                                    <a class="nav-link" href="{% url 'TunerPro' %}">TunerPro</a>
-                                    <a class="nav-link" href="{% url 'OregonWildlifeClassifier' %}">Oregon Wildlife Classifier</a>
-                                </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{% url 'cs_projects' %}">SW/HW Projects<span class="sr-only">(current)</span></a>
+                        <div class="dropdown-box">
+                            <div class="dropdown-content">
+                                <a class="nav-link" href="{% url 'FullMonteWeb' %}">FullMonteWeb</a>
+                                <a class="nav-link" href="{% url 'PocketTravel' %}">PocketTravel</a>
+                                <a class="nav-link" href="{% url 'ReversiAI' %}">Reversi AI</a>
+                                <a class="nav-link" href="{% url 'GunmanJump' %}">GunmanJump</a>
+                                <a class="nav-link" href="{% url 'BubbleMania' %}">BubbleMania</a>
+                                <a class="nav-link" href="{% url 'Cycle63' %}">Cycle63</a>
+                                <a class="nav-link" href="{% url 'TunerPro' %}">TunerPro</a>
+                                <a class="nav-link" href="{% url 'OregonWildlifeClassifier' %}">Oregon Wildlife Classifier</a>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#art-portfolio">Artworks<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% url 'art_projects' %}">Artworks<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact<span class="sr-only">(current)</span></a>
@@ -67,7 +65,7 @@
             </div>
             <span class="navbar-text small text-truncate mt-1 w-25 text-right order-1 order-md-last">always show</span>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid" style="min-height: 100vh;">
             {% block content %}{% endblock %}
         </div>
         <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top" style="background-color: #778e90; color: white; z-index: 99;">
@@ -151,4 +149,12 @@
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     }
+
+    // navbar
+    $(document).ready(function() {
+        $('nav-item.active').removeClass('active');
+        // const path = location.pathname;
+        // if (path.includes("cs-projects"))
+        $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
+    });
 </script>

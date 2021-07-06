@@ -2,9 +2,7 @@
 {% block content %}
 {% load static %}
 
-<div id="rectangle"></div>
-
-<section class="home-hero">
+<section class="home-intro" id="intro">
     <div class="card shadow-lg rounded mb-3 intro-card" style="max-width: 85vw;">
         <div class="row no-gutters">
             <div class="col-md-6">
@@ -62,231 +60,161 @@
                     <h1 class="card-title custom-title">
                         I<span>'</span>m Helen<br>Dai<span>.</span>
                     </h1>
-                    <p class="card-text" style="margin-top: 2vw; color: #463c35;">Cornell Tech at Cornell University '22 MEng. in Computer Science</p>
-                    <p class="card-text" style="color: #463c35;">University of Toronto '21 BASc. in Computer Engineering</p>
-                    <a href="#cs-portfolio" class="btn btn-primary btn-custom">See my CS work</a>
-                    <a href="#art-portfolio" class="btn btn-primary btn-custom">See my artworks</a>
+                    <h4 class="card-text" style="margin-top: 2vw; color: #463c35;"><i>H.D. for High Definition Engineer & Designer </i><span style="font-size: smaller">😉</span></h4>
+                    <p class="card-text" style="color: #463c35;">MEng. student in Computer Science @Cornell</p>
+                    <a href="#cs-portfolio" class="btn btn-primary btn-custom" style="margin-top: 4vh;">See my CS work</a>
+                    <a href="#art-portfolio" class="btn btn-primary btn-custom" style="margin-top: 4vh;">See my artworks</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row no-gutters">
+        <div class="col-6"></div>
+        <div class="col-6">
+            <div class="card text-center ml-auto greetings-card">
+                <div class="card-header">
+                    <h2 class="card-title" style="color: white;"> Hi there! </h2>
+                </div>
+                <div class="card-body">
+                    <p class="custom-card-text" style="text-align: center;">Welcome to my site 😃</p>
+                    <p class="custom-card-text">I am a Computer Engineering graduate from the University of Toronto and an incoming MEng. in Computer Science student at Cornell Tech, Cornell University. I am passionate about technologies and how we interact with them through accessible and creative ways. Feel free to check out some of my selected projects on this site. Happy browsing!</p>
+                    <a href="{% url 'about' %}" class="btn btn-primary btn-custom"> More about me </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="about" class="home-about" style="scroll-margin-top: 2vw;">
-    <div class="side-by-side">
-        <div class="row no-gutters">
-            <div class="col-3" style="padding-left: 12vw; padding-top: 10vw;">
-                <img class="img-thumbnail rounded-circle" src="{% static 'images/fullmonteweb.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-                <div class="caption">
-                    <p> FullMonteWeb 2020-2021 </p>
-                </div>
-                <img class="img-thumbnail rounded-circle" src="{% static 'images/vtr.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-                <div class="caption">
-                    <p> VTR 2020 Summer </p>
-                </div>
-                <img class="img-thumbnail rounded-circle" src="{% static 'images/thales.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-                <div class="caption">
-                    <p> Thales 2018 Summer </p>
-                </div>
-            </div>
-            <div class="col-3" style="padding-left: 2vw; padding-top: 5vw;">
-                <img class="img-thumbnail rounded-circle" src="{% static 'images/cornell.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-                <div class="caption">
-                    <p> Cornell 2021-2022 </p>
-                </div>
-                <img class="img-thumbnail rounded-circle" src="{% static 'images/uoft.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-                <div class="caption">
-                    <p> UToronto 2016-2021 </p>
-                </div>
-                <img class="img-thumbnail rounded-circle" src="{% static 'images/intel.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-                <div class="caption">
-                    <p> Intel 2019-2020 </p>
-                </div>
-                <img class="img-thumbnail rounded-circle" src="{% static 'images/codezilla.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-                <div class="caption">
-                    <p> CodeZilla 2016-2018 </p>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card text-center ml-auto about-card">
-                    <div class="card-header">
-                        <h2 class="card-title" style="color: white;"> About Me </h2>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">I am a Computer Engineering undergraduate at the University of Toronto (U of T) and an experienced programming tutor. I started coding in the summer of Grade 10 and have since then been very passionate about Computer Science and Engineering as a whole. On this site, you will see some of my selected projects from the past, including single player and multiplayer video games, a chess game AI, and some hardware applications implemented on the FPGA.</p>
-                        <p class="card-text">During U of T's Professional Experience Year Program (PEY), I interned at Intel San Jose Campus for a full year as a Software Engineering intern. During the summer of 2020, I also did research at U of T with Professor Vaughn Betz. Please check out my resume to see more details about my past academic and professional experiences.</p>
-                        <p class="card-text">My focuses of study are Computer Vision, Computer Graphics, and Human-Computer Interaction.</p>
-                        <a href="#" class="btn btn-primary btn-custom"> Check out my video intro </a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Skills: 
-                    </div>
-                </div>
-            </div>
-    </div>
-</section>
-
-<section id="cs-portfolio" class="home-cs-portfolio" style="scroll-margin-top: 5vw;">
-    <div class="card text-center mx-auto cs-projects-card">
-        <div class="card-header">
-            <h2 class="card-title" style="color: white;"> Software/Hardware Projects </h2>
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <h5 class="project-caption">FullMonteWeb</h5>
-                    <div class="cs-gallery zoom">
-                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid gallery-img" alt="">
-                        <a href="{% url 'FullMonteWeb' %}">
-                            <div class="hover-overlay">
-                                <p class="hover-caption">See details</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <h5 class="project-caption">PocketTravel</h5>
-                    <div class="cs-gallery zoom">
-                        <a href="{% url 'PocketTravel' %}">
-                            <img src="{% static 'images/pocket_travel.gif' %}" class="img-fluid gallery-img" alt="">
-                            <div class="hover-overlay">
-                                <p class="hover-caption">See details</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <h5 class="project-caption">Reversi AI</h5>
-                    <div class="cs-gallery zoom">
-                        <a href="{% url 'ReversiAI' %}">
-                            <img src="{% static 'images/reversi_ai.gif' %}" class="img-fluid gallery-img" alt="">
-                            <div class="hover-overlay">
-                                <p class="hover-caption">See details</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <h5 class="project-caption">GunmanJump</h5>
-                    <div class="cs-gallery zoom">
-                        <a href="{% url 'GunmanJump' %}">
-                            <img src="{% static 'images/gunman_mahem.gif' %}" class="img-fluid gallery-img" alt="">
-                            <div class="hover-overlay">
-                                <p class="hover-caption">See details</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <h5 class="project-caption">BubbleMania</h5>
-                    <div class="cs-gallery zoom">
-                        <a href="{% url 'BubbleMania' %}">
-                            <img src="{% static 'images/bubble_mania.gif' %}" class="img-fluid gallery-img" alt="">
-                            <div class="hover-overlay">
-                                <p class="hover-caption">See details</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <h5 class="project-caption">Cycle63</h5>
-                    <div class="cs-gallery zoom">
-                        <a href="{% url 'Cycle63' %}">
-                            <img src="{% static 'images/cycle_63.gif' %}" class="img-fluid gallery-img" alt="">
-                            <div class="hover-overlay">
-                                <p class="hover-caption">See details</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <h5 class="project-caption">TunerPro</h5>
-                    <div class="cs-gallery zoom">
-                        <a href="{% url 'TunerPro' %}">
-                            <img src="{% static 'images/tuner_pro.gif' %}" class="img-fluid gallery-img" alt="">
-                            <div class="hover-overlay">
-                                <p class="hover-caption">See details</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <h5 class="project-caption">Oregon Wildlife Classifier</h5>
-                    <div class="cs-gallery zoom">
-                        <a href="{% url 'OregonWildlifeClassifier' %}">
-                            <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid gallery-img" alt="">
-                            <div class="hover-overlay">
-                                <p class="hover-caption">See details</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="art-portfolio" class="home-art-portfolio" style="scroll-margin-top: 5vw;">
+<section class="home-cs-selected" id="cs-selected" style="padding-top:20vh; scroll-margin-top: 5vw;">
     <div class="card text-center mx-auto art-projects-card">
         <div class="card-header">
-            <h2 class="card-title" style="color: white;"> Visual Arts/Design Projects </h2>
+            <h2 class="card-title" style="color: white;"> Selected Software/Hardware Projects 💻</h2>
+        </div>
+        <div class="card-body">
+            <div class="row d-flex justify-content-center" style="margin-bottom: 2vh;">
+                <div class="col-lg-4 custom-thumbnail">
+                    <div class="card project-card zoom">
+                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid card-img" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">FullMonteWeb</h5>
+                            <p>A blah</p>
+                        </div>
+                        <a href="{% url 'FullMonteWeb' %}">
+                            <div class="hover-overlay"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 custom-thumbnail">
+                    <div class="card project-card zoom">
+                        <img src="{% static 'images/pocket_travel.gif' %}" class="img-fluid card-img" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">FullMonteWeb</h5>
+                            <p>A blah</p>
+                        </div>
+                        <a href="{% url 'PocketTravel' %}">
+                            <div class="hover-overlay"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 custom-thumbnail">
+                    <div class="card project-card zoom">
+                        <img src="{% static 'images/reversi_ai.gif' %}" class="img-fluid card-img" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">FullMonteWeb</h5>
+                            <p>A blah</p>
+                        </div>
+                        <a href="{% url 'ReversiAI' %}">
+                            <div class="hover-overlay"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 custom-thumbnail">
+                    <div class="card project-card zoom">
+                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid card-img" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">FullMonteWeb</h5>
+                            <p>A blah</p>
+                        </div>
+                        <a href="{% url 'OregonWildlifeClassifier' %}">
+                            <div class="hover-overlay"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 custom-thumbnail">
+                    <div class="card project-card zoom">
+                        <img src="{% static 'images/cycle_63.gif' %}" class="img-fluid card-img" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">FullMonteWeb</h5>
+                            <p>A blah</p>
+                        </div>
+                        <a href="{% url 'Cycle63' %}">
+                            <div class="hover-overlay"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <a href="{% url 'cs_projects' %}" class="btn btn-primary btn-custom btn-custom-large" style="margin-top: 4vh;">See all SW/HW projects</a>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<section id="selected-arts" class="home-selected-arts" style="padding-top:20vh; scroll-margin-top: 5vw;">
+    <div class="card text-center mx-auto art-projects-card">
+        <div class="card-header">
+            <h2 class="card-title" style="color: white;">  Selected Artworks 🖌</h2>
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img  src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
-                    </a>
+                <div class="col-lg-4 custom-thumbnail">
+                    <div class="card project-card zoom">
+                        <img  src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="img-fluid card-img"  alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <p>A blah</p>
+                        </div>
+                        <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                            <div class="hover-overlay"></div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <a href="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"  class="fancybox" rel="ligthbox">
-                        <img  src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
-                    </a>
+
+                <div class="col-lg-4 custom-thumbnail">
+                    <div class="card project-card zoom">
+                        <img  src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="img-fluid card-img"  alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <p>A blah</p>
+                        </div>
+                        <a href="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
+                            <div class="hover-overlay"></div>
+                        </a>
+                    </div>
                 </div>
-                
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <a href="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img  src="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
-                    </a>
-                </div>
-                
-                <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <a href="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img  src="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
-                    </a>
-                </div>
-                
-                 <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <a href="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img  src="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
-                    </a>
-                </div>
-                
-                 <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <a href="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img  src="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
-                    </a>
-                </div>
-                
-                 <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <a href="https://images.pexels.com/photos/56005/fiji-beach-sand-palm-trees-56005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img  src="https://images.pexels.com/photos/56005/fiji-beach-sand-palm-trees-56005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
-                    </a>
-                </div>
-                
-                 <div class="col-lg-3 col-md-4 col-xs-6 custom-thumbnail">
-                    <a href="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img  src="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid gallery-img"  alt="">
-                    </a>
+
+                <div class="col-lg-4 custom-thumbnail">
+                    <div class="card project-card zoom">
+                        <img  src="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid card-img"  alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <p>A blah</p>
+                        </div>
+                        <a href="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
+                            <div class="hover-overlay"></div>
+                        </a>
+                    </div>
                 </div>
            </div>
+        </div>
+        <div class="container">
+            <a href="{% url 'art_projects' %}" class="btn btn-primary btn-custom btn-custom-large" style="margin-top: 4vh;">See all artworks</a>
         </div>
     </div>
 </section>
@@ -307,6 +235,37 @@
                 $(this).removeClass('transition');
             });
     });
+
+    $(document).scroll(function() {
+
+        introID = document.getElementById("intro");
+        csID = document.getElementById("cs-selected");
+        artID = document.getElementById("selected-arts");
+
+        var myScrollFunc = function () {
+            var y = window.scrollY;
+            if(y < 600) {
+                introID.className = "home-intro show"
+                csID.className = "home-cs-selected hide"
+                artID.className = "home-selected-arts hide"
+            }
+            else if (y >= 600 && y < 2000) {
+                introID.className = "home-intro hide"
+                csID.className = "home-cs-selected show"
+                artID.className = "home-selected-arts hide"
+            } else if (y >= 2000) {
+                introID.className = "home-intro hide"
+                csID.className = "home-cs-selected hide"
+                artID.className = "home-selected-arts show"
+            } else {
+                introID.className = "home-intro hide"
+                csID.className = "home-cs-selected hide"
+                artID.className = "home-selected-arts hide"
+            }
+        };
+
+        window.addEventListener("scroll", myScrollFunc);
+        });
         
 </script>
 
