@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="project-intro">
+    {% block project_image %}{% endblock %}
+</div>
+
+<section class="project-content" id="project-content">
+    <div class="row no-gutters">
+        <div class="col-sm-2" style="margin-left: 5%;">
+            <nav class="navbar sidebar-nav hide" id="sidebar-menu">
+                <ul class="menu">
+                    {% block sidebar_content %}{% endblock %}
+                </ul>
+            </nav>
+        </div>
+        <div class="col pt-2" style="margin-right: 5%;">
+            {% block project_content %}{% endblock %}
+        </div>
+    </div>
+</section>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script>
+
+    $(document).scroll(function() {
+
+        contentID = document.getElementById("project-content");
+        sidebarID = document.getElementById("sidebar-menu");
+
+        var myScrollFunc = function () {
+            var y = window.scrollY;
+            if(y > contentID.offsetTop - 200 && y < contentID.offsetTop + contentID.offsetHeight - 600) {
+                sidebarID.className = "navbar sidebar-nav show";
+            } else {
+                sidebarID.className = "navbar sidebar-nav hide";
+            }
+        };
+
+        window.addEventListener("scroll", myScrollFunc);
+        });
+        
+</script>
+
+{% endblock %}

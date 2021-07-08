@@ -60,8 +60,8 @@
                     <h1 class="card-title custom-title">
                         I<span>'</span>m Helen<br>Dai<span>.</span>
                     </h1>
-                    <h4 class="card-text" style="margin-top: 2vw; color: #463c35;"><i>H.D. for High Definition Engineer & Designer </i><span style="font-size: smaller">😉</span></h4>
-                    <p class="card-text" style="color: #463c35;">MEng. student in Computer Science @Cornell</p>
+                    <h4 class="card-text" style="margin-top: 2vw; color: #463c35;"><i>A High Definition Software Engineer </i><span style="font-size: smaller">😉</span></h4>
+                    <p class="card-text" style="color: #463c35;">M.Eng. in Computer Science student @Cornell</p>
                     <a href="#cs-portfolio" class="btn btn-primary btn-custom" style="margin-top: 4vh;">See my CS work</a>
                     <a href="#art-portfolio" class="btn btn-primary btn-custom" style="margin-top: 4vh;">See my artworks</a>
                 </div>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="card-body">
                     <p class="custom-card-text" style="text-align: center;">Welcome to my site 😃</p>
-                    <p class="custom-card-text">I am a Computer Engineering graduate from the University of Toronto and an incoming MEng. in Computer Science student at Cornell Tech, Cornell University. I am passionate about technologies and how we interact with them through accessible and creative ways. Feel free to check out some of my selected projects on this site. Happy browsing!</p>
+                    <p class="custom-card-text">I am a Computer Engineering graduate from the University of Toronto and a Master of Engineering in Computer Science student at Cornell Tech, Cornell University. I am passionate about technologies and how we interact with them through accessible and creative ways. Feel free to check out some of my selected projects on this site. Happy browsing!</p>
                     <a href="{% url 'about' %}" class="btn btn-primary btn-custom"> More about me </a>
                 </div>
             </div>
@@ -86,10 +86,10 @@
     </div>
 </section>
 
-<section class="home-cs-selected" id="cs-selected" style="padding-top:20vh; scroll-margin-top: 5vw;">
-    <div class="card text-center mx-auto art-projects-card">
+<section class="home-cs-selected hide" id="cs-selected" style="padding-top:20vh; scroll-margin-top: 5vw;">
+    <div class="card text-center mx-auto project-background-card">
         <div class="card-header">
-            <h2 class="card-title" style="color: white;"> Selected Software/Hardware Projects 💻</h2>
+            <h2 class="card-title" style="color: white;"> Software/Hardware Project Highlights 💻</h2>
         </div>
         <div class="card-body">
             <div class="row d-flex justify-content-center" style="margin-bottom: 2vh;">
@@ -97,7 +97,7 @@
                     <div class="card project-card zoom">
                         <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid card-img" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">FullMonteWeb</h5>
+                            <h5 class="card-title project-title">FullMonteWeb</h5>
                             <p>A blah</p>
                         </div>
                         <a href="{% url 'FullMonteWeb' %}">
@@ -110,7 +110,7 @@
                     <div class="card project-card zoom">
                         <img src="{% static 'images/pocket_travel.gif' %}" class="img-fluid card-img" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">FullMonteWeb</h5>
+                            <h5 class="card-title">PocketTravel</h5>
                             <p>A blah</p>
                         </div>
                         <a href="{% url 'PocketTravel' %}">
@@ -123,7 +123,7 @@
                     <div class="card project-card zoom">
                         <img src="{% static 'images/reversi_ai.gif' %}" class="img-fluid card-img" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">FullMonteWeb</h5>
+                            <h5 class="card-title">Reversi AI</h5>
                             <p>A blah</p>
                         </div>
                         <a href="{% url 'ReversiAI' %}">
@@ -136,7 +136,7 @@
                     <div class="card project-card zoom">
                         <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid card-img" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">FullMonteWeb</h5>
+                            <h5 class="card-title">Oregon Wildlife Classifier</h5>
                             <p>A blah</p>
                         </div>
                         <a href="{% url 'OregonWildlifeClassifier' %}">
@@ -149,7 +149,7 @@
                     <div class="card project-card zoom">
                         <img src="{% static 'images/cycle_63.gif' %}" class="img-fluid card-img" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">FullMonteWeb</h5>
+                            <h5 class="card-title">Cycle 63</h5>
                             <p>A blah</p>
                         </div>
                         <a href="{% url 'Cycle63' %}">
@@ -159,17 +159,17 @@
                 </div>
             </div>
             <div class="container">
-                <a href="{% url 'cs_projects' %}" class="btn btn-primary btn-custom btn-custom-large" style="margin-top: 4vh;">See all SW/HW projects</a>
+                <a href="{% url 'cs_projects' %}" class="btn btn-primary btn-custom btn-custom-large" style="margin-top: 4vh;">See all selected SW/HW projects</a>
             </div>
         </div>
     </div>
     
 </section>
 
-<section id="selected-arts" class="home-selected-arts" style="padding-top:20vh; scroll-margin-top: 5vw;">
-    <div class="card text-center mx-auto art-projects-card">
+<section id="selected-arts" class="home-selected-arts hide" style="padding-top:20vh; scroll-margin-top: 5vw;">
+    <div class="card text-center mx-auto project-background-card">
         <div class="card-header">
-            <h2 class="card-title" style="color: white;">  Selected Artworks 🖌</h2>
+            <h2 class="card-title" style="color: white;">  Artwork Highlights 🖌</h2>
         </div>
         <div class="card-body">
             <div class="row">
@@ -214,7 +214,7 @@
            </div>
         </div>
         <div class="container">
-            <a href="{% url 'art_projects' %}" class="btn btn-primary btn-custom btn-custom-large" style="margin-top: 4vh;">See all artworks</a>
+            <a href="{% url 'art_projects' %}" class="btn btn-primary btn-custom btn-custom-large" style="margin-top: 4vh;">See all selected artworks</a>
         </div>
     </div>
 </section>
@@ -244,23 +244,19 @@
 
         var myScrollFunc = function () {
             var y = window.scrollY;
-            if(y < 600) {
-                introID.className = "home-intro show"
-                csID.className = "home-cs-selected hide"
-                artID.className = "home-selected-arts hide"
+            if(y < introID.offsetTop + introID.offsetHeight - 200) {
+                introID.className = "home-intro show";
+                csID.className = "home-cs-selected hide";
+                artID.className = "home-selected-arts hide";
             }
-            else if (y >= 600 && y < 2000) {
-                introID.className = "home-intro hide"
-                csID.className = "home-cs-selected show"
-                artID.className = "home-selected-arts hide"
-            } else if (y >= 2000) {
-                introID.className = "home-intro hide"
-                csID.className = "home-cs-selected hide"
-                artID.className = "home-selected-arts show"
+            else if (y < csID.offsetTop + csID.offsetHeight - 200) {
+                introID.className = "home-intro hide";
+                csID.className = "home-cs-selected show";
+                artID.className = "home-selected-arts hide";
             } else {
-                introID.className = "home-intro hide"
-                csID.className = "home-cs-selected hide"
-                artID.className = "home-selected-arts hide"
+                introID.className = "home-intro hide";
+                csID.className = "home-cs-selected hide";
+                artID.className = "home-selected-arts show";
             }
         };
 

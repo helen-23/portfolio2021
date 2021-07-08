@@ -1,5 +1,147 @@
-{% extends "base.html" %}
-{% block content %}
-{% load static %}
+{% extends "projects_base.html" %}
 
+{% block project_image %}
+{% load static %}
+    <img class="project-intro-img" src="{% static 'images/PocketTravel/Logo.png' %}" alt="">
+{% endblock %}
+
+{% block sidebar_content %}
+{% load static %}
+    <li><a class="" href="#">Introduction</a></li>
+    <ul class="sub-menu">
+        <li><a class="" href="#">Background</a></li>
+        <li><a class="" href="#">Motivation</a></li>
+    </ul>
+    <li><a class="" href="#">Design</a></li>
+    <ul class="sub-menu">
+        <li><a class="" href="#">Features</a></li>
+        <li><a class="" href="#">Algorithms</a></li>
+        <li><a class="" href="#">My Contributions</a></li>
+    </ul>
+{% endblock %}
+
+{% block project_content %}
+{% load static %}
+    <!-- Title -->
+    <h1>PocketTravel<br><span>A Geographical Information System (GIS) Application</span></h1>
+    <p class="team">Team members: Helen Dai, Vicky Liu, Verna Tian</p>
+
+    <!-- Intro -->
+    <h2>Introduction</h2>
+    <p>Imagine yourself as a backpacker on the streets of a foreign city. You must catch the cruise to take you somewhere else before noon, but now you are hopelessly lost and have no access to the internet. Your only hope is your phone, which contains an application that displays a map of the city with all streets and subway stations. How would you like your map to operate?</p>
+    <p>Our inspiration came from an observation of confused-looking backpackers who crowd in Union Station each day. Many of these people come from other cities to explore and must rely on the subway system to get from place to place. However, a digital map that is detailed but laggy to operate is not always so helpful. Therefore, our team came up with a mapping software that solves this problem for this targeted group of users.</p>
+    <p>All databases used to build this application were provided by the ECE department at the University of Toronto.</p>
+
+    <!-- Features -->
+    <h2>Features</h2>
+
+    <h3>1. Levels of Detail</h3>
+    <section id="grid-id" class="demo-grid">
+        <figure class="subpage-item">
+            <img src="img/PocketTravel/levels_of_details.png" alt="subpage item" width="1000em">
+        </figure>
+        <p>A typical city contains thousands of features, drawing each and every one of these takes time. However we do not necessary need to see so much details all the time. From observations and experiences, we found out that at different zoom levels, users typically use the map for different purposes. At low zoom levels, users are usually looking to collect large scale data, such as the coverage of large lakes in Toronto. Buildings and streets can barely be seen, so we don’t draw the detailed information. At a slightly higher zoom level, highways and major streets can be clearly identified yet other streets are still difficult to see, so we only draw the highways and main roads for users to plan out long-distance trips. Zooming in, we start drawing all the small roads in between. Because we are following this user psychology, not only have we made the map more efficient, but also more predictable for the user during navigation.</p>    
+    </section>
+
+    <h3>2. Change Maps</h3>
+    <section id="grid-id" class="demo-grid">
+        <figure class="subpage-item">
+            <img src="img/PocketTravel/change_map.gif" alt="subpage item" width="1000em">
+        </figure>
+        <p>One key feature of this applications is that it supports maps of 19 major cities from different countries worldwide. On the side bar, click on “change maps” to summon up a window with a list of those cities. The user can select the desired city and the corresponding map will be automatically loaded to the screen. Here is a short demo of the process. We have chosen to keep the graphics interface at a minimal so that it saves drawing time and is easy to read. Typical cities are loaded within 2 seconds and more complex ones, such as Tokyo, can be loaded within 30 seconds. </p>
+    </section>
+
+    <h3>3. Search Bar with Auto Complete</h3>
+    <section id="grid-id" class="demo-grid">
+        <figure class="subpage-item">
+            <img src="img/PocketTravel/autocomplete.gif" alt="subpage item" width="1000em">
+        </figure>
+        <p>By clicking "Find" button, a search bar will show up at the top left corner of the map. Users can use it to search the intersection of two different streets. Users should first type in two street names with comma between them and then press return. PocketTravel can quickly find their intersection and then zoom in to that intersection and highlighted it. We have also implemented the auto complete feature for the search bar, so users just need to type in the first few characters and press tab to select the full street names. Finally, this search will be recorded into the history for users to recall at a later time.</p>
+    </section>
+
+    <h3>4. Search History</h3>
+    <section id="grid-id" class="demo-grid">
+        <figure class="subpage-item">
+            <img src="img/PocketTravel/search_history.gif" alt="subpage item" width="1000em">
+        </figure>
+        <p>By using the search bar or by click on an intersection, this search will be recorded into the history for users to recall at a later time, located at the bottom right side of the screen.</p>
+    </section>
+
+    <h3>5. Best Route Planning</h3>
+    <p>Users can get the directions between two intersections on the map by clicking on two points on the map, by searching for two intersections, or by a combination of both. The shortest route will be highlighted and users can see step-by-step instructions in writing at the bottom of the screen. Users can also click on multiple points on the map for a multi-stop direction planning.</p>
+    <div class="figure_container">
+        <img src="img/PocketTravel/direction_search.gif" alt="subpage item" width="770em">
+        <img src="img/PocketTravel/directions_click.gif" alt="subpage item" width="770em">
+    </div>
+
+    <h3>6. Points of Interest (POI)</h3>
+    <section id="grid-id" class="demo-grid">
+        <figure class="subpage-item">
+            <img src="img/PocketTravel/hover_mouse.gif" alt="subpage item" width="1000em">
+        </figure>
+        <p>We use different colors to represent different types of POIs. When hovering over a POI, users are able to see its name on screen. These features help backpackers finding a specific location easier.</p>
+    </section>
+
+    <h3>7. Subway</h3>
+    <p>By clicking the "Show Subway" button, subway lines will show up on the map. Different lines are in different colors, and when zoomed in to a certain level, small icons will become visible to indicate the location of each subway station.</p>
+    <div class="figure_container">
+        <img src="img/PocketTravel/subway.jpeg" alt="subpage item" width="770em">
+        <img src="img/PocketTravel/subway_icons.jpg" alt="subpage item" width="770em">
+    </div>
+
+    <!-- Algorithms -->
+    <h2>Algorithms</h2>
+
+    <h3>Nearest Intersection – K-D Tree</h3>
+    <p>Our algorithm snaps the user’s mouse input coordinates to the nearest intersection by using a k-d Tree, which divides the intersections into sections according to their x and y coordinates,  alternately simplifying the search by avoiding points that it are unworthy in visiting. To build the tree, steps are as follows:</p>
+    <ol>
+        <li class="list">pick the point in the middle of the horizontal axis (shown in red), set it as the head node</li>
+        <li class="list">nodes on the left branch of the head node correspond to the points on the left side of the red line and nodes on the right branch correspond to the right side</li>
+        <li class="list">from each side, we pick the point in the middle of the vertical axis and add them as the child node of the head node</li>
+        <li class="list_last">repeat this with alternating vertical and horizontal divisions until all the nodes have been placed on the tree and the map has been divided into sections</li>
+    </ol>
+    <p>A naïve way to find the nearest intersection would be to loop through all the intersections and compare them against the intersection of interest, which is very slow. For a k-d tree, we can simplify this process. To find the nearest intersection from the tree, steps are as follows:</p>
+    <ol>
+        <li class="list">given a point, traverse through the k-d tree by alternating the comparison between its x coordinate to a node’s x coordinate and its y coordinate to a node’s y coordinate (i.e. compare the point’s x coordinate with the head node, then compare the point’s y coordinate with the y coordinate of one of the nodes in the next level, and so on)</li>
+        <li class="list_last">once arrived at a leaf node, first calculate the Euclidean distance between the given point and the leaf node, then for this particular example below, get the leaf node’s parent node and calculate the distance between the given point and the horizontal line that passes through the parent node. If the distance to the leaf node is shorter than the distance to the line, then there is no need to check the node on the other side of  the parent node</li>
+    </ol>
+    <p>That's how the k-d tree avoids the points that are unworthy of visiting. As shown on the graph, the naïve search algorithm becomes slower as more points are being searched, but using k-d Tree, this algorithm does slow down as drastically, instead, it stays at around 0.</p>
+    <div class="figure_container">
+        <img src="img/PocketTravel/kd_tree.gif" alt="subpage item" width="770em">
+        <img src="img/PocketTravel/kd_tree_improvement.png" alt="subpage item" width="770em">
+    </div>
+
+    <h3>Auto Complete – Trie Tree</h3>
+    <p>We have chosen to use the trie tree because it produces a time complexity of O(n) at runtime. The tree only had to be built once: the first level of the tree is the first letter of the street names, from A to Z, the second level is the second letter, and so on. A continuous path to the end in the tree is a full street name. There is a flag in each node to indicate if it is the end of the word.</p>
+    <div class="figure_container">
+        <img src="img/PocketTravel/trie.gif" alt="subpage item" width="770em">
+    </div>
+
+    <h3>Best Route (Travelling Salesman Problem) – Dijkstra’s vs A*</h3>
+    <p>
+        To find the cheapest path between two intersections, we used the A* algorithm, which is similar to the Dijkstra's algorithm, but uses heuristics to find the solutions faster.<br><br>
+        For Dijkstra's, we would first set the score of the source to 0, and others to infinity, labeling the scores as f(n). We would then update the score of every adjacent point of the source point to the cost of the cheapest path traveling from the source point, and push the adjacent points to a priority queue. When choosing the next point to visit from the priority queue, we would always visit the point with lowest f(n), and the process goes on until we reach the destination. A demonstration of the algorithm is shown below.<br><br>
+        How A* differs from Dijkstra's is that when it chooses the next point to visit from the priority queue, instead of choosing the point with the lowest cost, g(n), it also takes a heuristic factor, h(n), into consideration. That is, the heuristic that estimate the cost of the cheapest path from the point to the destination, which may result in choosing a point that is not the cheapest to go to for that segment, but will ultimately lead to the optimal destination faster.<br><br>
+        The image on the right compares the visited nodes for the A* algorithm and for the Dijkstra's algorithm. The yellow path is the path we found, and the purple points are the nodes we visit during the search. It is obvious that the number of points A* visited is much less than that of Dijkstra's (a spread-out circular region vs a more directed oval region). This means that A* significantly speeds up the path the searching process.
+    </p>
+    <div class="figure_container">
+        <img src="img/PocketTravel/dijkstra.gif" alt="subpage item" width="500em">
+        <img src="img/PocketTravel/dijkstra_vs_astar.jpg" alt="subpage item" width="770em">
+    </div>
+
+    <h3>Multi-Destination Planning – Greedy, Two-Opt, and Simulated Annealing</h3>
+    <p>
+        For multi-destination planning, we first used the greedy algorithm, where we chose a random starting point and then fetch the nearest destination as the next point to visit until we visit all the destinations. However, the paths that greedy found are not good enough because it always gets stuck at a local minimum, so we wanted to find a way to jump out of local minimum and eventually reach the global minimum.<br><br>
+        Once an “optimal” path is found from greedy, using 2-opt, we cut the path into 3 pieces and then we reconnect the three path segments. We created 12 different types of recombination in total. In addition to this, we also implemented simulated annealing. At first the temperature is high, and it will accept the solution in a large range, so the possibility of getting a worse solution than the local minimum is high. However, the temperature will adjust and decrease over time ,so that it will gradually narrow down to near where the global minimum is. This resulted in an average of 8196 seconds traveling time decrease for the paths found.
+    </p>
+    <div class="figure_container">
+        <img src="img/PocketTravel/greedy.gif" alt="subpage item" width="500em">
+        <img src="img/PocketTravel/2opt.gif" alt="subpage item" width="500em">
+        <img src="img/PocketTravel/annealing.PNG" alt="subpage item" width="500em">
+    </div>
+    <p><br>To further optimize for the final competition, we chose to implement multi-start with multithread. Since we were running on a 8-core processor for the competition portion of this project, we decided to choose the best 8 solutions obtained from the greedy search, loop through each as a candidate starting point on a separate thread, then so two-opt and simulated annealing simultaneously on each candidate. We ended up with an additional improvement of 4422 seconds decrease in average traveling time.</p>
+    <div class="figure_container">
+        <img src="img/PocketTravel/multithread.PNG" alt="subpage item" width="770em">
+        <img src="img/PocketTravel/multithread_improvement.png" alt="subpage item" width="770em">
+    </div>
 {% endblock %}
