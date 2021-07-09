@@ -9,6 +9,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -16,7 +17,10 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 14pt;
     background-color: white;
+}
 
+.scrollspy-body {
+    position: relative;
 }
 
 img {
@@ -82,6 +86,25 @@ img {
 .custom-card-text {
     text-align: left;
     line-height: 1 !important;
+}
+/* 
+mark {
+    background: #f3f2ce;
+    border-radius: 12px;
+    padding: 0 0;
+} */
+
+mark {
+    background: linear-gradient(to right, rgba(255,255,255,0) 50%, #f3f2ce 50%);
+    background-position: -0% 0;
+    background-size: 200% auto;
+    transition: background-position 1s ease-out;
+    border-radius: 12px;
+    padding: 0 0;
+}
+
+mark.start {
+    background-position: -99.99% 0;
 }
 
 /* nav bar
@@ -353,18 +376,169 @@ img.gallery-img {
     margin: 0;
     top: 50%;
     transform: translateY(-50%);
-    padding: 0;
-    list-style: none;
+    padding-left: 10px;
     transition: all .5s;
-}
-
-.sidebar-nav .menu,
-.sidebar-nav .sub-menu {
-    list-style: none;
 }
 
 .sidebar-nav a {
     color: #778e90;
+}
+
+.nav-pills .nav-link {
+    font-weight: 400;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: transparent !important;
+    color: #778e90;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: #f3e2ce;
+}
+
+.team-info-card {
+    max-width: 50%;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    background-color: #b3c0b9;
+}
+
+.team-info-card p {
+    color: white !important;
+    font-size: 12pt;
+    line-height: 1;
+}
+
+.description-textbox {
+    width: 90%;
+    margin: 0 0 10% 0
+}
+
+.description-textbox h1{
+    color: #778e90;
+    margin: 0, auto;
+    margin-top: 1em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.description-textbox span {
+    font-size: 20pt;
+}
+
+.description-textbox h4 {
+    text-decoration: underline;
+    text-decoration-thickness: 9px;
+    text-decoration-color: #d8dfd6;
+    color: rgb(94, 92, 92);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.description-textbox p {
+    font-size: 12pt;
+    color: rgb(94, 92, 92);
+}
+
+.description-textbox .list {
+    font-size: 12pt;
+    color: rgb(94, 92, 92);
+}
+
+.description-textbox mark {
+    color: rgb(94, 92, 92);
+}
+
+.main-section {
+    margin: 0 0 10% 0
+}
+
+.sub-section {
+    margin: 0 0 5% 0
+}
+
+.page {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.page .titlebar {
+    background-color: #ededed;
+    height: 28px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    position: relative;
+}
+    
+.page .titlebar .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 7px;
+}
+
+.page .titlebar .closes {
+    background-color: #ef6866;
+}
+
+.page .titlebar .minimise {
+    background-color: #f5ed49;
+}
+
+.page .titlebar .maximise {
+    background-color: #89c665;
+}
+
+.page .titlebar .location {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 65%;
+    text-align: center;
+    font-size: 10px;
+    margin: 0;
+}
+
+.page .spacer {
+    height: 400px;
+}
+
+.sub-section .img {
+    width: 100%;
+    height: auto;
+}
+
+.section-element {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.element-box {
+    height: auto;
+}
+
+.figure_container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.figure_container img {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    max-width: 60%;
+    border-radius: 6px;
+    margin-bottom: 20px;
 }
 
 /* contact/footer

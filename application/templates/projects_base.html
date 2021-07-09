@@ -1,26 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
-<div class="project-intro">
-    {% block project_image %}{% endblock %}
-</div>
-
-<section class="project-content" id="project-content">
-    <div class="row no-gutters">
-        <div class="col-sm-2" style="margin-left: 5%;">
-            <nav class="navbar sidebar-nav hide" id="sidebar-menu">
-                <ul class="menu">
-                    {% block sidebar_content %}{% endblock %}
-                </ul>
-            </nav>
-        </div>
-        <div class="col pt-2" style="margin-right: 5%;">
-            {% block project_content %}{% endblock %}
-        </div>
+<body scrollspy-body data-spy="scroll" data-target="#sidebar-menu" data-offset="200">
+    <div class="project-intro">
+        {% block project_image %}{% endblock %}
     </div>
-</section>
+
+    <section class="project-content" id="project-content">
+        <div class="row no-gutters">
+            <div class="col-sm-2" style="margin-left: 5%;">
+                <nav class="navbar sidebar-nav hide" id="sidebar-menu">
+                    <ul class="nav nav-pills flex-column">
+                        {% block sidebar_content %}{% endblock %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="col pt-2" style="margin-right: 5%;">
+                <div class="description-textbox">
+                    {% block project_content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
 
     $(document).scroll(function() {
@@ -38,7 +45,22 @@
         };
 
         window.addEventListener("scroll", myScrollFunc);
+    });
+
+    $(window).scroll(function () {
+        var docViewTop = $(window).scrollTop() + 100;
+        var docViewBottom = docViewTop + $(window).height();
+
+        $( "mark" ).each(function(){
+            var elemTop = $(this).offset().top;
+            var elemBottom = elemTop + $(this).height();
+            if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)) {
+                $(this).addClass('start');
+            } else {
+                $(this).removeClass('start');
+            }
         });
+    });
         
 </script>
 
