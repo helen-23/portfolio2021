@@ -19,10 +19,6 @@ body {
     background-color: white;
 }
 
-.scrollspy-body {
-    position: relative;
-}
-
 img {
     /* set max width for images so they don't run off the screen */
     margin: 0, auto;
@@ -409,7 +405,8 @@ img.gallery-img {
 .team-info-card p {
     color: white !important;
     font-size: 12pt;
-    line-height: 1;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
 .description-textbox {
@@ -513,9 +510,14 @@ img.gallery-img {
     height: 400px;
 }
 
-.sub-section .img {
-    width: 100%;
-    height: auto;
+.desc-image {
+    min-width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.page .desc-image {
+    min-width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
 }
 
 .section-element {
@@ -534,7 +536,7 @@ img.gallery-img {
     margin-bottom: 40px;
 }
 
-.figure_container img {
+.figure_container .desc-image {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     max-width: 60%;
     border-radius: 6px;

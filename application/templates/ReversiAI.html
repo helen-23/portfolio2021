@@ -3,24 +3,175 @@
 {% block project_image %}
 {% load static %}
     <img class="project-intro-img" src="{% static 'images/PocketTravel/Logo.png' %}" alt="">
+    <h2>A Reversi (Orthello) Chess Game AI</h2>
 {% endblock %}
 
 {% block sidebar_content %}
 {% load static %}
-    <li><a class="" href="#">Introduction</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Team</a></li>
-        <li><a class="" href="#">Motivation</a></li>
-    </ul>
-    <li><a class="" href="#">Design</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Features</a></li>
-        <li><a class="" href="#">Algorithms</a></li>
-        <li><a class="" href="#">My Contributions</a></li>
-    </ul>
+    <li class="nav-item active">
+        <a class="nav-link" href="#intro-section">Introduction</a>
+    </li>
+    <nav class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#bg-subsection">Background</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#rules-subsection">Game Play</a>
+        </li>
+    </nav>
+    <li class="nav-item">
+        <a class="nav-link" href="#implementation-section">Implementation</a>
+    </li>
+    <nav class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#graphics-subsection">Graphics</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#algo-subsection">Algorithms</a>
+        </li>
+    </nav>
 {% endblock %}
 
 {% block project_content %}
 {% load static %}
+    <div class="card text-center mx-auto team-info-card">
+        <div class="card-body">
+            <p><b>Duration:</b> March 2017 - Apr 2017 (1 month) </p>
+            <p><b>Skills/Tools:</b> C, SFML </p>
+            <p><b>Outcome:</b> 3rd Place in the UofT Reversi AI Challenge </p>
+        </div>
+    </div>
 
+    <!-- Intro -->
+    <section class="main-section" id="intro-section">
+        <h1>Introduction</h1>
+        <!-- Background -->
+        <section class="sub-section" id="bg-subsection">
+            <h4>Background</h4>
+            <p>Reversi, an older version of Othello, is a strategy game played by two players on an 8 x 8 grid board. One side plays white tiles, the other side plays black tiles, and they take turns placing their tiles in a way such that they can flip as many of their opponent’s tiles as possible. My task was to develop an AI to play against human players and other AIs.</p>
+        </section>
+        <!-- Game Play -->
+        <section class="sub-section" id="rules-subsection">
+            <h4>Game Play</h4>
+            <p>
+                Diagrams below show a sequence of possible positions and moves in a game of Reversi. The game starts off with two white and two black tiles placed in advance at the centre, as shown in the first diagram. The Black piece always goes first.<br><br>
+                To be considered as a valid move for the next player, <mark>there must be a continuous straight line of the opponent’s tiles in at least one of the eight directions from the candidate empty position (North, South, East, West, and diagonals), and there must be a tile of the player’s colour
+                already placed at the position immediately following the continuous straight line</mark>. Upon makiing a valid move, all of the opponent’s tiles along this straight line are flipped to the player’s colour.<br><br>
+                In the second diagram below, all of the candidate positions for White’s next move are shown shaded. <mark>If the White player decides to play at row c, column a, the Black tile at row c, column b is flipped</mark> and the board looks like what is shown in the third diagram.<br><br>
+            </p>
+            <div class="row section-element">
+                <div class="col-lg-4 my-auto">
+                    <a href="{% static 'images/ReversiAI/initial_board.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/initial_board.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+                <div class="col-lg-4 my-auto">
+                    <a href="{% static 'images/ReversiAI/white_canidate.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/white_canidate.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+                <div class="col-lg-4 my-auto">
+                    <a href="{% static 'images/ReversiAI/white_first_move.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/white_first_move.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+            <p>
+                Now, The Black player's candidate moves are shown in the first diagram below, and the next diagram shows the resulting board if the Black player lays a tile at (b, a).<br><br>
+                Finally, if the White player lays a tile at (a, c) the board appears like what is shown in the third diagram below.<br><br>
+                The players continue to take turns until someone has no more available moves, in which case <mark>the only player with an available move is allowed to keep making moves until a move becomes available for the opponent</mark>. At this point, the opponent is allowed to take a turn and the alternating turns between the players resume. <mark>The game ends when either: 1) the entire board is full, or 2) neither player has an available move</mark>.
+            </p>
+            <div class="row section-element">
+                <div class="col-lg-4 my-auto">
+                    <a href="{% static 'images/ReversiAI/black_canidate.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/black_canidate.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+                <div class="col-lg-4 my-auto">
+                    <a href="{% static 'images/ReversiAI/black_first_move.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/black_first_move.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+                <div class="col-lg-4 my-auto">
+                    <a href="{% static 'images/ReversiAI/white_second_move.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/white_second_move.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Implementation -->
+    <section class="main-section" id="implementation-section">
+        <h1>Implementation</h1>
+        <!-- Graphics -->
+        <section class="sub-section" id="graphics-subsection">
+            <h4>Game Graphics</h4>
+            <p>This project was originally written in C and was intended for command line execution, but just for fun, I made a GUI using the Simple and Fast Multimedia Library (SFML). In this demo, the computer player plays the white piece and the human player plays the black piece.</p>
+            <div class="figure_container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IQFDgQufLyI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <!-- Algorithms -->
+        <section class="sub-section" id="algo-subsection">
+            <h4>Computer Player (AI) Implementation</h4>
+            <p><b>1. Naïve Solution (Basic Implementation)</b></p>
+            <p>At every computer’s turn, loop through the entire board to find all of computer’s current available moves. For each available move, count the number of the opponent’s tiles the computer can flip for that position, we call this the “score” of the move. Finally, find the maximum score out of all the available moves and place the tile there.</p>            
+            
+            <p><b>2. Board of Factors</b></p>
+            <div class="row section-element">
+                <div class="col-lg-8 my-auto vertical-center">
+                    <p><mark>Corners are the best spots!</mark> Once a player takes over a corner, the opponent can never flip that piece, and the player can also use it to trap the opponent’s pieces along three directions. Similarly, <mark>the three spots directly adjacent to each corner are the worst spots</mark> because they can lead the opponent to the corners. Taking advantage of these cases, I made an array of factors to represent how favorable each spot on the board is, as shown on the right.</p>
+                </div>
+                <div class="col-lg-4 my-auto">
+                    <a href="{% static 'images/ReversiAI/factor_board.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/factor_board.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+            <div class="row section-element">
+                <div class="col-lg-4 my-auto">
+                    <a href="{% static 'images/ReversiAI/score_before_factor.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/score_before_factor.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+                <div class="col-lg-8 my-auto vertical-center">
+                    <p>The diagram below shows an example board (I use W to represent white tiles, and B to represent black tiles). The board is initialized with the initial setup and the scores for all other positions are initialized to -1. The highlighted entries are candidate entries for the white player, and we can see that all the possible valid positions have a score of 1 (flipping one of the black pieces).</p>
+                </div>
+            </div>
+            <div class="row section-element">
+                <div class="col-lg-8 my-auto vertical-center">
+                    <p>Now, multiply each score by its corresponding factor, and we will be able to differentiate between the choices. <mark>In this case, the top right corner is the best choice</mark>.</p>
+                </div>
+                <div class="col-lg-4 my-auto">
+                    <a href="{% static 'images/ReversiAI/score_after_factor.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/score_after_factor.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+
+            <p><b>3. Minmax Algorithm</b></p>
+            <p>After some initial research, I decided to implement the minmax algorithm for better decision making. At each move, my algorithm computes for <mark>both its own possibilities and the opponent's next best move to predict four steps ahead</mark>. The process is better described in the diagram below.</p>
+            <div class="row section-element">
+                <div class="col-lg-8 my-auto" style="margin: 20px auto;">
+                    <a href="{% static 'images/ReversiAI/minmax.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/minmax.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+
+            <p><b>4. Alpha-Beta Pruning</b></p>
+            <p>The Minmax algorithm has redundant steps, which takes up runtime. With additional research, I decided to implement Alpha-Beta pruning as an improvement. The difference is that <mark>we can abandon positions that are obviously worse than another candidate position earlier on in the process</mark>. The following diagram describes my implementation in details.
+                The reason why this works is because we are <mark>assuming that the opponent is at least as smart as we are</mark>.
+            </p>
+            <div class="row section-element">
+                <div class="col-lg-7 my-auto" style="margin: 20px auto;">
+                    <a href="{% static 'images/ReversiAI/alphabeta.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/ReversiAI/alphabeta.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
+        
 {% endblock %}

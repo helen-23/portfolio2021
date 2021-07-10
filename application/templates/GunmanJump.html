@@ -3,24 +3,147 @@
 {% block project_image %}
 {% load static %}
     <img class="project-intro-img" src="{% static 'images/PocketTravel/Logo.png' %}" alt="">
+    <h2>A Single/Multiplayer Platform Shooting Game</h2>
 {% endblock %}
 
 {% block sidebar_content %}
 {% load static %}
-    <li><a class="" href="#">Introduction</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Team</a></li>
-        <li><a class="" href="#">Motivation</a></li>
-    </ul>
-    <li><a class="" href="#">Design</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Features</a></li>
-        <li><a class="" href="#">Algorithms</a></li>
-        <li><a class="" href="#">My Contributions</a></li>
-    </ul>
+    <li class="nav-item active">
+        <a class="nav-link" href="#intro-section">Introduction</a>
+    </li>
+    <nav class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#bg-subsection">Background</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#rules-subsection">Game Play</a>
+        </li>
+    </nav>
+    <li class="nav-item">
+        <a class="nav-link" href="#design-section">Design</a>
+    </li>
 {% endblock %}
 
 {% block project_content %}
 {% load static %}
+    <div class="card text-center mx-auto team-info-card">
+        <div class="card-body">
+            <p><b>Duration:</b> Mar 2016 - Apr 2016 (1 month) </p>
+            <p><b>Skills/Tools:</b> ActionScript3 </p>
+        </div>
+    </div>
 
+    <!-- Intro -->
+    <section class="main-section" id="intro-section">
+        <h1>Introduction</h1>
+        <!-- Background -->
+        <section class="sub-section" id="bg-subsection">
+            <h4>Background</h4>
+            <p>Gunman Jump is a video game inspired by Doodle Jump and Gun Mayhem. I wrote this game in Grade 12 using Actionscript3, and since this is a personal project, I have uploaed all source code on GitHub. Portal to the code is <a href="https://github.com/helen-23/GunmanJump/">here</a>. Below are two short demos I recorded for the game. On the left is a video walkthrough for the single player mode, and on the right is for multiplayer mode.</p>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto">
+                    <iframe width="100%" height="260" src="https://www.youtube.com/embed/b61huHCox3c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <iframe width="100%" height="260" src="https://www.youtube.com/embed/pGhQJfQgf34" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- Game Play -->
+        <section class="sub-section" id="rules-subsection">
+            <h4>Game Play</h4>
+            <p>In the traditional Doodle Jump game, the aim is to guide the main character up a never-ending series of platforms without falling. In Gun Mayhem, the task is to destroy all enemies by shooting them down a stationary platform. Gunman Jump is a combination of the two, so the player’s goal is to stay on the platform by jumping up the levels as the platforms move down, while also avoiding bullets that will nudge the player off the platforms.</p>
+        </section>
+    </section>
+
+    <!-- Design -->
+    <section class="main-section" id="design-section">
+        <h1>Design</h1>
+        <div class="row section-element">
+            <div class="col-lg-6 my-auto">
+                <div class="page">
+                    <div class="titlebar">
+                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div>
+                    </div>
+                    <a href="{% static 'images/GunmanJump/main_page.gif' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/GunmanJump/main_page.gif' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 my-auto vertical-center">
+                <p>The main page provides two game options: single player mode and multi-player mode.</p>
+            </div>
+        </div>
+        <div class="row section-element">
+            <div class="col-lg-6 my-auto vertical-center">
+                <p>In single player mode, there are randomly positioned cannons on parts of the platforms, and they will periodically shoot bullets in fixed directions, so the player should avoid being shot while moving his or her way up.</p>
+            </div>
+            <div class="col-lg-6 my-auto">
+                <div class="page">
+                    <div class="titlebar">
+                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div>
+                    </div>
+                    <a href="{% static 'images/GunmanJump/single_player.gif' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/GunmanJump/single_player.gif' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row section-element">
+            <div class="col-lg-6 my-auto">
+                <div class="page">
+                    <div class="titlebar">
+                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div>
+                    </div>
+                    <a href="{% static 'images/GunmanJump/multi_player.gif' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/GunmanJump/multi_player.gif' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 my-auto vertical-center">
+                <p>In multiplayer mode, the game can support up to three players, and each player’s task is to nudge the enemies off the platform by shooting at them.</p>
+            </div>
+        </div>
+            
+        <p>A fun feature of the game I have decided to implement is the customization of characters. At the start of the game, it will prompt the player(s) to enter a name and to pick a costume. It will also ask the player(s) to specify the number of lives for each player in the round. After entering the game, each player can be revived up to the number of lives specified.</p>
+        <div class="row section-element">
+            <div class="col-lg-6 my-auto">
+                <div class="page">
+                    <div class="titlebar">
+                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div>
+                    </div>
+                    <a href="{% static 'images/GunmanJump/single_player_setup.gif' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/GunmanJump/single_player_setup.gif' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 my-auto">
+                <div class="page">
+                    <div class="titlebar">
+                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div>
+                    </div>
+                    <a href="{% static 'images/GunmanJump/multi_player_setup.gif' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/GunmanJump/multi_player_setup.gif' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row section-element">
+            <div class="col-lg-6 my-auto">
+                <p>Each time when a player shoots someone off the platforms in multiplayer mode, that player will be awarded with points. When the game ends (only one player left standing), the game will switch to a leaderboard view with the history scores of all existing players in descending order of scores.</p>
+            </div>
+            <div class="col-lg-6 my-auto">
+                <div class="page">
+                    <div class="titlebar">
+                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div>
+                    </div>
+                    <a href="{% static 'images/GunmanJump/leaderboard.png' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/GunmanJump/leaderboard.png' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+        
 {% endblock %}

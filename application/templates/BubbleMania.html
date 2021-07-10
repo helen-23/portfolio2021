@@ -3,24 +3,132 @@
 {% block project_image %}
 {% load static %}
     <img class="project-intro-img" src="{% static 'images/PocketTravel/Logo.png' %}" alt="">
+    <h2>A Tile-Matching Arcade Puzzle Video Game</h2>
 {% endblock %}
 
 {% block sidebar_content %}
 {% load static %}
-    <li><a class="" href="#">Introduction</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Team</a></li>
-        <li><a class="" href="#">Motivation</a></li>
-    </ul>
-    <li><a class="" href="#">Design</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Features</a></li>
-        <li><a class="" href="#">Algorithms</a></li>
-        <li><a class="" href="#">My Contributions</a></li>
-    </ul>
+    <li class="nav-item active">
+        <a class="nav-link" href="#intro-section">Introduction</a>
+    </li>
+    <nav class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#bg-subsection">Background</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#rules-subsection">Game Play</a>
+        </li>
+    </nav>
+    <li class="nav-item">
+        <a class="nav-link" href="#design-section">Design</a>
+    </li>
+    <nav class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#game-subsection">Game Page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#algo-subsection">Algorithm</a>
+        </li>
+    </nav>
 {% endblock %}
 
 {% block project_content %}
 {% load static %}
+    <div class="card text-center mx-auto team-info-card">
+        <div class="card-body">
+            <p><b>Duration:</b> Mar 2015 - Apr 2015 (1 month) </p>
+            <p><b>Skills/Tools:</b> ActionScript3 </p>
+        </div>
+    </div>
 
+    <!-- Intro -->
+    <section class="main-section" id="intro-section">
+        <h1>Introduction</h1>
+        <!-- Background -->
+        <section class="sub-section" id="bg-subsection">
+            <h4>Background</h4>
+            <p>BubbleMania is a clone of the Puzzle Bobble video game from 1994. I wrote this game in Grade 11 using self-taught ActionScript3, and since this is a personal project, I have uploaded all source code on GitHub. Portal to the code is <a href="https://github.com/helen-23/Bubble-Mania/">here</a>. Below is also a short demo of the game I recorded:</p>
+            <div class="figure_container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6TwOIJlNFVM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <!-- Game Play -->
+        <section class="sub-section" id="rules-subsection">
+            <h4>Game Play</h4>
+            <p>The task of the game is to clear the arena by forming groups of three or more like-colored bubbles, and to do that, the player must aim a new bubble towards a cluster of bubbles in the arena.</p>
+        </section>
+    </section>
+
+    <!-- Design -->
+    <section class="main-section" id="design-section">
+        <h1>Design</h1>
+        <section class="sub-section" id="game-subsection">
+            <h4>Game Page</h4>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto vertical-center">
+                    <p>The main page provides several options: choose theme, play game, and scoreboard.</p>
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <div class="page">
+                        <div class="titlebar">
+                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div>
+                        </div>
+                        <a href="{% static 'images/BubbleMania/moving_intro.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/BubbleMania/moving_intro.gif' %}" alt="subpage item">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto">
+                    <div class="page">
+                        <div class="titlebar">
+                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div>
+                        </div>
+                        <a href="{% static 'images/BubbleMania/choose_theme.png' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/BubbleMania/choose_theme.png' %}" alt="subpage item">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 my-auto vertical-center">
+                    <p>Theme selection page lets you choose the background theme.</p>
+                </div>
+            </div>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto vertical-center">
+                    <p>At the start of each round, the top five rows of the playing arena is occupied by a prearranged pattern of colored bubbles. Down the center of the screen, there is a standalone bubble waiting to be launched. A player can click in a direction and the bubble will be shot upwards in a straight line following that direction. The task of the game is to clear the arena by forming groups of three or more like-colored bubbles, and to do that, the player must aim a new bubble towards a cluster of bubbles in the arena. The player has 2 minutes to clear all the bubbles without any bubbles crossing the bottom line. </p>
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <div class="page">
+                        <div class="titlebar">
+                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div>
+                        </div>
+                        <a href="{% static 'images/BubbleMania/short_demo.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/BubbleMania/short_demo.gif' %}" alt="subpage item">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto">
+                    <div class="page">
+                        <div class="titlebar">
+                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div>
+                        </div>
+                        <a href="{% static 'images/BubbleMania/score.PNG' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/BubbleMania/score.PNG' %}" alt="subpage item">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 my-auto vertical-center">
+                    <p>Theme selection page lets you choose the background theme.</p>
+                </div>
+            </div>
+        </section>
+        <section class="sub-section" id="algo-subsection">
+            <h4>Algorithm</h4>
+            <p>Breadth First Search is used for detecting whether the new bubble is directly adjacent to any like-colored bubbles in the arena. There are five types of colored bubbles in BubbleMania: white, yellow, cyan, blue, and red. The entire playing arena is represented by a 2D array and the first five rows are initialized with a set of bubbles in randomly generated colors. All new bubbles that show up at the bottom of the screen are also randomly generated once a previous one is fired. When a new bubble is launched, keep track of its position (x and y coordinates) and map it to the corresponding entry in the 2D array. When it reaches an entry that is adjacent to one or more entries that are already occupied by a bubble, then this new bubble is snapped to the position of the nearest array entry using Euclidean distance. Finally, BFS is used to search all adjacent bubbles for matching colors. If a cluster of like-colored bubbles are identified, the entire cluster is “popped” and cleared from the screen.</p>
+        </section>
+    </section>
+        
 {% endblock %}

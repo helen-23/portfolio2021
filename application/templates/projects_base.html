@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
-<body scrollspy-body data-spy="scroll" data-target="#sidebar-menu" data-offset="200">
+<body class="scrollspy-body" data-spy="scroll" data-target="#sidebar-menu" data-offset="200">
     <div class="project-intro">
         {% block project_image %}{% endblock %}
     </div>
@@ -24,7 +24,6 @@
     </section>
 </body>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -62,6 +61,18 @@
         });
     });
         
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none",
+                autoScale: true,
+                minHeight: 600
+            });
+    });  
 </script>
 
 {% endblock %}

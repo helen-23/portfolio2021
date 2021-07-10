@@ -6,23 +6,6 @@
     <h2>A Geographical Information System (GIS) Application</h2>
 {% endblock %}
 
-<nav id="navbar-example3" class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <nav class="nav nav-pills flex-column">
-      <a class="nav-link" href="#item-1">Item 1</a>
-      <nav class="nav nav-pills flex-column">
-        <a class="nav-link ml-3 my-1" href="#item-1-1">Item 1-1</a>
-        <a class="nav-link ml-3 my-1" href="#item-1-2">Item 1-2</a>
-      </nav>
-      <a class="nav-link" href="#item-2">Item2</a>
-      <a class="nav-link" href="#item-3">Item3</a>
-      <nav class="nav nav-pills flex-column">
-        <a class="nav-link ml-3 my-1" href="#item-3-1">Item 3-1</a>
-        <a class="nav-link ml-3 my-1" href="#item-3-2">Item 3-2</a>
-      </nav>
-    </nav>
-  </nav>
-
 {% block sidebar_content %}
 {% load static %}
     <li class="nav-item active">
@@ -47,9 +30,12 @@
             <a class="nav-link ml-3 my-1" href="#algo-subsection">Algorithms</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link ml-3 my-1" href="#contrib-subsection">My Contributions</a>
+            <a class="nav-link ml-3 my-1" href="#analysis-subsection">Analysis</a>
         </li>
     </nav>
+    <li class="nav-item">
+        <a class="nav-link" href="#contrib-section">My Contributions</a>
+    </li>
 {% endblock %}
 
 {% block project_content %}
@@ -69,7 +55,7 @@
         <!-- Problem -->
         <section class="sub-section" id="prob-subsection">
             <h4>Problem</h4>
-            <p>Our inspiration comes from the observation of confused-looking backpackers trying to find their way in Union Station everyday. Most of them come from other cities for an adventure and must rely on the subway system to get from place to place. <mark>Physical maps often get outdated and they are a hassle to carry around, especially if these backpackers have multiple destinations on their plan. On the other hand, a digital map often require access to a data plan</mark>, which is unreasonable if the backpackers are staying at a forign city for only a few days. In addition, patchy internet connections in the wild (such as hicking trails) can lead to laggy digital maps. This is a common issue people face when they are travelling in another city, so how can we resolve it?</p>
+            <p>Our inspiration comes from the observation of confused-looking urban backpackers trying to find their way in Union Station everyday. Most of them come from other cities for an adventure and must rely on the subway system to get from place to place. <mark>Physical maps often get outdated and they are a hassle to carry around, especially if these backpackers have multiple destinations on their plan. On the other hand, a digital map often require access to a data plan</mark>, which is unreasonable if the backpackers are staying at a forign city for only a few days. In addition, patchy internet connections in the wild (such as hicking trails) can lead to laggy digital maps. This is a common issue people face when they are travelling in another city, so how can we resolve it?</p>
         </section>
         <!-- Solution -->
         <section class="sub-section" id="solution-subsection">
@@ -90,7 +76,9 @@
                         <div class="titlebar">
                             <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
                         </div>
-                        <img src="{% static 'images/PocketTravel/levels_of_details.png' %}" alt="subpage item">
+                        <a href="{% static 'images/PocketTravel/levels_of_details.png' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/PocketTravel/levels_of_details.png' %}" alt="subpage item">
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 my-auto vertical-center">
@@ -106,7 +94,9 @@
                         <div class="titlebar">
                             <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location" id="location">Toronto, Canada</div>
                         </div>
-                        <img src="{% static 'images/PocketTravel/change_map.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/PocketTravel/change_map.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/PocketTravel/change_map.gif' %}" alt="subpage item">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -116,7 +106,9 @@
                         <div class="titlebar">
                             <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
                         </div>
-                        <img src="{% static 'images/PocketTravel/autocomplete.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/PocketTravel/autocomplete.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/PocketTravel/autocomplete.gif' %}" alt="subpage item">
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 my-auto vertical-center">
@@ -132,7 +124,9 @@
                         <div class="titlebar">
                             <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
                         </div>
-                        <img src="{% static 'images/PocketTravel/search_history.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/PocketTravel/search_history.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/PocketTravel/search_history.gif' %}" alt="subpage item">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -144,7 +138,9 @@
                         <div class="titlebar">
                             <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
                         </div>
-                        <img src="{% static 'images/PocketTravel/direction_search.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/PocketTravel/direction_search.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/PocketTravel/direction_search.gif' %}" alt="subpage item">
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 my-auto">
@@ -152,16 +148,22 @@
                         <div class="titlebar">
                             <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
                         </div>
-                        <img src="{% static 'images/PocketTravel/directions_click.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/PocketTravel/directions_click.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/PocketTravel/directions_click.gif' %}" alt="subpage item">
+                        </a>
                     </div>
                 </div>
             </div>
             <p><b>6. Points of Interest (POI)</b><br>We use different colors to represent different types of POIs. When hovering over a POI, users are able to see its name on screen. These features help backpackers to find specific venues easier.</p>
-            <div class="page" style="width: 60%; margin: 20px auto;">
-                <div class="titlebar">
-                    <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+            <div class="col-lg-6 my-auto" style="margin: 20px auto;">
+                <div class="page">
+                    <div class="titlebar">
+                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                    </div>
+                    <a href="{% static 'images/PocketTravel/hover_mouse.gif' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/PocketTravel/hover_mouse.gif' %}" alt="subpage item">
+                    </a>
                 </div>
-                <img src="{% static 'images/PocketTravel/hover_mouse.gif' %}" alt="subpage item">
             </div>
             <p><b>7. Subway Lines and Stations</b></p>
             <p>By clicking the "Show Subway" button, subway lines will show up on the map. Different lines are in different colors, and when zoomed in to a certain level, small icons become visible to indicate the location of each subway station.</p>
@@ -171,7 +173,9 @@
                         <div class="titlebar">
                             <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Tokyo, Japan</div>
                         </div>
-                        <img src="{% static 'images/PocketTravel/subway.jpg' %}" alt="subpage item">
+                        <a href="{% static 'images/PocketTravel/subway.jpg' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/PocketTravel/subway.jpg' %}" alt="subpage item">
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 my-auto">
@@ -179,7 +183,9 @@
                         <div class="titlebar">
                             <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
                         </div>
-                        <img src="{% static 'images/PocketTravel/subway_icons.jpg' %}" alt="subpage item">
+                        <a href="{% static 'images/PocketTravel/subway_icons.jpg' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/PocketTravel/subway_icons.jpg' %}" alt="subpage item">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -188,59 +194,53 @@
         <!-- Algorithms -->
         <section class="sub-section" id="algo-subsection">
             <h4>Algorithms</h4>
-            <p><b>Nearest Intersection: K-D Tree</b></p>
-            <p>Our algorithm snaps the user’s mouse input coordinates to the nearest intersection by using a k-d Tree, which <mark>divides the intersections into sections according to their x and y coordinates, alternately simplifying the search by avoiding points that are unworthy in visiting</mark>. The following steps are used to build the tree:</p>
-            <ol>
-                <li class="list">pick the point in the middle of the horizontal axis (shown in red), set it as the head node</li>
-                <li class="list">nodes on the left branch of the head node correspond to the points on the left side of the red line and nodes on the right branch correspond to the right side</li>
-                <li class="list">from each side, we pick the point in the middle of the vertical axis and add them as the child node of the head node</li>
-                <li class="list">repeat this with alternating vertical and horizontal divisions until all the nodes have been placed on the tree and the map has been divided into sections</li>
-            </ol>
-            <p>A naïve way to find the nearest intersection would be to loop through all the intersections and compare them against the intersection of interest, which is very slow. For a k-d tree, we can simplify this process. To find the nearest intersection from the tree, steps are as follows:</p>
-            <ol>
-                <li class="list">given a point, traverse through the k-d tree by alternating the comparison between its x coordinate to a node’s x coordinate and its y coordinate to a node’s y coordinate (i.e. compare the point’s x coordinate with the head node, then compare the point’s y coordinate with the y coordinate of one of the nodes in the next level, and so on)</li>
-                <li class="list">once arrived at a leaf node, first calculate the Euclidean distance between the given point and the leaf node, then for this particular example below, get the leaf node’s parent node and calculate the distance between the given point and the horizontal line that passes through the parent node. If the distance to the leaf node is shorter than the distance to the line, then there is no need to check the node on the other side of  the parent node</li>
-            </ol>
-            <p>That's how the k-d tree avoids the points that are unworthy of visiting. As shown on the graph, <mark>the naïve search algorithm becomes slower as more points are being searched, but using k-d Tree, this algorithm does slow down as drastically</mark>, instead, it stays at around 0.</p>
-            <figure class="figure_container">
-                <img src="{% static 'images/PocketTravel/kd_tree.gif' %}" alt="subpage item">
-                <img src="{% static 'images/PocketTravel/kd_tree_improvement.png' %}" alt="subpage item">
-            </figure>
-            <p><b>Auto Complete: Trie Tree</b></p>
-            <p>We have chosen to use the trie tree because it <mark>produces a time complexity of O(n) at runtime</mark>. The tree only had to be built once: the first level of the tree is the first letter of the street names, from A to Z, the second level is the second letter, and so on. A continuous path to the end in the tree is a full street name. There is a flag in each node to indicate if it is the end of the word.</p>
-            <figure class="figure_container">
-                <img src="{% static 'images/PocketTravel/trie.gif' %}" alt="subpage item">
-            </figure>
-            <p><b>Best Route Planning (Travelling Salesman Problem): Dijkstra’s vs A*</b></p>
-            <p>
-                To find the cheapest path between two intersections, we used the A* algorithm, which is similar to the Dijkstra's algorithm, but uses heuristics to find the solutions faster.<br><br>
-                For Dijkstra's, we would first set the score of the source to 0, and others to infinity, labeling the scores as f(n). We would then update the score of every adjacent point of the source point to the cost of the cheapest path traveling from the source point, and push the adjacent points to a priority queue. When choosing the next point to visit from the priority queue, we would always visit the point with lowest f(n), and the process goes on until we reach the destination. A demonstration of the algorithm is shown below.<br><br>
-                <mark>How A* differs from Dijkstra's is that when it chooses the next point to visit from the priority queue, instead of choosing the point with the lowest cost, g(n), it also takes a heuristic factor, h(n), into consideration</mark>. That is, the heuristic that estimate the cost of the cheapest path from the point to the destination, which may result in choosing a point that is not the cheapest to go to for that segment, but will ultimately lead to the optimal destination faster.<br><br>
-                The image on the right compares the visited nodes for the A* algorithm and for the Dijkstra's algorithm. The yellow path is the path we found, and the purple points are the nodes we visit during the search. It is obvious that <mark>the number of points A* visited is much less than that of Dijkstra's</mark> (a spread-out circular region vs a more directed oval region). This means that A* significantly speeds up the path the searching process.
-            </p>
-            <figure class="figure_container">
-                <img src="{% static 'images/PocketTravel/dijkstra.gif' %}" alt="subpage item">
-                <img src="{% static 'images/PocketTravel/dijkstra_vs_astar.jpg' %}" alt="subpage item">
-            </figure>
+            <p>One of our major challenges was to implement an algorithm that finds the shortest path between multiple destinations, or better known as the Travelling Salesman Problem.</p>
             <p><b>Multi-Destination Planning: Greedy, Two-Opt, and Simulated Annealing</b></p>
-            <p>
-                For multi-destination planning, we first used the greedy algorithm, where we chose a random starting point and then fetch the nearest destination as the next point to visit until we visit all the destinations. However, the paths that greedy found are not good enough because it always gets stuck at a local minimum, so we wanted to <mark>find a way to jump out of local minimum and eventually reach the global minimum</mark>.<br><br>
-                Once an “optimal” path is found from greedy, using 2-opt, we cut the path into 3 pieces and then we reconnect the three path segments. We created <mark>12 different types of recombination in total. In addition to this, we also implemented simulated annealing</mark>. At first the temperature is high, and it will accept the solution in a large range, so the possibility of getting a worse solution than the local minimum is high. However, the temperature will adjust and decrease over time ,so that it will gradually narrow down to near where the global minimum is. <mark>This resulted in an average of 8196 seconds traveling time decrease for the paths found</mark>.
-            </p>
-            <figure class="figure_container">
-                <img src="{% static 'images/PocketTravel/greedy.gif' %}" alt="subpage item">
-                <img src="{% static 'images/PocketTravel/2opt.gif' %}" alt="subpage item">
-                <img src="{% static 'images/PocketTravel/annealing.PNG' %}" alt="subpage item">
-            </figure>
-            <p><br>To further optimize for the final competition, we chose to implement multi-start with multithread. Since we were running on a 8-core processor for the competition portion of this project, we decided to <mark>choose the best 8 solutions obtained from the greedy search, loop through each as a candidate starting point on a separate thread, then so two-opt and simulated annealing simultaneously on each candidate. We ended up with an additional improvement of 4422 seconds decrease in average traveling time</mark>.</p>
-            <figure class="figure_container">
-                <img src="{% static 'images/PocketTravel/multithread.PNG' %}" alt="subpage item">
-                <img src="{% static 'images/PocketTravel/multithread_improvement.png' %}" alt="subpage item">
-            </figure>
+            <p>For multi-destination planning, we first used a greedy approach, chosing a random starting point and using the A* algorithm to fetch the nearest destination as the next point to visit, until we visit all the destinations. However, the paths we obtained from this approach are not good enough because it always gets stuck at a local minimum, so we wanted to <mark>find a way to jump out of local minimum and eventually reach the global minimum</mark>.</p>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto" style="margin: 20px auto;">
+                    <a href="{% static 'images/PocketTravel/greedy.gif' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/PocketTravel/greedy.gif' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+            <p>Once an “optimal” path is found from greedy, using 2-opt, we cut the path into 3 pieces and then we reconnect the three path segments. We created <mark>12 different types of recombination in total. In addition to this, we also implemented simulated annealing</mark>. At first the temperature is high, and it will accept the solution in a large range, so the possibility of getting a worse solution than the local minimum is high. However, the temperature will adjust and decrease over time ,so that it will gradually narrow down to near where the global minimum is.</p>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto" style="margin: 20px auto;">
+                    <a href="{% static 'images/PocketTravel/2opt.gif' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/PocketTravel/2opt.gif' %}" alt="subpage item">
+                    </a>
+                </div>
+                <div class="col-lg-6 my-auto" style="margin: 20px auto;">
+                    <a href="{% static 'images/PocketTravel/annealing.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/PocketTravel/annealing.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+            <p><b>Multi-Start and Multithreading</b></p>
+            <p>To further optimize for the final competition, we chose to implement multi-start with multithread. Since we were running on a 8-core processor for the competition portion of this project, we decided to <mark>choose the best 8 solutions obtained from the greedy search, loop through each as a candidate starting point on a separate thread, then so two-opt and simulated annealing simultaneously on each candidate</mark>.</p>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto" style="margin: 20px auto;">
+                    <a href="{% static 'images/PocketTravel/multithread.PNG' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/PocketTravel/multithread.PNG' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="sub-section" id="analysis-subsection">
+            <h4>Algorithm Analysis</h4>
+            <p>By implementing 2-opt and simulated annealing, this resulted in an average of <mark>8196 seconds traveling time decrease for the paths found</mark>. By using multi-start and multithreading, we ended up with an <mark>additional improvement of 4422 seconds decrease in average traveling time</mark>.</p>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto" style="margin: 20px auto;">
+                    <a href="{% static 'images/PocketTravel/multithread_improvement.png' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/PocketTravel/multithread_improvement.png' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
         </section>
     </section>
 
-    <section class="main-section" id="contrib-subsection">
+    <section class="main-section" id="contrib-section">
         <h1>My Contributions</h1>
     </section>
 
