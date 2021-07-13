@@ -3,24 +3,130 @@
 {% block project_image %}
 {% load static %}
     <img class="project-intro-img" src="{% static 'images/PocketTravel/Logo.png' %}" alt="">
+    <h2>An Interactive Hardware Game</h2>
 {% endblock %}
 
 {% block sidebar_content %}
 {% load static %}
-    <li><a class="" href="#">Introduction</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Team</a></li>
-        <li><a class="" href="#">Motivation</a></li>
-    </ul>
-    <li><a class="" href="#">Design</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Features</a></li>
-        <li><a class="" href="#">Algorithms</a></li>
-        <li><a class="" href="#">My Contributions</a></li>
-    </ul>
+    <li class="nav-item active">
+        <a class="nav-link" href="#intro-section">Introduction</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#design-section">Design</a>
+    </li>
+    <nav class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#game-subsection">Game Flow</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#modules-subsection">Modules</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#challenges-subsection">Challenges & Learnings</a>
+        </li>
+    </nav>
 {% endblock %}
 
 {% block project_content %}
 {% load static %}
+    <div class="card text-center mx-auto team-info-card">
+        <div class="card-body">
+            <p><b>Duration:</b> Nov 2017 - Dec 2017 (1 month) </p>
+            <p><b>Skills/Tools:</b> Verilog, DE1-SoC board, VGA, sensors, and switches</p>
 
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <section class="main-section" id="intro-section">
+        <h1>Introduction</h1>
+        <!-- Background -->
+        <p>Cycle 63 is a single player simulation game observed from the first-person point of view. In the completed project, there are three external devices, a bike pedal, a handle bar, and a micro switch. The inspiration and motivation of this game came from the observation that people tend to sit in front of their screen too long while playing video games. The lack of exercise causes many health issues, including diabetes, cardiovascular disease, and high blood pressure. <mark>With the interactive component added to the game, users are able to play and exercise at the same time</mark>, thus solving the problem.</p>
+        <p>The aim of this simulation is to “move forward” in the game while avoiding the obstacles. The speed of the movement is controlled by changing the frequency of pedaling on the bike. In addition, switching lanes is done by turning the bike handle.</p>
+        <div class="row section-element">
+            <div class="col-lg-5 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/Cycle63/moving_obsticle_demo.gif' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/Cycle63/moving_obsticle_demo.gif' %}" alt="subpage item">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design -->
+    <section class="main-section" id="design-section">
+        <h1>Design</h1>
+        <div class="sub-section" id="game-subsection">
+            <h4>Game Flow</h4>
+            <p>
+                During game mode, two lanes will show up on the screen with a randomly recurring obstacle on each lane. <mark>The obstacles’ speed depend on the frequency at which the player is pedaling</mark>. When the physical handle bar is turned to the left, the handle bar on screen moves to the left lane of the road, and vice versa.<br><br>
+                <mark>the obstacle touches the handle bar on screen, then it's gameover</mark>. The timer display on HEX4 and HEX5 show how long a particular game is running.
+            </p>
+            <div class="figure_container">
+                <a href="{% static 'images/Cycle63/main_display.jpg' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/Cycle63/main_display.jpg' %}" alt="subpage item">
+                </a>
+            </div>
+        </div>
+
+        <div class="sub-section" id="modules-subsection">
+            <!-- Modules -->
+            <h4>Modules</h4>
+            <p><b>1. Simulation Module (top level module)</b></p>
+            <p>This module passes the user-end inputs (SW, KEY, CLOCK_50, and GPIO_1, which is connected to the micro switch) and outputs (LEDR, HEX, and all VGA output parameters)  into the ADC control, ADC adapter, get pedal signal, hex decoder, and control-to-data modules accordingly.</p>
+            
+            <p><b>2. Control-to-Data</b></p>
+            <p>This module contains the signal wires and connects the FSM and the Datapath through these wires.</p>
+
+            <p><b>3. Finite State Machine (FSM)</b></p>
+            <p>The FSM controls the current and next states of logic and sends out different signals to the Datapath according to the varying states. Within the FSM, a delay counter is used to control the number of clock cycles per frame (around 500 frames/second) and a frame counter is used to control the number of frames between each update of the object’s location on screen (50 updates/second). The seconds counter and speed counter is also implemented within the FSM and outputted to the top level module.</p>
+
+            <p><b>4. Speed Counter</b></p>
+            <p>The time counter sends out an enable signal every time the pedal completes one of its cycles (triggers the micro switch). The speed counter catches this signal and counts the number of ¼ seconds that passed during that pedal cycle. Once a signal is received, the speed counter also translates the time passed into the period between which the objects move (For example, move down one pixel per 2 updates for a higher speed or one pixel per 10 updates for a lower speed).</p>
+
+            <p><b>5. Datapath</b></p>
+            <p>Receives signals from the FSM and data from random number generator modules to complete the task of moving objects on screen. A cycle in the drawing process goes like this: draws two squares (the obstacles), followed by the bike handle, according to its current position (left or right), followed by erasing the squares (cover the squares’ pixels with the corresponding colours from the background), and finally updates the new location of the squares.</p>
+
+            <p><b>6. VGA Adapter</b></p>
+            <p>All graphics are shown on the monitor after a translation of data from the top level module through the VGA Adapter. The adapter takes the X and Y coordinates and plots the colour of that pixel from the specified memory onto the screen.</p>
+
+            <p><b>7. Memory Modules</b></p>
+            <p>The intro screen, background, handlebars, and gameover screen images are stored as pixels of colours into the VGA memory. The background and intro screen are both 360x240 pixels images and the handlebar is 120X50.They all have 3-bit colours for each pixel.</p>
+
+            <p><b>Overall Design Block Diagram</b></p>
+            <div class="figure_container">
+                <a href="{% static 'images/Cycle63/block_diagram.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/Cycle63/block_diagram.png' %}" alt="subpage item">
+                </a>
+            </div>
+        </div>
+
+        <div class="sub-section" id="challenges-subsection">
+            <!-- Challenges -->
+            <h4>Challenges and Learnings</h4>
+            <p><b>Phototransistor</b></p>
+            <p>At the start of the project, I planned to place a laser pointer and a laser receiver on the pedals to detect the pedaling frequency. I connected the laser receiver to the ADC pins on the DE1 SoC board and the schematics of this part is shown below. The hex display properly shows the translated digital values received by the phototransistor. However, this did not work because <mark>the pedling frequency was too fast to be detected by the phototransistor</mark> I bought.</p>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto">
+                    <a href="{% static 'images/Cycle63/sensor demo.gif' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/Cycle63/sensor demo.gif' %}" alt="subpage item">
+                    </a>
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <a href="{% static 'images/Cycle63/converter_schematic.png' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/Cycle63/converter_schematic.png' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+            <p><b>Micro Switch</b></p>
+            <p>Next, I tried placing a micro switch below the pedal so that it would be triggered every time the pedal reaches the lowest position. The switch is connected to the GPIO pins on the DE1 SoC board. However, I realized that there are unexpected oscillations in the signals due to the mechanical properties of the switch. As a result, <mark>the program received alternating high and low signals at very high frequencies</mark> and the game would not work properly. I eventually had to fix the software module so that these minor oscillations do not trigger undesired conditions.</p>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto" style="margin: 20px auto;">
+                    <a href="{% static 'images/Cycle63/micro_switch.jpg' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/Cycle63/micro_switch.jpg' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+        
 {% endblock %}

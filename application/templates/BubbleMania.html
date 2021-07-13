@@ -47,7 +47,7 @@
         <!-- Background -->
         <section class="sub-section" id="bg-subsection">
             <h4>Background</h4>
-            <p>BubbleMania is a clone of the Puzzle Bobble video game from 1994. I wrote this game in Grade 11 using self-taught ActionScript3, and since this is a personal project, I have uploaded all source code on GitHub. Portal to the code is <a href="https://github.com/helen-23/Bubble-Mania/">here</a>. Below is also a short demo of the game I recorded:</p>
+            <p>BubbleMania is a clone of the Puzzle Bobble video game from 1994. I wrote this game in Grade 11 using ActionScript3, and since this is a personal project, I have uploaded all source code on GitHub. Portal to the code is <a href="https://github.com/helen-23/Bubble-Mania/">here</a>. Below is also a short demo of the game I recorded:</p>
             <div class="figure_container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/6TwOIJlNFVM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -55,7 +55,7 @@
         <!-- Game Play -->
         <section class="sub-section" id="rules-subsection">
             <h4>Game Play</h4>
-            <p>The task of the game is to clear the arena by forming groups of three or more like-colored bubbles, and to do that, the player must aim a new bubble towards a cluster of bubbles in the arena.</p>
+            <p>The task of the game is to clear the arena by shooting bubbles toward a cluster of bubbles and <mark>forming groups of three or more like-colored bubbles</mark> to pop them.</p>
         </section>
     </section>
 
@@ -96,7 +96,7 @@
             </div>
             <div class="row section-element">
                 <div class="col-lg-6 my-auto vertical-center">
-                    <p>At the start of each round, the top five rows of the playing arena is occupied by a prearranged pattern of colored bubbles. Down the center of the screen, there is a standalone bubble waiting to be launched. A player can click in a direction and the bubble will be shot upwards in a straight line following that direction. The task of the game is to clear the arena by forming groups of three or more like-colored bubbles, and to do that, the player must aim a new bubble towards a cluster of bubbles in the arena. The player has 2 minutes to clear all the bubbles without any bubbles crossing the bottom line. </p>
+                    <p>At the start of each round, the top five rows of the playing arena is occupied by a prearranged pattern of bubbles. Down the center of the screen, there is a new bubble awaiting to be launched. The player can click on the screen and the bubble will shoot upwards following that direction. <mark>The player has 2 minutes to clear all the bubbles without any bubbles crossing the bottom line</mark>. </p>
                 </div>
                 <div class="col-lg-6 my-auto">
                     <div class="page">
@@ -127,7 +127,7 @@
         </section>
         <section class="sub-section" id="algo-subsection">
             <h4>Algorithm</h4>
-            <p>Breadth First Search is used for detecting whether the new bubble is directly adjacent to any like-colored bubbles in the arena. There are five types of colored bubbles in BubbleMania: white, yellow, cyan, blue, and red. The entire playing arena is represented by a 2D array and the first five rows are initialized with a set of bubbles in randomly generated colors. All new bubbles that show up at the bottom of the screen are also randomly generated once a previous one is fired. When a new bubble is launched, keep track of its position (x and y coordinates) and map it to the corresponding entry in the 2D array. When it reaches an entry that is adjacent to one or more entries that are already occupied by a bubble, then this new bubble is snapped to the position of the nearest array entry using Euclidean distance. Finally, BFS is used to search all adjacent bubbles for matching colors. If a cluster of like-colored bubbles are identified, the entire cluster is “popped” and cleared from the screen.</p>
+            <p>I implemented Breadth First Search to detect whether the new bubble is directly adjacent to any like-colored bubbles in the arena. There are five types of colored bubbles in BubbleMania: white, yellow, cyan, blue, and red. All new bubbles that show up at the bottom of the screen are also randomly generated once a previous one is fired. When it reaches an entry that is adjacent to one or more entries that are already occupied by a bubble, then this new bubble is snapped to the position of the nearest array entry using Euclidean distance. Finally, <mark>BFS is used to search all adjacent bubbles for matching colors</mark>. If a cluster of like-colored bubbles are identified, the entire cluster is “popped” and cleared from the screen.</p>
         </section>
     </section>
         

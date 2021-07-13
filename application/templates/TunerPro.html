@@ -3,24 +3,83 @@
 {% block project_image %}
 {% load static %}
     <img class="project-intro-img" src="{% static 'images/PocketTravel/Logo.png' %}" alt="">
+    <h2>A Music Tunner Hardware Application</h2>
 {% endblock %}
 
 {% block sidebar_content %}
 {% load static %}
-    <li><a class="" href="#">Introduction</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Team</a></li>
-        <li><a class="" href="#">Motivation</a></li>
-    </ul>
-    <li><a class="" href="#">Design</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Features</a></li>
-        <li><a class="" href="#">Algorithms</a></li>
-        <li><a class="" href="#">My Contributions</a></li>
-    </ul>
+    <li class="nav-item active">
+        <a class="nav-link" href="#intro-section">Introduction</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#design-section">Design</a>
+    </li>
+    <nav class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#usage-subsection">How to Use</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#methods-subsection">Methods</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#analysis-subsection">Analysis</a>
+        </li>
+    </nav>
 {% endblock %}
 
 {% block project_content %}
 {% load static %}
+    <div class="card text-center mx-auto team-info-card">
+        <div class="card-body">
+            <p><b>Duration:</b> Mar 2018 - Apr 2018 (1 month) </p>
+            <p><b>Skills/Tools:</b> Assembly, DE1-SoC board, VGA, microphone </p>
 
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <section class="main-section" id="intro-section">
+        <h1>Introduction</h1>
+        <!-- Background -->
+        <p>TunerPro is a hardware application built on the field-programmable gate array (FPGA) for tunning music notes. The board used was DE1-SoC and all codes were written in Assembly. Below is a short demo of the project.</p>
+        <div class="figure_container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/D4s9kMr_bOs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Design -->
+    <section class="main-section" id="design-section">
+        <h1>Design</h1>
+        <div class="sub-section" id="usage-subsection">
+            <h4>How to Use</h4>
+            <ol>
+                <li class="list">Connect a microphone to the DE1-SoC board</li>
+                <li class="list">Press Button0 to record your note for two seconds; LED0 will light up during recoding</li>
+                <li class="list">Once recording is complete, the result will automatically show up on screen, which will tell you which note you played and if it was too high, slightly high, too low, or slightly low</li>
+                <li class="list">You can press Button1 to play a sample tune for the latest note you just recorded</li>
+                <li class="list">You can also use Switch0 to Switch6 to select a note to play as sample</li>
+            </ol>
+        </div>
+
+        <div class="sub-section" id="methods-subsection">
+            <!-- Methods -->
+            <h1>Methods</h1>
+            <p><b>Finding Closest Note</b></p>
+            <p>The recorded analog signal is sampled and stored as digital data. To find the closest note that was recorded, an ideal solution would be to do a Discrete Time Fourier Transform. However, it is difficult doing this with Assembly, so I have decided to simplify the algorithm:</p>            
+            <ol>
+                <li class="list">Loop through the stored digital data and keep track of where all the minimum and maximum values are in time</li>
+                <li class="list">With minimum and maximum locations, we can compute the period</li>
+                <li class="list">Average out all the individual periods along the 2 seconds signal and invert it to get the frequency</li>
+                <li class="list">Map the frequency to a note</li>
+            </ol>
+            
+            <p><b>Recording and Timing</b></p>
+            <p>The interrupt handlers are in charge of processing events passed in by the user. When Button0 is pressed, a timer counter starts at 0 and begins counting. When it reaches 2 seconds, the timer interrupt is triggered, and the results are computed and displayed on screen. During recording, the button interrupt is never triggered to avoid interrupting the recording process.</p>
+        </div>
+
+        <div class="sub-section" id="analysis-subsection">
+            <p>This method is an approximation, so if the recording is contaminated with a lot of noise, the result will be inaccurate. I have tested this in a quiet room with ear pods as microphones, and my <mark>stimuli include a set of digitally generated notes and my own voice (humming the same set of notes)</mark>. All of these tests passed as expected.</p>
+        </div>
+    </section>
+        
 {% endblock %}
