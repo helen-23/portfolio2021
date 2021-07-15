@@ -12,7 +12,7 @@
                 <div class="col-lg-4 custom-thumbnail">
                     <h5 class="project-caption">FullMonteWeb</h5>
                     <div class="cs-gallery zoom">
-                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid gallery-img" alt="">
+                        <img src="{% static 'images/fullmonte_web.gif' %}"" class="img-fluid gallery-img" alt="">
                         <a href="{% url 'FullMonteWeb' %}">
                             <div class="hover-overlay">
                                 <p class="hover-caption">See details</p>
@@ -46,22 +46,10 @@
                 </div>
 
                 <div class="col-lg-4 custom-thumbnail">
-                    <h5 class="project-caption">GunmanJump</h5>
+                    <h5 class="project-caption">Oregon Wildlife Classifier</h5>
                     <div class="cs-gallery zoom">
-                        <a href="{% url 'GunmanJump' %}">
-                            <img src="{% static 'images/gunman_mahem.gif' %}" class="img-fluid gallery-img" alt="">
-                            <div class="hover-overlay">
-                                <p class="hover-caption">See details</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 custom-thumbnail">
-                    <h5 class="project-caption">BubbleMania</h5>
-                    <div class="cs-gallery zoom">
-                        <a href="{% url 'BubbleMania' %}">
-                            <img src="{% static 'images/bubble_mania.gif' %}" class="img-fluid gallery-img" alt="">
+                        <a href="{% url 'OregonWildlifeClassifier' %}">
+                            <img src="{% static 'images/oregon_wildlife_classifier.gif' %}" class="img-fluid gallery-img" alt="">
                             <div class="hover-overlay">
                                 <p class="hover-caption">See details</p>
                             </div>
@@ -94,10 +82,22 @@
                 </div>
 
                 <div class="col-lg-4 custom-thumbnail">
-                    <h5 class="project-caption">Oregon Wildlife Classifier</h5>
+                    <h5 class="project-caption">GunmanJump</h5>
                     <div class="cs-gallery zoom">
-                        <a href="{% url 'OregonWildlifeClassifier' %}">
-                            <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid gallery-img" alt="">
+                        <a href="{% url 'GunmanJump' %}">
+                            <img src="{% static 'images/gunman_mahem.gif' %}" class="img-fluid gallery-img" alt="">
+                            <div class="hover-overlay">
+                                <p class="hover-caption">See details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 custom-thumbnail">
+                    <h5 class="project-caption">BubbleMania</h5>
+                    <div class="cs-gallery zoom">
+                        <a href="{% url 'BubbleMania' %}">
+                            <img src="{% static 'images/bubble_mania.gif' %}" class="img-fluid gallery-img" alt="">
                             <div class="hover-overlay">
                                 <p class="hover-caption">See details</p>
                             </div>

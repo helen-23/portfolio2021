@@ -62,8 +62,8 @@
                     </h1>
                     <h4 class="card-text" style="margin-top: 2vw; color: #463c35;"><i>A High Definition Software Engineer </i><span style="font-size: smaller">😉</span></h4>
                     <p class="card-text" style="color: #463c35;">M.Eng. in Computer Science student @Cornell</p>
-                    <a href="#cs-portfolio" class="btn btn-primary btn-custom" style="margin-top: 4vh;">See my CS work</a>
-                    <a href="#art-portfolio" class="btn btn-primary btn-custom" style="margin-top: 4vh;">See my artworks</a>
+                    <a href="#cs-selected" class="btn btn-primary btn-custom" style="margin-top: 4vh;">Project Highlights</a>
+                    <a href="#selected-arts" class="btn btn-primary btn-custom" style="margin-top: 4vh;">Artwork Highlights</a>
                 </div>
             </div>
         </div>
@@ -93,12 +93,13 @@
         </div>
         <div class="card-body">
             <div class="row d-flex justify-content-center" style="margin-bottom: 2vh;">
-                <div class="col-lg-4 custom-thumbnail">
+                <div class="col-lg-4 custom-thumbnail d-flex align-items-stretch">
                     <div class="card project-card zoom">
-                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid card-img" alt="">
+                        <img src="{% static 'images/fullmonte_web.gif' %}" class="img-fluid card-img" alt="">
                         <div class="card-body">
                             <h5 class="card-title project-title">FullMonteWeb</h5>
-                            <p>A blah</p>
+                            <p class="subtitle"><b>A Web-based Photodynamic Therapy Planning and Optimization Application</b></p>
+                            <p class="subtitle">UI Research and Design, Backend Development</p>
                         </div>
                         <a href="{% url 'FullMonteWeb' %}">
                             <div class="hover-overlay"></div>
@@ -106,12 +107,13 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 custom-thumbnail">
+                <div class="col-lg-4 custom-thumbnail d-flex align-items-stretch">
                     <div class="card project-card zoom">
                         <img src="{% static 'images/pocket_travel.gif' %}" class="img-fluid card-img" alt="">
                         <div class="card-body">
                             <h5 class="card-title">PocketTravel</h5>
-                            <p>A blah</p>
+                            <p class="subtitle"><b>A Geographical Information System (GIS) Application</b></p>
+                            <p class="subtitle">UI Research and Design, Backend Development</p>
                         </div>
                         <a href="{% url 'PocketTravel' %}">
                             <div class="hover-overlay"></div>
@@ -119,12 +121,13 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 custom-thumbnail">
+                <div class="col-lg-4 custom-thumbnail d-flex align-items-stretch">
                     <div class="card project-card zoom">
                         <img src="{% static 'images/reversi_ai.gif' %}" class="img-fluid card-img" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Reversi AI</h5>
-                            <p>A blah</p>
+                            <p class="subtitle"><b>A Fun Chess Game AI</b></p>
+                            <p class="subtitle">UI Design, Algorithm Research and Implementation</p>
                         </div>
                         <a href="{% url 'ReversiAI' %}">
                             <div class="hover-overlay"></div>
@@ -132,12 +135,13 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 custom-thumbnail">
+                <div class="col-lg-4 custom-thumbnail d-flex align-items-stretch">
                     <div class="card project-card zoom">
-                        <img src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" class="img-fluid card-img" alt="">
+                        <img src="{% static 'images/oregon_wildlife_classifier.gif' %}" class="img-fluid card-img" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Oregon Wildlife Classifier</h5>
-                            <p>A blah</p>
+                            <p class="subtitle"><b>An ML-based Wildlife Classifier</b></p>
+                            <p class="subtitle">ML Research, Implementation, and Analysis</p>
                         </div>
                         <a href="{% url 'OregonWildlifeClassifier' %}">
                             <div class="hover-overlay"></div>
@@ -145,12 +149,13 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 custom-thumbnail">
+                <div class="col-lg-4 custom-thumbnail d-flex align-items-stretch">
                     <div class="card project-card zoom">
                         <img src="{% static 'images/cycle_63.gif' %}" class="img-fluid card-img" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Cycle 63</h5>
-                            <p>A blah</p>
+                            <p class="subtitle"><b>An Interactive Video Game Made for Exercise</b></p>
+                            <p class="subtitle">Hardware, Software Development</p>
                         </div>
                         <a href="{% url 'Cycle63' %}">
                             <div class="hover-overlay"></div>
@@ -159,7 +164,7 @@
                 </div>
             </div>
             <div class="container">
-                <a href="{% url 'cs_projects' %}" class="btn btn-primary btn-custom btn-custom-large" style="margin-top: 4vh;">See all selected SW/HW projects</a>
+                <a href="{% url 'cs_projects' %}" class="btn btn-primary btn-custom btn-custom-large" style="margin-top: 4vh;">See all selected projects</a>
             </div>
         </div>
     </div>
