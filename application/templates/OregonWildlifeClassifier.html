@@ -3,24 +3,321 @@
 {% block project_image %}
 {% load static %}
     <img class="project-intro-img" src="{% static 'images/PocketTravel/Logo.png' %}" alt="">
+    <h2>A Geographical Information System (GIS) Application</h2>
 {% endblock %}
 
 {% block sidebar_content %}
 {% load static %}
-    <li><a class="" href="#">Introduction</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Team</a></li>
-        <li><a class="" href="#">Motivation</a></li>
-    </ul>
-    <li><a class="" href="#">Design</a></li>
-    <ul class="sub-menu">
-        <li><a class="" href="#">Features</a></li>
-        <li><a class="" href="#">Algorithms</a></li>
-        <li><a class="" href="#">My Contributions</a></li>
-    </ul>
+    <li class="nav-item active">
+        <a class="nav-link" href="#intro-section">Introduction</a>
+    </li>
+    <nav class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#bg-subsection">Background</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#related-subsection">Related Work</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#solution-subsection">Our Goal</a>
+        </li>
+    </nav>
+    <li class="nav-item">
+        <a class="nav-link" href="#prep-section">Preparation</a>
+    </li>
+    <nav class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#overview-subsection">Design Overview</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#dataprep-subsection">Data Processing</a>
+        </li>
+    </nav>
+    <li class="nav-item">
+        <a class="nav-link" href="#design-section">Design</a>
+    </li>
+    <nav class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#architecture-subsection">Best Architecture</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#baseline-subsection">Baseline Model</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#results-subsection">Results</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ml-3 my-1" href="#ethical-subsection">Ethical Considerations</a>
+        </li>
+    </nav>
+    <li class="nav-item">
+        <a class="nav-link" href="#contrib-section">My Contributions</a>
+    </li>
 {% endblock %}
 
 {% block project_content %}
 {% load static %}
+    <div class="card text-center mx-auto team-info-card">
+        <div class="card-body">
+            <p><b>Team Members:</b> Xiao Ying (Helen) Dai, Yuwei Tang, Yihan Tian, Muhammad Usama Waheed </p>
+            <p><b>Duration:</b> Mar 2021 - Apr 2021 (1 month) </p>
+            <p><b>Skills/Tools:</b> Python, PyTorch </p>
+            <p><b>My Role:</b> UI/UX design and research lead, secretary, backend developer </p>
+        </div>
+    </div>
 
+    <!-- Intro -->
+    <section class="main-section" id="intro-section">
+        <h1>Introduction</h1>
+        <!-- Background -->
+        <section class="sub-section" id="bg-subsection">
+            <h4>Background</h4>
+            <p>
+                The motivations for creating and training the Oregon Wildlife Classifier lie in the teams’ interest in animal life, particularly which inhabits temperate rainforests, and the team’s concern with climate change and shrinking forests. A classifier can help with conservation efforts and keeping track of endangered animal population sizes. <mark>Since classifying large amounts of photos by inspection can be tedious it is more feasible to use advanced computer technology in the form of machine learning which greatly aids with image processing</mark>. Once the classifier has been trained, it can be utilized and the cost of human laborious work can be eliminated. 
+            </p>
+        </section>
+        <!-- Related Work -->
+        <section class="sub-section" id="related-subsection">
+            <h4>Related Work</h4>
+            <p>
+                There are many applications of animal image classifiers in use today. A group of ecologists used motion‐activated cameras (“camera traps”) to study remote wildlife. However, studies involving camera traps result in visually analyzing millions of images in order to extract data that can be used in ecological analyzes. Hence the ecologists resorted to using <mark>convolutional neural networks with the ResNet‐18 architecture</mark> to automatically classify wildlife species from camera trap images obtained from five states across the United States <a target="_blank" href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13120">[1]</a>. <mark>Another use case of using a trained machine learning classifier is in the form of a predator recognition system</mark>. In part of the world where predators such as lions, alligators, and bears have been known to encroach onto residential areas. Such systems are deployed to ensure communities can keep if such predators cross into human territory and can be dealt with immediately to not pose further threat. This is important because animal attacks are becoming more common as more forests are cut down. 
+            </p>
+            <div class="col-lg-8 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/OregonWildlifeClassifier/classifier_in_action.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/classifier_in_action.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+        </section>
+        <!-- Solution -->
+        <section class="sub-section" id="solution-subsection">
+            <h4>Our Goal</h4>
+            <p>
+                The goal of this project is to design, train, and compare different models of the Oregon wildlife classifier that could identify different classes of wildlife animals found in the state of Oregon, United States. 
+            </p>
+        </section>
+    </section>
+
+    <!-- Prep -->
+    <section class="main-section" id="prep-section">
+        <h1>Preparation</h1>
+        <section class="sub-section" id="overview-subsection">
+            <h4>Overall Model Design Flow</h4>
+            <div class="col-lg-8 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/OregonWildlifeClassifier/overview.PNG' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/overview.PNG' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+        </section>
+        <section class="sub-section" id="dataprep-subsection">
+            <h4>Data Processing</h4>
+            <p>
+                <b>Data Origin:</b><br>
+                The team obtained the Oregon Wildlife dataset from Kaggle <a target="_blank" href="https://www.kaggle.com/virtualdvid/oregon-wildlife">[2]</a>. The original dataset is composed of approximately 14000 images divided into 20 classes of animal species.<br><br>
+
+                <b>Data Selection:</b><br>
+                The team decided to use 8 classes of distinct animal species for this project. The animal species are bald eagles, cougars, elk, gray wolves, seals, raccoons, ravens and deer respectively.<br><br>
+
+                <b>Data Filtering:</b><br>
+                Each class has approximately 700 images, the team went through each picture and remove those that do not meet the following requirements:
+            <p>
+            <ol>
+                <li class="list">Only 1 animal is visible in the picture</li>
+                <li class="list">Contains no human</li>
+                <li class="list">Not taken by an infrared camera</li>
+            </ol>
+            <p>
+                <b>Data Adjustment:</b><br>
+                In order to allow images to have similar properties, the team decided to reshape and resize each picture so it is 224 by 224 pixels RGB.<br><br>
+
+                <b>Data Organization:</b><br>
+                Since each filtered and adjusted class contains 500 images, the team decided to use 350 images as training data, 100 images as verification data, and 50 images as testing data.<br><br>
+
+                <b>Data Augmentation:</b><br>
+                Some classes of images from the original dataset contained less than 500 qualified images, so <mark>data augmentation was conducted to make up for the targeted 500 images per class</mark>. This includes creating new, valid images by randomly rotating images under 30 degrees, zooming in, and splitting one image with multiple instances of the animal into multiple images with one instance each. A diagram of such techniques used is shown below.
+            </p>
+            <div class="col-lg-10 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/OregonWildlifeClassifier/data_augmentation.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/data_augmentation.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+        </section>
+    </section>
+
+    <!-- Design -->
+    <section class="main-section" id="design-section">
+        <h1>Design</h1>
+        <!-- Overview -->
+        <section class="sub-section" id="architecture-subsection">
+            <h4>Best Architecture</h4>
+            <p>
+                We experimented with several CNN models, including <mark>our own model built from scratch, AlexNet, ResNet18, and VGG16, and VGG19</mark>. The best model was achieved by using transfer learning with the VGG architecture for feature extraction. In particular, the team discovered that the VGG19 architecture variant produced the best results. Figure below shows the overall architecture of our selected classifier.
+            </p>
+            <div class="col-lg-10 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/OregonWildlifeClassifier/architecture.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/architecture.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+            <p>
+                First, images pass through a pre-trained VGG19 model to obtain 7x7x512 feature maps. Next, the feature maps are passed into three classification layers specifically tailored for our task. A detailed description of the 3-layer CNN is as follows:
+            </p>
+            <ol>
+                <li class="list">A convolutional layer that results in 5x5x1024 output feature maps</li>
+                <li class="list">A ReLU activation function</li>
+                <li class="list">A max pooling layer that results in 2x2x1024 output feature maps</li>
+                <li class="list">A fully-connected layer that takes the flattened feature maps and produces an output of size of 32 hidden units</li>
+                <li class="list">A final fully-connected layer that classifies the result into one of 8 classes</li>
+            </ol>
+        </section>
+        <!-- Features -->
+        <!--                    <p><b>1. User Authentication</b><br></p>    -->
+        <section class="sub-section" id="baseline-subsection">
+            <h4>Baseline Model</h4>
+            <p>
+                To evaluate our CNN model’s performance, <mark>a Random Forest model was used as the baseline model for comparison</mark>. Random Forest classifier is a supervised learning algorithm well suited for multiclass classification problems, and it is available to use through the scikit-learn Python machine learning library. An illustration of the architecture is shown in Figures 4-5 below, and the algorithm roughly works as follows:
+            </p>
+            <ol>
+                <li class="list">Partition the dataset into random samples.</li>
+                <li class="list">Construct a decision tree, which is a recursive partitioning heuristic, for each sample, then get a prediction from each.</li>
+                <li class="list">Choose the most popular prediction result from all trees as the final result.</li>
+            </ol>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto vertical-center">
+                    <p>This illustrates a decision tree structure, where samples of images are sorted at different branches. Actual feature sorting would not be based on plain word questions shown in the diagram, this is just to show how the algorithm works at the high level.</p>
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <a href="{% static 'images/OregonWildlifeClassifier/decision_tree.png' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/decision_tree.png' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
+            <div class="row section-element">
+                <div class="col-lg-6 my-auto">
+                    <a href="{% static 'images/OregonWildlifeClassifier/random_forest.png' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/random_forest.png' %}" alt="subpage item">
+                    </a>
+                </div>
+                <div class="col-lg-6 my-auto vertical-center">
+                    <p>This illustrates how the random Forest algorithm making a decision on the votes from trees.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DV -->
+        <section class="sub-section" id="results-subsection">
+            <h4>Results and Comparisons</h4>
+            <p><b>Quantitative Results</b></p>
+            <p>
+                This section describes the <mark>results from the top four models the team has implemented</mark>. All training, validation, and testing were run on Google Collab with the NVIDIA Tesla K80 GPU.<br><br>
+                Table below shows the final accuracies of each model. All models use cross-entropy loss and the Adam optimizer for best results. Training data was recorded after every iteration (mini-batch), and accuracies of all the validation data were also logged after every iteration. 
+            </p>
+            <div class="col-lg-9 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/OregonWildlifeClassifier/top_4.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/top_4.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+            <p><br>The following set of images show the training curves for these 4 models:</p>
+            <div id="carouselControls" class="carousel slide myCarousel" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row section-element">
+                            <div class="col-lg-6 my-auto">
+                                <a href="{% static 'images/OregonWildlifeClassifier/alexnet_curves.png' %}" class="fancybox" rel="ligthbox">
+                                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/alexnet_curves.png' %}" alt="subpage item" style="height: 50%;">
+                                </a>
+                            </div>
+                            <div class="col-lg-6 my-auto">
+                                <a href="{% static 'images/OregonWildlifeClassifier/resnet_curves.png' %}" class="fancybox" rel="ligthbox">
+                                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/resnet_curves.png' %}" alt="subpage item" style="height: 50%;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row section-element">
+                            <div class="col-lg-6 my-auto">
+                                <a href="{% static 'images/OregonWildlifeClassifier/vgg16_curves.png' %}" class="fancybox" rel="ligthbox">
+                                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/vgg16_curves.png' %}" alt="subpage item" style="height: 50%;">
+                                </a>
+                            </div>
+                            <div class="col-lg-6 my-auto">
+                                <a href="{% static 'images/OregonWildlifeClassifier/vgg19_curves.png' %}" class="fancybox" rel="ligthbox">
+                                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/vgg19_curves.png' %}" alt="subpage item" style="height: 50%;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev my-prev-icon" href="#carouselControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black; height: 20%; width: 20%;"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next my-next-icon" href="#carouselControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black; height: 20%; width: 20%;"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="row section-element">
+                <div class="col-lg-7 my-auto vertical-center">
+                    <p>This table furthermore shows Model 4's test accuracies by species:</p>
+                </div>
+                <div class="col-lg-5 my-auto">
+                    <a href="{% static 'images/OregonWildlifeClassifier/test_accuracies_species.png' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/test_accuracies_species.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                    </a>
+                </div>
+            </div>
+            <p><b>Qualitative Results</b></p>
+            <p>As mentioned above, we extensively trained the models using both AlexNet (Model 1) and VGG19 (Model 4) pre-trained features. Even though both models yielded high testing accuracies, 96.5% and 98.75% respectively, there were still some consistent and inconsistent class misclassifications.</p>
+            <div class="col-lg-9 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/OregonWildlifeClassifier/misclassifications.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/misclassifications.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+            <p><br>
+                Starting with Model 1 which was trained using AlexNet features, there were several common misclassifications. By looking at these misclassifications shown in Table 4, <mark>it appears that the model had problems differentiating cougars from raccoons, eagles from ravens, and deer from elk</mark>. These misclassifications are reasonable since some of the animal classes are biologically related to each other. For example, eagles and ravens are birds and deer and elk belong to the same taxonomic family. It is interesting that Model 1 also sometimes could not tell between a seal and a cougar. One possible reason could be the fact that the images of cougars and seals in the training set often had a uni-colour background such as sky and ocean.<br><br>
+                <mark>With a test accuracy of 98.75%, Model 4, which uses VGG19 features, is the best-performing model</mark>. However, it still had difficulty identifying deer and ravens. It recognized deer as elk and raccoons, and ravens as deer and eagles. Apart from the possible reasons illustrated above, the misclassifications could simply result from insignificant anomalies.
+            </p>
+            <p><b>Evaluating Model on New Data</b></p>
+            <p>
+                One of the best ways to obtain new data that is certainly unique is to take images of wild animals ourselves. However, our project is used to classify wildlife animals in Oregon and it is difficult for the team to photograph these animals. Thus, we decided to search for <mark>new data on Google and randomly pick the top 10 images for each of the 8 animal classes. We also made sure that these new images were not included in the original dataset</mark>.
+            </p>
+            <div class="col-lg-9 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/OregonWildlifeClassifier/google_images.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/google_images.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+            <p><br>
+                In this part, three models were selected to evaluate with the new data from Google. In general, all three models’ performance met the expectation of classified 8 types of animals. The new accuracies also matched previous test accuracies. 
+            </p>
+            <div class="col-lg-9 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/OregonWildlifeClassifier/new_data_accuracy.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/new_data_accuracy.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+            <p><br>
+                The best model using transfer learning with VGG19 has a tendency of misclassifying deer and elk, which coincides with our previous observation. However, the overall accuracy is 97.5% which exceeds our team’s initial expectation of 90% (Figure 10). Another two models, AlexNet and ResNet also have good performance with 93.75% and 87.5% accuracies respectively on new data. but they both have random mispredictions between animal types (Figures 11 & 12).
+            </p>
+        </section>
+        <section class="sub-section" id="ethical-subsection">
+            <h4>Ethical Considerations</h4>
+            <p>
+                The collection contains classes of animal species, such as raccoons, that are sensitive to camera flash. Some photographers might have used flash when taking pictures of these animals and hence could have temporarily affected their physical and psychological health <a target="_blank" href="https://www.naturettl.com/does-flash-photography-harm-animals/#:~:text=It is safe to say,exposure to flash at night.&text=Flash photography at night does,is important to be considerate">[3]</a>.<br><br>
+                Our model can help identify wildlife by using flashless cameras placed outside in the wild. As well it can enable people to learn which animals roam in a certain area. Incidentally, this data might be used by poachers to locate and hunt wild animals.
+            </p>
+        </section>
+    </section>
+
+    <section class="main-section" id="contrib-section">
+        <h1>My Contributions</h1>
+        <p>
+            During preparation work, each team member was assigned to process images for 2 classes of animals, for a total of 8 classes. The work included filtering out images of poor quality, cropping the images to focus on the animals (in one-to-one aspect ratio), and finally resizing the images to 224 x 224 pixels.<br><br>
+            I was mainly responsible for <mark>researching, selecting, and implementing the baseline model</mark>. Upon selecting the Random Forest model, I implemented it for our task using the scikit-learn Python machine learning library and trained it.<br><br>
+            I also <mark>implemented the transfer learning model with VGG16 and VGG19 architectures using PyTorch and trained them</mark>.
+        </p>
+    </section>
+        
 {% endblock %}

@@ -51,7 +51,7 @@
 {% load static %}
     <div class="card text-center mx-auto team-info-card">
         <div class="card-body">
-            <p><b>Team Members:</b> Helen Dai, Samuel Chen, Bob Ji </p>
+            <p><b>Team Members:</b> Xiao Ying (Helen) Dai, Zihao Chen, Shengxiang Ji </p>
             <p><b>Supervisors:</b> Prof. Vaughn Betz, Dr. Lothar Lilge</p>
             <p><b>Duration:</b> Sep 2020 - Current (~ 1 year) </p>
             <p><b>Skills/Tools:</b> Python, Django, AWS, HTML, CSS, JavaScript </p>
@@ -67,27 +67,50 @@
         <section class="sub-section" id="bg-subsection">
             <h4>Background</h4>
             <p>
-                Interstitial photodynamic therapy (iPDT) is a modern cancer treatment method that eradicates tumors using light sensitive drugs activated by a set of light probes. In order to only activate drugs in the targeted tumor while minimizing damage to the healthy organ tissues surrounding it, the positions of the light probes and their intensities are the key.<br><br>
-                FullMonte and PDT-SPACE are software packages developed by the medical biophotonics research group and the computer engineering group of the University of Toronto, and together they serve to create optimized treatment plans for iPDT. PDT-SPACE intelligently searches for possible light probe setups, it then uses FullMonte to evaluate the various promising choices by simulating their light propagation and absorption behaviors, and it eventually outputs a set of information, including the optimized number of light probes needed, their powers, and their positions for the specified iPDT treatment plan.<br><br>
-                For more information on the FullMonte Project, please visit <a href="https://fullmonte.gitlab.io/">https://fullmonte.gitlab.io</a>.
+                Interstitial photodynamic therapy (iPDT) is a modern cancer treatment method that <mark>eradicates tumors using light sensitive drugs activated by a set of light probes</mark>. In order to only activate drugs in the targeted tumor while minimizing damage to the healthy organ tissues surrounding it, the positions of the light probes and their intensities are the key.<br><br>
             </p>
+            <div class="col-lg-8 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/FullMonteWeb/iPDT_treatment.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/FullMonteWeb/iPDT_treatment.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+            <div class="row section-element">
+                <div class="col-lg-9 my-auto vertical-center">
+                    <p><br><br><mark>FullMonte and PDT-SPACE are software packages</mark> developed by the medical biophotonics research group and the computer engineering group of the University of Toronto, and together they <mark>serve to create optimized treatment plans for iPDT</mark>. PDT-SPACE intelligently searches for possible light probe setups, it then uses FullMonte to evaluate the various promising choices by simulating their light propagation and absorption behaviors, and it eventually outputs a set of information, including the optimized number of light probes needed, their powers, and their positions for the specified iPDT treatment plan.</p>
+                    <p>For more information on the FullMonte Project, please visit <a target="_blank" href="https://fullmonte.gitlab.io/">https://fullmonte.gitlab.io</a>.</p>
+                </div>
+                <div class="col-lg-3 my-auto">
+                    <a href="{% static 'images/FullMonteWeb/iPDT_light_source.png' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/FullMonteWeb/iPDT_light_source.png' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
         </section>
         <!-- Problem -->
         <section class="sub-section" id="prob-subsection">
             <h4>Problem</h4>
-            <p>
-                Despite being promising tools for iPDT treatment planning, both the FullMonte and PDT-SPACE software packages rely heavily on the command line interface and programming knowledge for setup and operations, making them impractical for medical practitioners to use. Therefore, there is a gap to build an intuitive and accessible user interface for PDT-SPACE and FullMonte in order to promote a more widespread adoption of the tools.                
-            </p>
+            <div class="row section-element">
+                <div class="col-lg-7 my-auto">
+                    <a href="{% static 'images/FullMonteWeb/problem.png' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/FullMonteWeb/problem.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                    </a>
+                </div>
+                <div class="col-lg-5 my-auto vertical-center">
+                    <p>
+                        Despite being promising tools for iPDT treatment planning, both <mark>the FullMonte and PDT-SPACE software packages rely heavily on the command line interface and programming knowledge for setup and operations</mark>, making them impractical for medical practitioners to use. Therefore, <mark>there is a gap to build an intuitive and accessible user interface for PDT-SPACE and FullMonte in order to promote a more widespread adoption of the tools</mark>.                
+                    </p>
+                </div>
+            </div>
         </section>
         <!-- Solution -->
         <section class="sub-section" id="solution-subsection">
             <h4>Our Approach</h4>
             <p>
-                Our goal was to design a web interface that allows users who do not have extensive computer engineering knowledge to run FullMonte and PDT-SPACE, visualize the simulation and optimization results, and download output files. The idea was based on the previous work by Julian Gonsalves, Charlie Chai, Yuchao Jin, and Galen Brook-Atkins. Due to extention of the website's capabilities, most of the original work had to be re-written and many new features were added, such as supporting AWS computing backend.<br><br>
-                Here is the portal to our final design:
+                Our goal was to <mark>design a web interface that allows users who do not have extensive computer engineering knowledge to run FullMonte and PDT-SPACE, visualize the simulation and optimization results, and download output files</mark>. The idea was based on the previous work by Julian Gonsalves, Charlie Chai, Yuchao Jin, and Galen Brook-Atkins. Due to extention of the website's capabilities, most of the original work had to be re-written and many new features were added, such as supporting AWS computing backend.<br><br>
             </p>
             <div class="container">
-                <a href="http://fullmontesuite.herokuapp.com/" class="btn btn-primary btn-custom" style="margin-top: 4vh; padding: 15px;">FullMonteWeb <i class="fas fa-external-link-alt"></i></a>
+                <p>Here is the portal to our final design:</p>
+                <a target="_blank" href="http://fullmontesuite.herokuapp.com/" class="btn btn-primary btn-custom" style="padding: 15px;">FullMonteWeb <i class="fas fa-external-link-alt"></i></a>
             </div>
         </section>
     </section>
@@ -100,18 +123,35 @@
         <ol>
             <li class="list">Most of these software are not intended for turbid (highly-scattering) media such as living tissue. An example application is GoldSim, which is specialized for general science and business. Therefore, they are not suitable.</li>
             <li class="list">Many popular Monte Carlo (MC) light scattering codes do not come with a GUI, such as Monte Carlo Multi-Layered (MCML).</li>
-            <li class="list">For the applications that do have a GUI, they have some scaling limitations. For example, Multi-Scattering is a web-based simulator for light propagation in turbid media and it has a beautiful user interface, but it uses 3 backend servers owned by Lund University, so only three simultaneous simulations are possible. </li>
+            <li class="list">For the applications that do have a GUI, they have some <mark>scaling limitations</mark>. For example, Multi-Scattering is a web-based simulator for light propagation in turbid media and it has a beautiful user interface, but it uses 3 backend servers owned by Lund University, so only three simultaneous simulations are possible. </li>
             <li class="list">FullMonte is by far the fastest open-source tetrahedral MC light propagation software, so building an intuitive graphics user interface is highly beneficial. </li>
-            <li class="list">None of the existing desktop/web applications provide iPDT treatment planning features. Today, most clinicians manually created plans based on heuristics and previous attempts of iPDT, so the creation of PDT-SPACE to automate the process of iPDT planning is highly benefcial. Therefore, it would be great if the PDT-SPACE software package can be incorporated into the application as well.</li>
+            <li class="list"><mark>None of the existing desktop/web applications provide iPDT treatment planning features</mark>. Today, most clinicians manually created plans based on heuristics and previous attempts of iPDT, so the creation of PDT-SPACE to automate the process of iPDT planning is highly benefcial. Therefore, it would be great if the PDT-SPACE software package can be incorporated into the application as well.</li>
         </ol>
         <p><b>Web-based vs Desktop Application</b></p>
-        <p>We learned that FullMonte simulations can be compute-intensive, expecially with the visualization component, which demands powerful GPU support. Furthermore, we would like the website to be as easily accessible as possible for all medical researchers in the field, so there should be minimal setup and learning from the user's end. A desktop application requires manual setup on the user's device and would impose a strict demand on the device's CPU Specifications, whereas a web-based application does not require any setup on the user's device and can leverage the use of cloud computing services. Therefore, we have determined that a web-based application is the better choice for us.</p>
+        <p>We learned that <mark>FullMonte simulations can be compute-intensive</mark>, expecially with the visualization component, which demands powerful GPU support. Furthermore, we would like the website to be as easily accessible as possible for all medical researchers in the field, so there should be minimal setup and learning from the user's end. A desktop application requires manual setup on the user's device and would impose a strict demand on the device's CPU Specifications, whereas <mark>a web-based application does not require any setup on the user's device and can leverage the use of cloud computing services</mark>. Therefore, we have determined that a web-based application is the better choice for us.</p>
         <p><b>Website Framework</b></p>
         <p> We have chosen to build the FullMonteWeb application on the Django web framework, which is an open source Python-based framework designed for developing web applications. This framework is very well designed for developing secure and scalable web applications while also providing functionalities readily for use, such as the user authentication system. </p>
         <p><b>Website Hosting Options</b></p>
         <p> We investegated into all the suitable options for hosting dynamic websites, including Heroku, Amazon Elastic Beanstalk, and Amazon Lightsail. Heroku was eventually chosen for its wonderful compatibility with Django and cleanest deployment process, but we also found that it is not very suitable for larger scale applications, so although it suits our current requirements, it is possible to migrate the website to Amazon’s web hosting services in the future. </p>
         <p><b> Cloud Computing Services </b></p>
-        <p> Amazon Web Services (AWS) offers an extensive suite of cloud computing platforms and APIs, ranging from vitrual computers to databases and storage. It is also easily scalable and provides great customer support. Our users simply need to get an AWS EC2 instance and run all the simulations on that virtual machine through our website.</p>
+        <p> Amazon Web Services (AWS) offers an extensive suite of cloud computing platforms and APIs, ranging from vitrual computers to database and storage. It is also easily scalable and provides great customer support. Our users simply need to get an AWS EC2 instance and run all the simulations on that virtual machine through our website.</p>
+        <div class="row section-element justify-content-md-center">
+            <div class="col-lg-3 my-auto">
+                <a href="{% static 'images/FullMonteWeb/django.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/FullMonteWeb/django.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+            <div class="col-lg-3 my-auto">
+                <a href="{% static 'images/FullMonteWeb/heroku.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/FullMonteWeb/heroku.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+            <div class="col-lg-3 my-auto">
+                <a href="{% static 'images/FullMonteWeb/aws.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/FullMonteWeb/aws.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- Design -->
@@ -121,18 +161,22 @@
         <section class="sub-section" id="overview-subsection">
             <h4>System-level Overview</h4>
             <p>
-                At a high level, the FullMonte web interface first generates scripts using optical properties, lightsource locations, and dose thresholds from user inputs. It then sends the generated scripts and the user-uploaded meshes to an AWS computing node, and executes the simulation or optimization software. When the execution is finished, the web interface saves the output files from the AWS computing node for visualization and makes it available for users to download. From the user’s perspective, the web interface abstracts away the underlying software and convoluted interconnections, and they only need to interact with intuitive buttons and text fields.
+                At a high level, the FullMonte web interface first generates scripts using optical properties, lightsource locations, and dose thresholds from user inputs. It then sends the generated scripts and the user-uploaded meshes to an AWS computing node, and executes the simulation or optimization software. When the execution is finished, the web interface saves the output files from the AWS computing node for visualization and makes it available for users to download. <mark>From the user’s perspective, the web interface abstracts away the underlying software and convoluted interconnections</mark>, and they only need to interact with buttons and text fields.
             </p>
-            <p><b>High-level Conceptual Block Diagram</b></p>
-            <div class="col-lg-6 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/PocketTravel/hover_mouse.gif' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/PocketTravel/hover_mouse.gif' %}" alt="subpage item">
+            <div class="container">
+                <p><b>High-level Conceptual Block Diagram</b></p>
+            </div>
+            <div class="col-lg-8 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/FullMonteWeb/user_flow.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/FullMonteWeb/user_flow.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                 </a>
             </div>
-            <p><b>System-level Block Diagram</b></p>
-            <div class="col-lg-6 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/PocketTravel/hover_mouse.gif' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/PocketTravel/hover_mouse.gif' %}" alt="subpage item">
+            <div class="container">
+                <p><b><br><br>System-level Block Diagram</b></p>
+            </div>
+            <div class="col-lg-8 my-auto" style="margin: 20px auto;">
+                <a href="{% static 'images/FullMonteWeb/system_context_diagram.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/FullMonteWeb/system_context_diagram.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                 </a>
             </div>
         </section>
@@ -140,50 +184,50 @@
         <!--                    <p><b>1. User Authentication</b><br></p>    -->
         <section class="sub-section" id="features-subsection">
             <h4>Features</h4>
-            <p><b>1. User Authentication </b><br>Users are required to register an account and login before accessing any website functionalities. This is to ensure that users will be able to come back and access their results later, and to ensure that nobody else has access to results that are not their own.</p>
+            <p><b>1. User Authentication </b><br>Users are required to register an account and login before accessing any website functionalities. This is to <mark>ensure that users will be able to come back and access their results later, and to ensure that nobody else has access to results that are not their own</mark>.</p>
             <div class="row section-element">
                 <div class="col-lg-4 my-auto">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/levels_of_details.png' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/levels_of_details.png' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/sign_up.png' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/sign_up.png' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 my-auto">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/levels_of_details.png' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/levels_of_details.png' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/login.png' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/login.png' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 my-auto">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/levels_of_details.png' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/levels_of_details.png' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/account_info.png' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/account_info.png' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="row section-element">
                 <div class="col-lg-6 my-auto vertical-center">
-                    <p><b>2. Tutorial </b><br>We have created this page to demonstrate all the how-to's for using the website, including how to set up an AWS EC2 cloud computing instance, how to launch simulations, etc.. There is a combination of writings, images, and videos for maximal clearity. </p>
+                    <p><b>2. Tutorial </b><br>We have created this page to demonstrate all the how-to's for using the website, including how to set up an AWS EC2 cloud computing instance, how to launch simulations, etc.. There is a <mark>combination of writings, images, and videos for maximal clearity</mark>. </p>
                 </div>
                 <div class="col-lg-6 my-auto">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location" id="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/change_map.gif' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/change_map.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/tutorial.png' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/tutorial.png' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
@@ -191,11 +235,11 @@
             <div class="row section-element">
                 <div class="col-lg-6 my-auto">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/autocomplete.gif' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/autocomplete.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/aws_setup.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/aws_setup.gif' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
@@ -203,30 +247,40 @@
                     <p><b>3. AWS Authentication</b><br>After the user creates their own EC2 instance, they need to allow our website to securely access the instance by providing its DNS name and .pem file through our AWS setup page. Next, our website will attempt to perform a remote SSH (Secure Shell) operation to connect to the instance. Once connected, it will detect whether the computing node is set up with the required environment and software (Docker, FullMonte, Paraview Visualizer, PDT-SPACE, and NVIDIA GPU driver if the server contains a GPU), then automatically set them up if not detected.</p>
                 </div>
             </div>
-            <p><b>4. FullMonte Simulation</b><br>The following is a series of pages that guide the user to prividing the files and parameters for a FullMonte simulation. As the first step, it asks users to upload mesh files, or to choose one from the list of mesh files that they used in previous simulations. Other input fields include unit of the mesh file (cm or mm), the types of energies to record (), total energy used, optical material properties, locations of the light sources, etc.. In the backend, our website takes all the selections and inputs and generates a TCL script with the appropriate functions for running FullMonte.</p>
+            <p><b>4. FullMonte Simulation</b><br>The following is a series of pages that guide the user to providing the files and parameters for a FullMonte simulation. As the first step, it asks users to upload mesh files, or to choose one from the list of mesh files that they used in previous simulations. Other input fields include unit of the mesh file (cm or mm), the types of energies to record, total energy used, optical material properties, locations of the light sources, etc.. <mark>In the backend, our website takes all the selections and inputs and generates a TCL script</mark> with the appropriate functions for running FullMonte.</p>
+            <div class="col-lg-7 my-auto" style="margin: 20px auto;">
+                <div class="page">
+                    <div class="titlebar titlebar-small">
+                        <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
+                    </div>
+                    <a href="{% static 'images/FullMonteWeb/fullmonte_main.png' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/FullMonteWeb/fullmonte_main.png' %}" alt="subpage item">
+                    </a>
+                </div>
+            </div>
             <div class="row section-element">
                 <div class="col-lg-6 my-auto vertical-center">
-                    <p>Advanced users who knows how to work with TCl scripts can download the generated TCL script so far, complete the rest of the script manually, upload the completed sctipt, and run the simulation directly to skip the rest of the setup procedures.</p>
+                    <p>Users can save material presets for a quick selection next time. Advanced users who knows how to work with TCl scripts can download the generated TCL script so far, complete the rest of the script manually, upload the completed sctipt, and run the simulation directly to skip the rest of the setup procedures.</p>
                 </div>
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" style="margin: 20px auto;">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/search_history.gif' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/search_history.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/fullmonte_materials.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/fullmonte_materials.gif' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="row section-element">
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" style="margin: 20px auto;">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/search_history.gif' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/search_history.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/fullmonte_light.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/fullmonte_light.gif' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
@@ -238,25 +292,25 @@
                 <div class="col-lg-6 my-auto vertical-center">
                     <p>The confirmation page allows users to check and many any final changes to the TCL script before launching the simulation.</p>
                 </div>
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" style="margin: 20px auto;">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/search_history.gif' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/search_history.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/fullmonte_confirm.png' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/fullmonte_confirm.png' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="row section-element">
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" style="margin: 20px auto;">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/search_history.gif' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/search_history.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/fullmonte_running.png' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/fullmonte_running.png' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
@@ -264,51 +318,119 @@
                     <p>Once confirmed, users will be redirected to this page while simulation is running. This will inform users of the simulation progress.</p>
                 </div>
             </div>
-            <p>Once completed, users will be informed of any information, warnings, and errors that incurred during the simulation. It also guides users to the next step: visualize the simulation output files or run another simulation.</p>
-            <div class="col-lg-6 my-auto" style="margin: 20px auto;">
-                <div class="page">
-                    <div class="titlebar">
-                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+            <p><b>5. PDT-SPACE Treatment Planning </b><br>The following is a series of pages that guide the user to prividing the <mark>files and parameters for a PDT-SPACE optimization planning</mark>. As the first step, it asks users to select a mesh file, and specify other fields such as source type, placement type, light placement file, etc.. In the backend, our website takes all the selections and inputs and generates an OP script with the appropriate code for running PDT-SCRIPT.</p>
+            <div id="carouselControls" class="carousel slide myCarousel" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row section-element">
+                            <div class="col-lg-6 my-auto">
+                                <div class="page">
+                                    <div class="titlebar titlebar-small">
+                                        <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
+                                    </div>
+                                    <a href="{% static 'images/FullMonteWeb/pdt_main.gif' %}" class="fancybox" rel="ligthbox">
+                                        <img class="desc-image" src="{% static 'images/FullMonteWeb/pdt_main.gif' %}" alt="subpage item">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 my-auto">
+                                <div class="page">
+                                    <div class="titlebar titlebar-small">
+                                        <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
+                                    </div>
+                                    <a href="{% static 'images/FullMonteWeb/mosek.png' %}" class="fancybox" rel="ligthbox">
+                                        <img class="desc-image" src="{% static 'images/FullMonteWeb/mosek.png' %}" alt="subpage item">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="{% static 'images/PocketTravel/hover_mouse.gif' %}" class="fancybox" rel="ligthbox">
-                        <img class="desc-image" src="{% static 'images/PocketTravel/hover_mouse.gif' %}" alt="subpage item">
-                    </a>
-                </div>
-            </div>
-            <p><b>5. PDT-SPACE Treatment Planning </b><br>The following is a series of pages that guide the user to prividing the files and parameters for a PDT-SPACE optimization planning. As the first step, it asks users to select a mesh file, and specify other fields such as source type, placement type, light placement file, etc.. In the backend, our website takes all the selections and inputs and generates an OP script with the appropriate code for running PDT-SCRIPT.</p>
-            <div class="col-lg-6 my-auto" style="margin: 20px auto;">
-                <div class="page">
-                    <div class="titlebar">
-                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                    <div class="carousel-item">
+                        <div class="row section-element">
+                            <div class="col-lg-6 my-auto">
+                                <div class="page">
+                                    <div class="titlebar titlebar-small">
+                                        <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
+                                    </div>
+                                    <a href="{% static 'images/FullMonteWeb/pdt_parameters.png' %}" class="fancybox" rel="ligthbox">
+                                        <img class="desc-image" src="{% static 'images/FullMonteWeb/pdt_parameters.png' %}" alt="subpage item">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 my-auto">
+                                <div class="page">
+                                    <div class="titlebar titlebar-small">
+                                        <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
+                                    </div>
+                                    <a href="{% static 'images/FullMonteWeb/pdt_parameters2.png' %}" class="fancybox" rel="ligthbox">
+                                        <img class="desc-image" src="{% static 'images/FullMonteWeb/pdt_parameters2.png' %}" alt="subpage item">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="{% static 'images/PocketTravel/hover_mouse.gif' %}" class="fancybox" rel="ligthbox">
-                        <img class="desc-image" src="{% static 'images/PocketTravel/hover_mouse.gif' %}" alt="subpage item">
-                    </a>
+                    <div class="carousel-item">
+                        <div class="row section-element">
+                            <div class="col-lg-6 my-auto">
+                                <div class="page">
+                                    <div class="titlebar titlebar-small">
+                                        <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
+                                    </div>
+                                    <a href="{% static 'images/FullMonteWeb/pdt_running.png' %}" class="fancybox" rel="ligthbox">
+                                        <img class="desc-image" src="{% static 'images/FullMonteWeb/pdt_running.png' %}" alt="subpage item">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 my-auto">
+                                <div class="page">
+                                    <div class="titlebar titlebar-small">
+                                        <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
+                                    </div>
+                                    <a href="{% static 'images/FullMonteWeb/pdt_finished.png' %}" class="fancybox" rel="ligthbox">
+                                        <img class="desc-image" src="{% static 'images/FullMonteWeb/pdt_finished.png' %}" alt="subpage item">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <a class="carousel-control-prev my-prev-icon" href="#carouselControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black; height: 20%; width: 20%;"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next my-next-icon" href="#carouselControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black; height: 20%; width: 20%;"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
             <p><b>6. Interactive Visualizers </b></p>
-            <p>This page can be launched up after a successful Fullmonte simulation or a successsful ODT-SPACE optimization (to visualize the optimized light source configuration). There are two visualization features: a 3D visualizer for interacting with the output 3D models and a Dose-Volume Histogram. The main visualization page is composed of a link to a third-party 3D visualization tool and an interactive Dose-Volume Histogram.</p>
+            <p>This page can be launched up after a successful Fullmonte simulation or a successsful PDT-SPACE optimization (to visualize the optimized light source configuration). <mark>There are two visualization features: a 3D visualizer for interacting with the output 3D models and a Dose-Volume Histogram</mark>. The main visualization page is composed of a link to a third-party 3D visualization tool and an interactive Dose-Volume Histogram.</p>
             <div class="col-lg-6 my-auto" style="margin: 20px auto;">
                 <div class="page">
-                    <div class="titlebar">
-                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                    <div class="titlebar titlebar-small">
+                        <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                     </div>
-                    <a href="{% static 'images/PocketTravel/hover_mouse.gif' %}" class="fancybox" rel="ligthbox">
-                        <img class="desc-image" src="{% static 'images/PocketTravel/hover_mouse.gif' %}" alt="subpage item">
+                    <a href="{% static 'images/FullMonteWeb/visual_main.png' %}" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="{% static 'images/FullMonteWeb/visual_main.png' %}" alt="subpage item">
                     </a>
                 </div>
             </div>
             <div class="row section-element">
                 <div class="col-lg-6 my-auto vertical-center">
-                    <p>A dose-volume histogram serves to show the distribution of fluence (energy intensity) throughout each body tissue region described in the simulation's output .vtk file. Users can interact with the plot by zooming in and out, toggling region data on and off, and choosing whether or not to show markers for data points. When markers are turned on, the user can hover the mouse over them to view their x and y values. </p>
+                    <p>A dose-volume histogram serves to show the distribution of fluence (energy intensity) throughout each body tissue region described in the simulation's output .vtk file. Users can <mark>interact with the plot by zooming in and out, toggling region data on and off, and choosing whether or not to show markers for data points</mark>. When markers are turned on, the user can hover the mouse over them to view their x and y values. </p>
                 </div>
                 <div class="col-lg-6 my-auto">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/search_history.gif' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/search_history.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/visual_dvh.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/visual_dvh.gif' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
@@ -316,39 +438,34 @@
             <div class="row section-element">
                 <div class="col-lg-6 my-auto">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/search_history.gif' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/search_history.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/visual_3d.gif' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/visual_3d.gif' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-6 my-auto vertical-center">
-                    <p>To achieve the 3D visualization functionality, the team researched and attempted several possible solutions. The final design that best aligns with our requirements makes use of a third party 3D visualization software called ParaView Visualizer, and how our website interfaces with this software is shown in the conceptual diagram below.</p>
+                    <p>To achieve the 3D visualization functionality, the team researched and attempted several possible solutions. The final design that best aligns with our requirements makes use of a third party <mark>3D visualization software called ParaView Visualizer</mark>, and how our website interfaces with this software is shown in the conceptual diagram below.</p>
                 </div>
             </div>
-            <div class="col-lg-6 my-auto" style="margin: 20px auto;">
-                <div class="page">
-                    <div class="titlebar">
-                        <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
-                    </div>
-                    <a href="{% static 'images/PocketTravel/hover_mouse.gif' %}" class="fancybox" rel="ligthbox">
-                        <img class="desc-image" src="{% static 'images/PocketTravel/hover_mouse.gif' %}" alt="subpage item">
-                    </a>
-                </div>
+            <div class="col-lg-10 my-auto" style="margin: 30px auto;">
+                <a href="{% static 'images/FullMonteWeb/3d_visualizer_diagram.png' %}" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="{% static 'images/FullMonteWeb/3d_visualizer_diagram.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                </a>
             </div>
             <div class="row section-element">
                 <div class="col-lg-6 my-auto vertical-center">
-                    <p><b>7. Simulation History</b><br>All generated scripts, input files, and output files from FullMonte are saved sfely to an Amazon S3 central storage system. This page allows users to download these files from storage when needed. </p>
+                    <p><b>7. Simulation History</b><br>All generated scripts, input files, and output files from FullMonte are saved safely to an Amazon S3 central storage system. This page <mark>allows users to download these files from storage when needed</mark>. </p>
                 </div>
                 <div class="col-lg-6 my-auto">
                     <div class="page">
-                        <div class="titlebar">
-                            <div class="dot closes"></div><div class="dot minimise"></div><div class="dot maximise"></div><div class="location">Toronto, Canada</div>
+                        <div class="titlebar titlebar-small">
+                            <div class="dot-small closes"></div><div class="dot-small minimise"></div><div class="dot-small maximise"></div>
                         </div>
-                        <a href="{% static 'images/PocketTravel/search_history.gif' %}" class="fancybox" rel="ligthbox">
-                            <img class="desc-image" src="{% static 'images/PocketTravel/search_history.gif' %}" alt="subpage item">
+                        <a href="{% static 'images/FullMonteWeb/history.png' %}" class="fancybox" rel="ligthbox">
+                            <img class="desc-image" src="{% static 'images/FullMonteWeb/history.png' %}" alt="subpage item">
                         </a>
                     </div>
                 </div>
@@ -358,38 +475,28 @@
         <!-- DV -->
         <section class="sub-section" id="verification-subsection">
             <h4>Verification and Iterations</h4>
-            <p>Testing and verifications were conducted and evaluated against a set of functional requirements, constraints, and objectives. There is a mix of quantitative and qualitative measurements.</p>
+            <p>Testing and verifications were conducted and evaluated against a set of <mark>functional requirements, constraints, and objectives</mark>. There is a mix of quantitative and qualitative measurements.</p>
             <p><b>Quantitative Measurements</b></p>
-            <p>For example, one of our objectives was for the website to be responsive, and our goal for this objective was to have a redirect latency of less than 800 ms. To measure the redirect time for each web page, we use the performance analyzer in the developer tool of Google Chrome browser. We went through workflows for simulation and optimization three times, and then calculated the average redirect time for each webpage. If the average redirect time is less than 800 ms for all web pages, our design meets this objective. </p>
+            <p>For example, one of our objectives was for the website to be responsive, and our goal for this objective was to have a <mark>redirect latency of less than 800 ms</mark>. To measure the redirect time for each web page, we use the performance analyzer in the developer tool of Google Chrome browser. We went through workflows for simulation and optimization three times, and then calculated the average redirect time for each webpage. If the average redirect time is less than 800 ms for all web pages, our design meets this objective. </p>
             <p><b>Qualitative Measurements</b></p>
-            <p>For example, one of our functional requirements was that the website should be intuitive. With the help of Dr. Lothar Lilge, a Ph.D. student in the medical biophysics group, and a few high school students, we were able to test out the flow of our website with real users. We received many helpful feedback on how to increase the website's usability and re-iterated through the project development phase to improve the website.</p>
-            <div class="container">
-                <a href="#" class="btn btn-primary btn-custom" style="margin-top: 4vh; width: 40%;">See Detailed Verification Methods and Analysis <i class="fas fa-external-link-alt"></i></a>
-            </div>
+            <p>For example, one of our functional requirements was that the website should be intuitive. With the help of Dr. Lothar Lilge, a Ph.D. student in the medical biophysics group, and a few high school students, <mark>we were able to test out the flow of our website with real users. We received many helpful feedback on how to improve the website's usability and re-iterated through the project development phase to improve the website</mark>.</p>
         </section>
     </section>
 
     <section class="main-section" id="contrib-section">
         <h1>My Contributions</h1>
-        <p>As the UI/UX design and research lead, I as in charge of designing the overall website layout for better aesthetics and easier navigation. I was also in charge of contacting the medical biophysics research group for user testing and communicate what can be improved.</p>
-        <p>In terms of backend, I was mainly responsible for implementing the visualization functionalities of the website. To allow for 3D visualization of VTK files, I conducted research on several possible options and selected ParaView Visualizer, which is a third party application that best suits our requirements. I then augmented Shengxiang’s AWS setup scripts to automatically install ParaView Visualizer on the user-specified EC2 instance if it is not already detected. FInally, I added code to run the setup script and launch ParaView Visualizer on the user’s EC2 instance. For the dose-volume histogram feature, I wrote the algorithm to generate dose-volume data as well as the scripts to plot and display the data on an interactive graph.</p>
+        <P>I did the <mark>initial research on FullMonte and PDT-SPACE and pitched an idea to my team</mark>. We then did some additional research, fine-tuned the objectives, and contacted the computer science group at the University of Toronto to propose our project plan.</P>
+        <p>As the UI/UX design and research lead, I was <mark>in charge of designing the overall website layout for easy navigation and aesthetics</mark>. I was also in charge of contacting the medical biophysics research group to <mark>conduct user testing and setting up meetings to discuss what can be improved</mark>.</p>
+        <p>In terms of backend, I was mainly responsible for implementing the <mark>visualization functionalities of the website</mark>. To allow for 3D visualization of VTK files, I conducted research on several possible options and selected the best one in terms of its suitability and usability. I then augmented the AWS setup scripts to automatically install ParaView Visualizer on the user-specified EC2 instance. Finally, I added code to run the setup script and launch ParaView Visualizer on the user’s EC2 instance. For the dose-volume histogram feature, <mark>I wrote the algorithm to generate dose-volume data as well as the scripts to plot and display the data on an interactive graph</mark>.</p>
     </section>
 
     <section class="main-section" id="future-section">
         <h1>Future and On-going Work</h1>
-    </section>
+        <ol>
+            <li class="list">My team and I are preparing for a paper to be published in the <mark>Journal of Biomedical Optics</mark> in November 2021. This is to introduce the website to the public.</li>
+            <li class="list">I am still working closely with the medical biophysics group at the University of Toronto to add additional features and to improve the website usability.</li>
+        </ol>
 
-    <script>
-        $(function () { 
-        count = 0; 
-        wordsArray = ["Toronto, Canada", "Toronto, Canada", "Toronto, Canada", "Beijing, China", "Beijing, China"]; 
-        setInterval(function () { 
-            count++; 
-            $("#location").fadeOut(0, function () { 
-                $(this).text(wordsArray[count % wordsArray.length]).fadeIn(0); 
-            }); 
-        }, 1460); 
-    });
-    </script>
+    </section>
         
 {% endblock %}
