@@ -171,15 +171,15 @@ p.card-text {
 }
 
 .home-intro {
-    transition: all 1s;
+    transition: all .5s;
 }
 
 .home-cs-selected {
-    transition: all 1s;
+    transition: all .5s;
 }
 
 .home-selected-arts {
-    transition: all 1s;
+    transition: all .5s;
 }
 
 .hide {
@@ -230,6 +230,24 @@ img.gallery-img {
     height: 300px;
     border-radius:10px;
     object-fit:cover;
+}
+
+img.art-img {
+    width: 100%;
+    border-radius:10px;
+    transition: all .5s;
+}
+
+img.art-img.show {
+    opacity:1;
+}
+
+img.art-img.hide {
+    opacity:0;
+}
+
+.column-img {
+    margin-bottom: 30px;
 }
 
 .zoom {
