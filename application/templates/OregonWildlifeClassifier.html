@@ -2,7 +2,7 @@
 
 {% block project_image %}
 {% load static %}
-    <img class="project-intro-img" src="{% static 'images/PocketTravel/Logo.png' %}" alt="">
+    <img class="project-intro-img" src="https://i.ibb.co/m0yc5yb/Logo.png" alt="">
     <h2>A Wildlife Classifier Using Machine Learning</h2>
 {% endblock %}
 
@@ -83,8 +83,8 @@
                 There are many applications of animal image classifiers in use today. A group of ecologists used motion‐activated cameras (“camera traps”) to study remote wildlife. However, studies involving camera traps result in visually analyzing millions of images in order to extract data that can be used in ecological analyzes. Hence the ecologists resorted to using <mark>convolutional neural networks with the ResNet‐18 architecture</mark> to automatically classify wildlife species from camera trap images obtained from five states across the United States <a target="_blank" href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13120">[1]</a>. <mark>Another use case of using a trained machine learning classifier is in the form of a predator recognition system</mark>. In part of the world where predators such as lions, alligators, and bears have been known to encroach onto residential areas. Such systems are deployed to ensure communities can keep if such predators cross into human territory and can be dealt with immediately to not pose further threat. This is important because animal attacks are becoming more common as more forests are cut down. 
             </p>
             <div class="col-lg-8 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/OregonWildlifeClassifier/classifier_in_action.png' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/classifier_in_action.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                <a href="https://i.ibb.co/0rJ3RNN/classifier-in-action.png" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/0rJ3RNN/classifier-in-action.png" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                 </a>
             </div>
         </section>
@@ -103,8 +103,8 @@
         <section class="sub-section" id="overview-subsection">
             <h4>Overall Model Design Flow</h4>
             <div class="col-lg-8 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/OregonWildlifeClassifier/overview.PNG' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/overview.PNG' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                <a href="https://i.ibb.co/JQrwbNs/overview.png" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/JQrwbNs/overview.png" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                 </a>
             </div>
         </section>
@@ -136,8 +136,8 @@
                 Some classes of images from the original dataset contained less than 500 qualified images, so <mark>data augmentation was conducted to make up for the targeted 500 images per class</mark>. This includes creating new, valid images by randomly rotating images under 30 degrees, zooming in, and splitting one image with multiple instances of the animal into multiple images with one instance each. A diagram of such techniques used is shown below.
             </p>
             <div class="col-lg-10 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/OregonWildlifeClassifier/data_augmentation.png' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/data_augmentation.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                <a href="https://i.ibb.co/4mVC54p/data-augmentation.png" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/4mVC54p/data-augmentation.png" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                 </a>
             </div>
         </section>
@@ -153,8 +153,8 @@
                 We experimented with several CNN models, including <mark>our own model built from scratch, AlexNet, ResNet18, and VGG16, and VGG19</mark>. The best model was achieved by using transfer learning with the VGG architecture for feature extraction. In particular, the team discovered that the VGG19 architecture variant produced the best results. Figure below shows the overall architecture of our selected classifier.
             </p>
             <div class="col-lg-10 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/OregonWildlifeClassifier/architecture.png' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/architecture.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                <a href="https://i.ibb.co/PNyLCz3/architecture.png" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/PNyLCz3/architecture.png" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                 </a>
             </div>
             <p>
@@ -185,15 +185,15 @@
                     <p>This illustrates a decision tree structure, where samples of images are sorted at different branches. Actual feature sorting would not be based on plain word questions shown in the diagram, this is just to show how the algorithm works at the high level.</p>
                 </div>
                 <div class="col-lg-6 my-auto">
-                    <a href="{% static 'images/OregonWildlifeClassifier/decision_tree.png' %}" class="fancybox" rel="ligthbox">
-                        <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/decision_tree.png' %}" alt="subpage item">
+                    <a href="https://i.ibb.co/s6g45hv/decision-tree.png" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="https://i.ibb.co/s6g45hv/decision-tree.png" alt="subpage item">
                     </a>
                 </div>
             </div>
             <div class="row section-element">
                 <div class="col-lg-6 my-auto">
-                    <a href="{% static 'images/OregonWildlifeClassifier/random_forest.png' %}" class="fancybox" rel="ligthbox">
-                        <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/random_forest.png' %}" alt="subpage item">
+                    <a href="https://i.ibb.co/R9ZJpk1/random-forest.png" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="https://i.ibb.co/R9ZJpk1/random-forest.png" alt="subpage item">
                     </a>
                 </div>
                 <div class="col-lg-6 my-auto vertical-center">
@@ -211,8 +211,8 @@
                 Table below shows the final accuracies of each model. All models use cross-entropy loss and the Adam optimizer for best results. Training data was recorded after every iteration (mini-batch), and accuracies of all the validation data were also logged after every iteration. 
             </p>
             <div class="col-lg-9 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/OregonWildlifeClassifier/top_4.png' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/top_4.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                <a href="https://i.ibb.co/cQHZkCG/top-4.png" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/cQHZkCG/top-4.png" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                 </a>
             </div>
             <p><br>The following set of images show the training curves for these 4 models:</p>
@@ -228,16 +228,16 @@
                                 <div class="container">
                                     <h5 style="background-color: #b3c0b9; border-top-left-radius: 20px; border-top-right-radius: 20px;">AlexNet + 3-Layer CNN</h5>
                                 </div>
-                                <a href="{% static 'images/OregonWildlifeClassifier/alexnet_curves.png' %}" class="fancybox" rel="ligthbox">
-                                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/alexnet_curves.png' %}" alt="subpage item" style="height: 50%;">
+                                <a href="https://i.ibb.co/0ttZDyb/alexnet-curves.png" class="fancybox" rel="ligthbox">
+                                    <img class="desc-image" src="https://i.ibb.co/0ttZDyb/alexnet-curves.png" alt="subpage item" style="height: 50%;">
                                 </a>
                             </div>
                             <div class="col-lg-6 my-auto">
                                 <div class="container">
                                     <h5 style="background-color: #b3c0b9; border-top-left-radius: 20px; border-top-right-radius: 20px;">Resnet18</h5>
                                 </div>
-                                <a href="{% static 'images/OregonWildlifeClassifier/resnet_curves.png' %}" class="fancybox" rel="ligthbox">
-                                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/resnet_curves.png' %}" alt="subpage item" style="height: 50%;">
+                                <a href="https://i.ibb.co/zHj9Y6s/resnet-curves.png" class="fancybox" rel="ligthbox">
+                                    <img class="desc-image" src="https://i.ibb.co/zHj9Y6s/resnet-curves.png" alt="subpage item" style="height: 50%;">
                                 </a>
                             </div>
                         </div>
@@ -248,16 +248,16 @@
                                 <div class="container">
                                     <h5 style="background-color: #b3c0b9; border-top-left-radius: 20px; border-top-right-radius: 20px;">VGG16 + 3-Layer CNN</h5>
                                 </div>
-                                <a href="{% static 'images/OregonWildlifeClassifier/vgg16_curves.png' %}" class="fancybox" rel="ligthbox">
-                                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/vgg16_curves.png' %}" alt="subpage item" style="height: 50%;">
+                                <a href="https://i.ibb.co/F6J3R6K/vgg16-curves.png" class="fancybox" rel="ligthbox">
+                                    <img class="desc-image" src="https://i.ibb.co/F6J3R6K/vgg16-curves.png" alt="subpage item" style="height: 50%;">
                                 </a>
                             </div>
                             <div class="col-lg-6 my-auto">
                                 <div class="container">
                                     <h5 style="background-color: #b3c0b9; border-top-left-radius: 20px; border-top-right-radius: 20px;">VGG19 + 3-Layer CNN</h5>
                                 </div>
-                                <a href="{% static 'images/OregonWildlifeClassifier/vgg19_curves.png' %}" class="fancybox" rel="ligthbox">
-                                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/vgg19_curves.png' %}" alt="subpage item" style="height: 50%;">
+                                <a href="https://i.ibb.co/2np9Gr3/vgg19-curves.png" class="fancybox" rel="ligthbox">
+                                    <img class="desc-image" src="https://i.ibb.co/2np9Gr3/vgg19-curves.png" alt="subpage item" style="height: 50%;">
                                 </a>
                             </div>
                         </div>
@@ -277,16 +277,16 @@
                     <p>This table furthermore shows Model 4's test accuracies by species:</p>
                 </div>
                 <div class="col-lg-5 my-auto">
-                    <a href="{% static 'images/OregonWildlifeClassifier/test_accuracies_species.png' %}" class="fancybox" rel="ligthbox">
-                        <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/test_accuracies_species.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                    <a href="https://i.ibb.co/DDf5Kgx/test-accuracies-species.png" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="https://i.ibb.co/DDf5Kgx/test-accuracies-species.png" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                     </a>
                 </div>
             </div>
             <p><b>Qualitative Results</b></p>
             <p>As mentioned above, we extensively trained the models using both AlexNet (Model 1) and VGG19 (Model 4) pre-trained features. Even though both models yielded high testing accuracies, 96.5% and 98.75% respectively, there were still some consistent and inconsistent class misclassifications.</p>
             <div class="col-lg-9 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/OregonWildlifeClassifier/misclassifications.png' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/misclassifications.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                <a href="https://i.ibb.co/vd5gj8m/misclassifications.png" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/vd5gj8m/misclassifications.png" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                 </a>
             </div>
             <p><br>
@@ -298,16 +298,16 @@
                 One of the best ways to obtain new data that is certainly unique is to take images of wild animals ourselves. However, our project is used to classify wildlife animals in Oregon and it is difficult for the team to photograph these animals. Thus, we decided to search for <mark>new data on Google and randomly pick the top 10 images for each of the 8 animal classes. We also made sure that these new images were not included in the original dataset</mark>.
             </p>
             <div class="col-lg-9 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/OregonWildlifeClassifier/google_images.png' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/google_images.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                <a href="https://i.ibb.co/vLHHM6q/google-images.png" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/vLHHM6q/google-images.png" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                 </a>
             </div>
             <p><br>
                 In this part, three models were selected to evaluate with the new data from Google. In general, all three models’ performance met the expectation of classified 8 types of animals. The new accuracies also matched previous test accuracies. 
             </p>
             <div class="col-lg-9 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/OregonWildlifeClassifier/new_data_accuracy.png' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/OregonWildlifeClassifier/new_data_accuracy.png' %}" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
+                <a href="https://i.ibb.co/whfQBnJ/new-data-accuracy.png" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/whfQBnJ/new-data-accuracy.png" alt="subpage item" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);">
                 </a>
             </div>
             <p><br>

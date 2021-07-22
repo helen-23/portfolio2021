@@ -2,7 +2,7 @@
 
 {% block project_image %}
 {% load static %}
-    <img class="project-intro-img" src="{% static 'images/PocketTravel/Logo.png' %}" alt="">
+    <img class="project-intro-img" src="https://i.ibb.co/m0yc5yb/Logo.png" alt="">
     <h2>An Interactive Hardware Game</h2>
 {% endblock %}
 
@@ -44,8 +44,8 @@
         <p>The aim of this simulation is to “move forward” in the game while avoiding the obstacles. The speed of the movement is controlled by changing the frequency of pedaling on the bike. In addition, switching lanes is done by turning the bike handle.</p>
         <div class="row section-element">
             <div class="col-lg-5 my-auto" style="margin: 20px auto;">
-                <a href="{% static 'images/Cycle63/moving_obsticle_demo.gif' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/Cycle63/moving_obsticle_demo.gif' %}" alt="subpage item">
+                <a href="https://i.ibb.co/4jBJ5xQ/moving-obsticle-demo.gif" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/4jBJ5xQ/moving-obsticle-demo.gif" alt="subpage item">
                 </a>
             </div>
         </div>
@@ -61,8 +61,8 @@
                 <mark>the obstacle touches the handle bar on screen, then it's gameover</mark>. The timer display on HEX4 and HEX5 show how long a particular game is running.
             </p>
             <div class="figure_container">
-                <a href="{% static 'images/Cycle63/main_display.jpg' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/Cycle63/main_display.jpg' %}" alt="subpage item">
+                <a href="https://i.ibb.co/bmgcxQH/main-display.jpg" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/bmgcxQH/main-display.jpg" alt="subpage item">
                 </a>
             </div>
         </div>
@@ -93,8 +93,8 @@
 
             <p><b>Overall Design Block Diagram</b></p>
             <div class="figure_container">
-                <a href="{% static 'images/Cycle63/block_diagram.png' %}" class="fancybox" rel="ligthbox">
-                    <img class="desc-image" src="{% static 'images/Cycle63/block_diagram.png' %}" alt="subpage item">
+                <a href="https://i.ibb.co/zNH5D9y/block-diagram.png" class="fancybox" rel="ligthbox">
+                    <img class="desc-image" src="https://i.ibb.co/zNH5D9y/block-diagram.png" alt="subpage item">
                 </a>
             </div>
         </div>
@@ -106,13 +106,13 @@
             <p>At the start of the project, I planned to place a laser pointer and a laser receiver on the pedals to detect the pedaling frequency. I connected the laser receiver to the ADC pins on the DE1 SoC board and the schematics of this part is shown below. The hex display properly shows the translated digital values received by the phototransistor. However, this did not work because <mark>the pedling frequency was too fast to be detected by the phototransistor</mark> I bought.</p>
             <div class="row section-element">
                 <div class="col-lg-6 my-auto">
-                    <a href="{% static 'images/Cycle63/sensor demo.gif' %}" class="fancybox" rel="ligthbox">
-                        <img class="desc-image" src="{% static 'images/Cycle63/sensor demo.gif' %}" alt="subpage item">
+                    <a href="https://i.ibb.co/b3fwtVp/sensor-demo.gif" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="https://i.ibb.co/b3fwtVp/sensor-demo.gif" alt="subpage item">
                     </a>
                 </div>
                 <div class="col-lg-6 my-auto">
-                    <a href="{% static 'images/Cycle63/converter_schematic.png' %}" class="fancybox" rel="ligthbox">
-                        <img class="desc-image" src="{% static 'images/Cycle63/converter_schematic.png' %}" alt="subpage item">
+                    <a href="https://i.ibb.co/g3xb89p/converter-schematic.png" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="https://i.ibb.co/g3xb89p/converter-schematic.png" alt="subpage item">
                     </a>
                 </div>
             </div>
@@ -120,8 +120,8 @@
             <p>Next, I tried placing a micro switch below the pedal so that it would be triggered every time the pedal reaches the lowest position. The switch is connected to the GPIO pins on the DE1 SoC board. However, I realized that there are unexpected oscillations in the signals due to the mechanical properties of the switch. As a result, <mark>the program received alternating high and low signals at very high frequencies</mark> and the game would not work properly. I eventually had to fix the software module so that these minor oscillations do not trigger undesired conditions.</p>
             <div class="row section-element">
                 <div class="col-lg-6 my-auto" style="margin: 20px auto;">
-                    <a href="{% static 'images/Cycle63/micro_switch.jpg' %}" class="fancybox" rel="ligthbox">
-                        <img class="desc-image" src="{% static 'images/Cycle63/micro_switch.jpg' %}" alt="subpage item">
+                    <a href="https://i.ibb.co/85Z5KZh/micro-switch.jpg" class="fancybox" rel="ligthbox">
+                        <img class="desc-image" src="https://i.ibb.co/85Z5KZh/micro-switch.jpg" alt="subpage item">
                     </a>
                 </div>
             </div>
