@@ -29,26 +29,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
 
-    $(document).scroll(function() {
-
-        contentID = document.getElementById("project-content");
-        sidebarID = document.getElementById("sidebar-menu");
-
-        var myScrollFunc = function () {
-            var y = window.scrollY;
-            if(y > contentID.offsetTop - 200 && y < contentID.offsetTop + contentID.offsetHeight - 600) {
-                sidebarID.className = "navbar sidebar-nav show";
-            } else {
-                sidebarID.className = "navbar sidebar-nav hide";
-            }
-        };
-
-        window.addEventListener("scroll", myScrollFunc);
-    });
-
     $(window).scroll(function () {
         var docViewTop = $(window).scrollTop() + 100;
         var docViewBottom = docViewTop + $(window).height();
+
+        var imageTop = $(".project-intro").offset().top;
+        var imageBottom = imageTop + $(".project-intro").height();
+        var footerTop = $(".page-footer").offset().top;
+        if (imageBottom <= docViewTop && footerTop >= docViewBottom) {
+            $(".sidebar-nav").addClass('show');
+            $(".sidebar-nav").removeClass('hide');
+
+        } else {
+            $(".sidebar-nav").addClass('hide');
+            $(".sidebar-nav").removeClass('show');
+        }
 
         $( "mark" ).each(function(){
             var elemTop = $(this).offset().top;

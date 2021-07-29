@@ -126,6 +126,7 @@ mark.start {
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 9999;
 }
 
 .dropdown-box {
@@ -179,15 +180,15 @@ p.card-text {
 }
 
 .home-intro {
-    transition: all .5s;
+    transition: all 2s;
 }
 
 .home-cs-selected {
-    transition: all .5s;
+    transition: all 2s;
 }
 
 .home-selected-arts {
-    transition: all .5s;
+    transition: all 2s;
 }
 
 .hide {

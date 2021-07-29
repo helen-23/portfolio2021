@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
 
-<section class="home-intro" id="intro">
+<section class="home-intro home-card">
     <div class="card shadow-lg rounded mb-3 intro-card" style="max-width: 85vw;">
         <div class="row no-gutters">
             <div class="col-md-6">
@@ -86,7 +86,7 @@
     </div>
 </section>
 
-<section class="home-cs-selected hide" id="cs-selected" style="padding-top:20vh;">
+<section class="home-cs-selected home-card" style="padding-top:20vh;">
     <div class="card text-center mx-auto project-background-card">
         <div class="card-header">
             <h2 class="card-title" style="color: white;"> Software/Hardware Project Highlights 💻</h2>
@@ -171,7 +171,7 @@
     
 </section>
 
-<section id="selected-arts" class="home-selected-arts hide" style="padding-top:20vh;">
+<section class="home-selected-arts home-card" style="padding-top:20vh;">
     <div class="card text-center mx-auto project-background-card">
         <div class="card-header">
             <h2 class="card-title" style="color: white;">  Artwork Highlights 🖌</h2>
@@ -262,32 +262,22 @@
             });
     });
 
-    $(document).scroll(function() {
+    $(window).scroll(function () {
+        var docViewTop = $(window).scrollTop() + 100;
+        var docViewBottom = docViewTop + $(window).height();
 
-        introID = document.getElementById("intro");
-        csID = document.getElementById("cs-selected");
-        artID = document.getElementById("selected-arts");
-
-        var myScrollFunc = function () {
-            var y = window.scrollY;
-            if(y < introID.offsetTop + introID.offsetHeight - 200) {
-                introID.className = "home-intro show";
-                csID.className = "home-cs-selected hide";
-                artID.className = "home-selected-arts hide";
-            }
-            else if (y < csID.offsetTop + csID.offsetHeight - 200) {
-                introID.className = "home-intro hide";
-                csID.className = "home-cs-selected show";
-                artID.className = "home-selected-arts hide";
+        $( ".home-card" ).each(function(){
+            var elemTop = $(this).offset().top;
+            var elemBottom = elemTop + $(this).height();
+            if ((elemTop <= docViewBottom) && (elemBottom >= docViewTop)) {
+                $(this).addClass('show');
+                $(this).removeClass('hide');
             } else {
-                introID.className = "home-intro hide";
-                csID.className = "home-cs-selected hide";
-                artID.className = "home-selected-arts show";
+                $(this).addClass('hide');
+                $(this).removeClass('show');
             }
-        };
-
-        window.addEventListener("scroll", myScrollFunc);
         });
+    });
         
 </script>
 
