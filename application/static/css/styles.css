@@ -103,6 +103,14 @@ mark.start {
     background-position: -99.99% 0;
 }
 
+.title {
+    font-weight: 600;
+    color: #778e90;
+    text-decoration: underline;
+    text-decoration-thickness: 8px;
+    text-decoration-color: #f3e2ce;
+}
+
 /* nav bar
 ====================*/
 .text-blue {
@@ -316,7 +324,15 @@ h5.card-title {
 
 /* about page
 ====================*/
+.about-card1 {
+    margin-top: 3vw;
+    background-color: #b3c0b9;
+}
 
+.about-card2 {
+    margin-top: 3vw;
+    background-color: #acb0bb;
+}
 
 
 /* All SW/HW projects page
@@ -378,21 +394,12 @@ h5.card-title {
 ====================*/
 
 .project-intro {
-    position: relative;
-    margin-bottom: 10%;
+    margin: 0;
     padding: 0;
-    height: 90vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .project-intro-img {
-    width: 50%;
-    height: auto;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .sidebar-nav {

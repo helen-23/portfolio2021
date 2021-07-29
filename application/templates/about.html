@@ -1,16 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
+<div class="container" style="padding-top: 5vh;">
+    <h1 class="title">Welcome to my grotto</h1>
+</div>
 
 <div class="side-by-side">
     <div class="row no-gutters">
-        <div class="col-3" style="padding-left: 12vw; padding-top: 10vw;">
+        <div class="col-2" style="padding-left: 5vw; padding-top: 20vh;">
             <img class="img-thumbnail rounded-circle" src="{% static 'images/fullmonteweb.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
+            <div class="caption" style="padding-bottom: 50px;">
                 <p> FullMonteWeb 2020-2021 </p>
             </div>
             <img class="img-thumbnail rounded-circle" src="{% static 'images/vtr.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
+            <div class="caption" style="padding-bottom: 50px;">
                 <p> VTR 2020 Summer </p>
             </div>
             <img class="img-thumbnail rounded-circle" src="{% static 'images/thales.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
@@ -18,17 +21,17 @@
                 <p> Thales 2018 Summer </p>
             </div>
         </div>
-        <div class="col-3" style="padding-left: 2vw; padding-top: 5vw;">
+        <div class="col-2" style="padding-left: 2vw; padding-top: 10vh;">
             <img class="img-thumbnail rounded-circle" src="{% static 'images/cornell.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
+            <div class="caption" style="padding-bottom: 50px;">
                 <p> Cornell 2021-2022 </p>
             </div>
             <img class="img-thumbnail rounded-circle" src="{% static 'images/uoft.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
+            <div class="caption" style="padding-bottom: 50px;">
                 <p> UToronto 2016-2021 </p>
             </div>
             <img class="img-thumbnail rounded-circle" src="{% static 'images/intel.jpg' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
-            <div class="caption">
+            <div class="caption" style="padding-bottom: 50px;">
                 <p> Intel 2019-2020 </p>
             </div>
             <img class="img-thumbnail rounded-circle" src="{% static 'images/codezilla.png' %}" style="width: 8vw; height: 8vw; object-fit: cover;">
@@ -36,17 +39,35 @@
                 <p> CodeZilla 2016-2018 </p>
             </div>
         </div>
-        <div class="col-6">
-            <div class="card text-center ml-auto about-card">
+        <div class="col-8">
+            <div class="card text-center ml-auto about-card1" style="margin-right: 5vw; margin-bottom:5vh;">
                 <div class="card-header">
-                    <h2 class="card-title" style="color: white;"> Hi there! </h2>
+                    <h2 class="card-title" style="color: white;"> High-Definition Software Engineer </h2>
                 </div>
                 <div class="card-body">
-                    <p class="custom-card-text">I am a Computer Engineering graduate from the University of Toronto and an incoming MEng in Computer Science student at Cornell Tech, Cornell University. I am passionate about technologies and how us, as humans, interact with them through creative ways. Feel free to check out some of my selected projects on this site. Happy browsing!</p>
-                    <a href="#" class="btn btn-primary btn-custom"> A little more about me </a>
+                    <p class="custom-card-text">Hi, I am Xiao Ying Dai, but you can call me Helen! I am a software engineer currently pursuing a Master of Engineering in Computer Science at Cornell Tech, Cornell University. My undergraduate background in Computer Engineering provided me with a strong set of critical thinking and problem-solving skills, as well as hands on experience in both the software and hardware industries. </p>
+                    <p class="custom-card-text">Like high-definition technologies, I have clarity on the problems at hand and commit to moving forward with the best solution. Being a naturally great listener, I am also a collaborative member on my teams and can always effectively communicate my ideas across to my teammates and stakeholders.</p>
                 </div>
                 <div class="card-footer text-muted">
                     Skills: 
+                </div>
+            </div>
+            <div class="card text-center ml-auto about-card2" style="margin-right: 5vw; margin-bottom:5vh;">
+                <div class="card-header">
+                    <h2 class="card-title" style="color: white;"> Research and Professional Experiences </h2>
+                </div>
+                <div class="card-body">
+                    <p class="custom-card-text">During the summer of 2020, I worked at the University of Toronto under the supervision of Professor Vaughn Betz as an undergraduate researcher. The focus of my research was about how various Machine Learning benchmarks from the industry stress different FPGA architectures and how they differ from the processor-centric designs in academic benchmark suites. During this time, I worked with people across institutes in a collaborative effort, including talents from the University of California, Berkeley, the University of Utah, Intel, and Google.</p>
+                    <p class="custom-card-text">In 2019, I took an opportunity to interned abroad at Intel San Jose Campus for twelve months. During this time, I worked as a Software Engineering Intern and focused on developing high speed transceiver applications. During the year, I quickly adapted to the new environment and received great feedbacks from my manager and colleagues. I was also a past software analyst intern at Thales Canada in the summer of 2018. Overall, these were valuable learning and working experiences that sharpened my troubleshooting and problem-solving skills.</p>
+                </div>
+            </div>
+            <div class="card text-center ml-auto about-card1" style="margin-right: 5vw; margin-bottom:20vh;">
+                <div class="card-header">
+                    <h2 class="card-title" style="color: white;"> Having Fun </h2>
+                </div>
+                <div class="card-body">
+                    <p class="custom-card-text">I am inherently curious and love to explore. I started taking visual art lessons when I was a kid and have since then fell in love with the world of art and design. Over the years, I have explored everything from sketching to painting, then to digital design and media arts. If you are interested, please feel free to check out my artworks on this website!</p>
+                    <p class="custom-card-text">On my free time, I like to paint, play badminton, jog, play the Chinese zither, travel, and many more! I am also passionate about state-of-the-art technologies, thinking outside of the box, and designing solutions that target real world problems. I love to meet new people and share our ideas, so don’t be shy and feel free to reach out to me for a chat!</p>
                 </div>
             </div>
         </div>
